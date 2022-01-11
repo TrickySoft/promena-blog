@@ -1,0 +1,68 @@
+@import "../../../../styles/mixins.scss";
+@import "../../../../styles//variables.scss";
+
+.postlist-banner {
+  width: 100%;
+}
+.postlist {
+  border: 1px solid rgb(245, 230, 230);
+  // width: 400px;
+  padding: $font_xlarge;
+  background-color: $color-white-primary;
+  &:hover {
+    background-color: $blue1;
+    color: $dark_shadow;
+  }
+ 
+}
+
+h2 {
+  padding: $font_verysmall 0 $font_verysmall 0;
+  margin-left: $font_large;
+  color: $blue1;
+  font-size: $font_large;
+  cursor: pointer;
+  font-family: $monstserrat_regular;
+  transition: color font-size 0.3ms ease-out;
+  a:hover{
+    color: white;
+    font-size: $font_xlarge;
+  }
+}
+.navLink{
+  width: 80%;
+}
+span {
+  margin-left: $font_large;
+  font-size: $font_button;
+  font-weight: 500;
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .postlist-banner {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 760px) {
+  .postlist-banner {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 760px) and (max-width: 1024px) {
+  .postlist-banner {
+    width: 100%;
+    height: 60%;
+  }
+  .postlist {
+    width: 100%;
+    padding: 0.6rem;
+  }
+  .wrap__postlist {
+    width: 100%;
+  }
+}

@@ -1,0 +1,115 @@
+@import "../../../../../styles/variables.scss";
+@import "../../../../../styles/mixins.scss";
+
+// .company{
+//   @include allcenter;
+//   color: $color-white-primary;
+//   padding-top: 8.5rem;
+// }
+.loginmodal {
+  position: fixed;
+  background-color: $dark_shadow3;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+
+  &__dialog {
+    background-color: rgba(0,0,0,.5);
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    width: 30%;
+    padding: $font_large;
+    @include absoluteCenter;
+    border-radius: $font_large;
+    color: $color-white-primary ;
+    min-height: 23rem;
+    height: 40rem;
+    &__submit{
+      text-align: center;
+    }
+    &__center-div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+    }
+    &__inputs {
+      background: $color-white-primary;
+      padding: $font_medium;
+      color: $dark_shadow;
+      margin: $font_verysmall 0;
+      font-family: $monstserrat_regular;
+      padding: $font_verysmall;
+      font-size: $font_medium;
+      border-radius: $font_text;
+      border: 1px solid $alto;
+    }
+    &__submitbtn {
+      width: 16.4rem;
+      padding: $font_verysmall;
+      border: none;
+      color: $color-white-primary;
+    }
+
+    &__button:focus {
+      outline: none;
+    }
+
+    &__footer {
+      justify-content: space-evenly;
+      min-height: 6.6rem;
+      &__login-title {
+        color: $color-white-primary;
+      }
+      &__description {
+        font-family: $monstserrat_regular;
+        font-size: $font_large;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.57;
+        letter-spacing: normal;
+        text-align: center;
+        color: $blue1;
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width:320px) and (max-width:760px) {
+  .loginmodal {
+    &__dialog {
+      width: 60%;
+      &__submit{
+      text-align: center;
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width:760px) and (max-width:1020px) {
+  .loginmodal {
+    &__dialog {
+      width: 40%;
+      &__submit{
+      text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (min-width:1024px) and (max-width:1420px) {
+  .loginmodal {
+    &__dialog {
+      width: 35%;
+      &__submit{
+      text-align: center;
+      }
+    }
+  }
+}
+  

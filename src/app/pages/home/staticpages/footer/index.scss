@@ -1,0 +1,219 @@
+@import "../../../../../styles/variables.scss";
+@import "../../../../../styles/mixins.scss";
+
+.footer {
+  @include relativeflex;
+  @include rowevenly;
+  background-color: $grey10;
+  padding: $font_verysmall;
+  ul {
+   @include listnone;
+  }
+  ul li a {
+    @include textnone;
+    cursor: pointer;
+  }
+  &__logo{
+    cursor: pointer;
+  }
+  &__center1 {
+    @include relativeblock;
+    @include columncenter;
+    font-size: $font_text;
+    font-family: $monstserrat_regular;
+    ul li a {
+      color: $dark2;
+      letter-spacing: 1.5px;
+    }
+    li {
+      margin-top: $font_xverysmall;
+    }
+    transition: transform 2s ease-in-out;
+  }
+  &__center1 li a:hover:nth-child(2n + 1) {
+    transform: scale(0.98);
+    color: $blue1;
+  }
+  &__center2 {
+    @include relativeblock;
+    flex-direction: column;
+    font-size: $font_text;
+    font-family: $monstserrat_regular;
+    ul li a {
+      color: $dark2;
+      letter-spacing: 2px;
+    }
+    li {
+      margin-top: $font_xverysmall;
+    }
+    transition: transform 3s ease;
+  }
+  &__center2 li a:hover:nth-child(2n + 1) {
+    transform: scale(0.98);
+    color: $blue1;
+  }
+  &__right {
+    @include relativeblock;
+    @include rowcenter;
+    &__content {
+      text-align: center;
+      margin: $font_verysmall;
+    }
+    &__input {
+      justify-content: center;
+      align-items: center;
+      padding: $font_xverysmall;
+      width: 45%;
+      margin: $font_xverysmall;
+    }
+    &__newsletter {
+      padding: 0.8rem;
+      color: $color-white-primary;
+      width: 45%;
+      background-color: $blue1;
+      transition: transform 0.5s ease;
+    }
+    &__newsletter:hover {
+      transform: scale(0.98);
+    }
+    &__subscribe {
+      transition: transform 5ms ease-in;
+      font-size: x-large !important;
+    }
+    &__subscribe:hover {
+      color: #188fff;
+      transform: scale(0.98);
+    }
+    &__select {
+      padding: $font_xverysmall;
+      width: 45%;
+    }
+  }
+  &__icons {
+    display: flex;
+    flex-direction: column;
+    margin: $font_xverysmall;
+  }
+  &__icons ul {
+    @include marpad;
+    @include flexcolumn;
+  }
+
+  &__icons ul li {
+    @include listnone;
+    margin: 0 1.5rem;
+  }
+
+  &__icons ul li .fab {
+    font-size: $font_xxlarge;
+    line-height: $font_top7;
+    transition: 0.3s;
+    color: $dark_shadow;
+  }
+
+  &__icons ul li .fab:hover {
+    color: $color-white-primary;
+  }
+
+  &__icons ul li a {
+    width: $font_top8;
+    height: 4.5rem;
+    padding: 1.3rem 0;
+    margin: 0.7rem;
+    @include allcenter;
+    font-size: $font_large;
+    border-radius: 50%;
+    background-color: $color-white-primary;
+    transition: 0.6s;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  &__icons ul li a:hover {
+    transform: translate(0, -10%);
+  }
+
+  &__icons ul li:nth-child(1) a:hover {
+    background-color: rgba(0, 0, 0, 0.829);
+  }
+  &__icons ul li:nth-child(2) a:hover {
+    background-color: #075e54;
+  }
+  &__icons ul li:nth-child(3) a:hover {
+    background-color: #0077b5;
+  }
+  &__icons ul li:nth-child(4) a:hover {
+    background-color: $dark_shadow;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .footer {
+    display: block;
+    padding: $font_large $font_xverysmall;
+    &__left {
+      display: -webkit-inline-box;
+      padding-left: $font_top6;
+    }
+    &__center1 {
+      @include flexbox;
+    }
+    &__center2 {
+      @include flexbox;
+    }
+    &__right {
+      position: relative;
+      width: 100%;
+      @include allcenter;
+      &__input {
+        width: 45%;
+        text-align: center;
+      }
+      &__newsletter {
+        margin-top: $font_xverysmall;
+      }
+    }
+    &__content {
+      padding-right: $font_top8;
+    }
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 760px) {
+  .footer {
+    display: block;
+    padding: $font_large $font_xverysmall;
+    &__left {
+      display: flex;
+      display: -webkit-inline-box;
+      padding-left: $font_top6;
+    }
+    &__center1 {
+      width: 50%;
+      @include absolueflex;
+    }
+    &__center2 {
+      width: 50%;
+      left: 35rem;
+      display: flex;
+      align-items: center;
+    }
+    &__right {
+      @include allcenter;
+      position: relative;
+      &__input {
+        width: 45%;
+        text-align: center;
+      }
+      &__newsletter {
+        margin-top: $font_xverysmall;
+      }
+    }
+    &__content {
+      padding-right: $font_top8;
+    }
+  }
+}
