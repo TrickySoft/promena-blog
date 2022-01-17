@@ -21,11 +21,11 @@ const Home = () => {
                 <div className='wrap__banner'>
                     <Banner />
                 </div>
-                <div className='wrap__postlist'>
+                {/* <div className='wrap__postlist'>
                     <Postlist />
-                </div>
+                </div> */}
             </div>
-            <div className='post-tab'>
+            {/* <div className='post-tab'>
                 <div className='all-posts items'>
                     <AllPosts />
                 </div>
@@ -33,7 +33,7 @@ const Home = () => {
                     <Tabs />
                 </div>
 
-            </div>
+            </div> */}
         </div>
     )
 }
