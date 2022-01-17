@@ -25,6 +25,7 @@
     "luxon": "^1.26.0",
     "moment": "^2.29.1",
     "node-sass": "4.14.1",
+    "owl.carousel": "^2.3.4",
     "pagination": "^0.4.6",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
