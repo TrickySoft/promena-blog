@@ -61,7 +61,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "sass-lint": "sass-lint -v",
-    "pre-commit": "lint-staged && npm run precommit"
+    "pre-commit": "npx lint-staged && npm run precommit"
   },
   "sasslintConfig": ".sass-lint.yml",
   "eslintConfig": {

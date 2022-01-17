@@ -7,6 +7,10 @@ import meeting1 from '../../../../../assets/images/meeting-01.jpg'
 import meeting2 from '../../../../../assets/images/meeting-02.jpg'
 import meeting3 from '../../../../../assets/images/meeting-03.jpg'
 import meeting4 from '../../../../../assets/images/meeting-04.jpg'
+import course1 from '../../../../../assets/images/course-01.jpg'
+import course2 from '../../../../../assets/images/course-02.jpg'
+import course3 from '../../../../../assets/images/course-03.jpg'
+import course4 from '../../../../../assets/images/course-04.jpg'
 import './index.scss'
 import $ from 'jquery';
 
@@ -402,7 +406,7 @@ const Banner = () => {
         <div className='col-lg-12'>
           <div className='owl-courses-item owl-carousel'>
             <div className='item'>
-              <img src='../../../../../../public/assets/images/course-01.jpg' alt='Course One'/>
+              <img src={course1} alt='Course One'/>
               <div className='down-content'>
                 <h4>Morbi tincidunt elit vitae justo rhoncus</h4>
                 <div className='info'>
@@ -424,7 +428,7 @@ const Banner = () => {
               </div>
             </div>
             <div className='item'>
-              <img src='../../../../../../public/assets/images/course-02.jpg' alt='Course Two'/>
+              <img src={course2} alt='Course Two'/>
               <div className='down-content'>
                 <h4>Curabitur molestie dignissim purus vel</h4>
                 <div className='info'>
@@ -444,7 +448,7 @@ const Banner = () => {
               </div>
             </div>
             <div className='item'>
-              <img src='../../../../../../public/assets/images/course-03.jpg' alt=''/>
+              <img src={course3} alt=''/>
               <div className='down-content'>
                 <h4>Nulla at ipsum a mauris egestas tempor</h4>
                 <div className='info'>
@@ -465,7 +469,7 @@ const Banner = () => {
               </div>
             </div>
             <div className='item'>
-              <img src='../../../../../../public/assets/images/course-04.jpg' alt=''/>
+              <img src={course3} alt=''/>
               <div className='down-content'>
                 <h4>Aenean molestie quis libero gravida</h4>
                 <div className='info'>
@@ -487,7 +491,7 @@ const Banner = () => {
               </div>
             </div>
             <div className='item'>
-              <img src='../../../../../../public/assets/images/course-01.jpg' alt=''/>
+              <img src={course1} alt=''/>
               <div className='down-content'>
                 <h4>Lorem ipsum dolor sit amet adipiscing elit</h4>
                 <div className='info'>
@@ -531,7 +535,7 @@ const Banner = () => {
               </div>
             </div>
             <div className='item'>
-              <img src='../../../../../../public/assets/images/course-03.jpg' alt=''/>
+              <img src={course3} alt=''/>
               <div className='down-content'>
                 <h4>Web Design Templates at your finger tips</h4>
                 <div className='info'>
@@ -553,7 +557,7 @@ const Banner = () => {
               </div>
             </div>
             <div className='item'>
-              <img src='../../../../../../public/assets/images/course-04.jpg' alt=''/>
+              <img src={course4} alt=''/>
               <div className='down-content'>
                 <h4>Please visit our website again</h4>
                 <div className='info'>
@@ -575,7 +579,7 @@ const Banner = () => {
               </div>
             </div>
             <div className='item'>
-              <img src='../../../../../../public/assets/images/course-01.jpg' alt=''/>
+              <img src={course1} alt=''/>
               <div className='down-content'>
                 <h4>Responsive HTML Templates for you</h4>
                 <div className='info'>
@@ -597,7 +601,7 @@ const Banner = () => {
               </div>
             </div>
             <div className='item'>
-              <img src='../../../../../../public/assets/images/course-02.jpg' alt=''/>
+              <img src={course2} alt=''/>
               <div className='down-content'>
                 <h4>Download Free CSS Layouts for your business</h4>
                 <div className='info'>
@@ -619,7 +623,7 @@ const Banner = () => {
               </div>
             </div>
             <div className='item'>
-              <img src='../../../../../../public/assets/images/course-03.jpg' alt=''/>
+              <img src={course3} alt=''/>
               <div className='down-content'>
                 <h4>Morbi in libero blandit lectus cursus</h4>
                 <div className='info'>
@@ -641,7 +645,7 @@ const Banner = () => {
               </div>
             </div>
             <div className='item'>
-              <img src='../../../../../../public/assets/images/course-04.jpg' alt=''/>
+              <img src={course4} alt=''/>
               <div className='down-content'>
                 <h4>Curabitur molestie dignissim purus</h4>
                 <div className='info'>

@@ -1,19 +1,13 @@
 /* eslint-disable no-useless-escape */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-shadow-restricted-names */
-
+import $ from 'jquery'
  import jQuery from 'jquery'
  window.jQuery = jQuery;
+  window.jQuery = $;
  
 (function($, window, document, undefined) {
 
-	// /**
-	//  * Creates a carousel.
-	//  * @class The Owl Carousel.
-	//  * @public
-	//  * @param {HTMLElement|jQuery} element - The element to create the carousel for.
-	//  * @param {Object} [options] - The options
-	//  */
 	function Owl(element, options) {
 
 
@@ -471,12 +465,6 @@
 			: true;
 	};
 
-	/**
-	 * Setups the current settings.
-	 * @todo Remove responsive classes. Why should adaptive designs be brought into IE8?
-	 * @todo Support for media queries by using `matchMedia` would be nice.
-	 * @public
-	 */
 	Owl.prototype.setup = function() {
 		var viewport = this.viewport(),
 			overwrites = this.options.responsive,

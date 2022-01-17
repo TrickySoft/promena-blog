@@ -3,6 +3,7 @@
 /* eslint-disable no-undef */
 import jQuery from 'jquery'
 window.jQuery = jQuery;
+window.jQuery = $;
 
 (function(factory) {
     'use strict';
