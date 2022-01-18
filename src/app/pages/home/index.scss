@@ -1,9 +1,9 @@
 @import "../../../styles/variables.scss";
 @import "../../../styles/mixins.scss";
 
-.width-container {
-  padding: $font_xxlarge $font_top8;
-}
+// .width-container {
+//   padding: $font_xxlarge $font_top8;
+// }
 .wrap {
   @include flexrow;
   max-height: 100%;
