@@ -17,7 +17,6 @@
     "draft-js": "^0.11.7",
     "env-cmd": "^10.1.0",
     "husky": "^4.3.8",
-    "jquery": "^3.6.0",
     "jsdom": "^19.0.0",
     "lint-staged": "^10.5.3",
     "localforage": "^1.9.0",
@@ -25,7 +24,6 @@
     "luxon": "^1.26.0",
     "moment": "^2.29.1",
     "node-sass": "4.14.1",
-    "owl.carousel": "^2.3.4",
     "pagination": "^0.4.6",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
@@ -34,6 +32,7 @@
     "react-dom": "^17.0.1",
     "react-draft-wysiwyg": "^1.14.7",
     "react-helmet": "^6.1.0",
+    "react-helmet-async": "^1.2.2",
     "react-js-pagination": "^3.0.3",
     "react-loadable": "^5.5.0",
     "react-paginate": "^8.1.0",
@@ -61,7 +60,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "sass-lint": "sass-lint -v",
-    "pre-commit": "npx lint-staged && npm run precommit"
+    "pre-commit": "lint-staged && npm run precommit"
   },
   "sasslintConfig": ".sass-lint.yml",
   "eslintConfig": {

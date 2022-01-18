@@ -1,18 +1,16 @@
-
 import React from 'react';
-
 import './index.scss';
+import Img from '../../../../../../assets/images/user-icon.png'
 
 const Comment = ({
   comment,
   replies
 }) => {
   const createdAt = new Date(comment.datetime).toLocaleDateString();
-
   return (
-    <div key={comment.Blog_id} className='comment'>
+    <div key={comment.commentId} className='comment'>
       <div className='comment-image-container'>
-        <img src='/user-icon.png' />
+        <img src={Img} />
       </div>
       <div className='comment-right-part'>
         <div className='comment-content'>
@@ -24,10 +22,10 @@ const Comment = ({
 </div>
         {replies.length > 0 && (
           <div className='replies'>
-            {replies.length && replies.map((reply) => (
-        comment.commentId === reply.CommentId ? <div className='comment'>
+            {replies.length && replies.map((reply, index) => (
+        comment.commentId === reply.CommentId ? <div className='comment' key={index}>
         <div className='comment-image-container'>
-        <img src='/user-icon.png' />
+        <img src={Img} />
       </div>
       <div className='comment-right-part'>
         <div className='comment-content'>
@@ -45,4 +43,4 @@ const Comment = ({
   );
 };
 
-export default Comment;
+export default React.memo(Comment);
