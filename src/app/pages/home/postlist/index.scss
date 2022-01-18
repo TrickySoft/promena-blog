@@ -4,16 +4,63 @@
 .postlist-banner {
   width: 100%;
 }
+
 .postlist {
   border: 1px solid rgb(245, 230, 230);
-  // width: 400px;
   padding: $font_xlarge;
   background-color: $color-white-primary;
   &:hover {
     background-color: $blue1;
+    color: #fff;
+  }
+  &:first-child{
+    background-color: $blue1;
     color: $dark_shadow;
   }
- 
+  &__triangle{
+    color: #fff;
+    transform: translate(-21px, 12px);
+    &--active{
+      color: #fff;
+      position: absolute;
+      font-size: 30px;
+      transform: translate(-21px, 12px);
+    }
+    &--disabled{
+      color: #fff;
+      position: absolute;
+      font-size: 30px;
+      transform: translate(-21px, 12px);
+    }
+    &__triangle:hover{
+      color: #fff;
+      position: absolute;
+      font-size: 30px;
+      transform: translate(-21px, 12px);
+    }
+  }
+ &__category-link{
+&--active{
+  color: #fff !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  text-transform: uppercase;
+}
+&--disabled{
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none !important;
+  text-transform: uppercase;
+}
+
+  }
+ &__category-span{
+&--active{
+  color: #fff !important;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+  }
 }
 
 h2 {
@@ -21,9 +68,11 @@ h2 {
   margin-left: $font_large;
   color: $blue1;
   font-size: $font_large;
+  text-transform: uppercase;
+  text-decoration: none !important;
   cursor: pointer;
   font-family: $monstserrat_regular;
-  transition: color font-size 0.3ms ease-out;
+  transition: color font-size 0.3ms linear;
   a:hover{
     color: white;
     font-size: $font_xlarge;

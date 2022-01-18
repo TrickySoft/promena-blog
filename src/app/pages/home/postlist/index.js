@@ -1,32 +1,32 @@
 import React, { useEffect, useState } from 'react'
 import './index.scss';
-import { Helmet } from 'react-helmet';
+import { Helmet,   HelmetProvider } from 'react-helmet-async';
 import { NavLink } from 'react-router-dom';
 import { getPostList } from 'app/utils/apiCalls';
 
 const Postlist = () => {
+const [posts, setPosts] = useState([]);
 
-    const [posts, setPosts] = useState([]);
-
-    useEffect(() => {
+useEffect(() => {
 getPostList((res)=>{
-    setPosts(res);
-    console.log(res)
+setPosts(res);
 });
-    }, posts);
+    }, []);
 
     return (
         <div className='postlist-banner'>
-            {posts.map(val => {
+            {posts.map((val, index )=> {
                 return (
-                    <div key={val.Blog_id} className='postlist'>
+                    <div key={index} className='postlist'>
+                    <HelmetProvider>
                     <Helmet>
-                    {/* <title>{val.title}</title> */}
                         <meta  name='category' content={val.category}/>
                         <meta name='description' content = {val.content}/>
                     </Helmet>
-                        <h2><NavLink  to={`/post/${val.Blog_id}`}>{val.category}</NavLink> </h2>
-                        <span>{val.title}</span>
+                    </HelmetProvider>
+                    <strong className={`postlist__triangle--${index ===0 ? 'active':'disabled'}`}>▶</strong>
+                        <h2><NavLink className={`postlist__category-link--${index ===0 ? 'active':'disabled'}`} to={`/post/${val.Blog_id}`}>{val.category}</NavLink> </h2>
+                        <span className={`postlist__category-span--${index ===0 ? 'active':'disabled'}`} >{val.title}</span>
                     </div>
                 )
             })}

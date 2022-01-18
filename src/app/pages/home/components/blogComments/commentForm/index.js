@@ -1,16 +1,12 @@
-/* eslint-disable quotes */
-/* eslint-disable no-debugger */
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
 import React , { useState } from 'react';
 import LoginModal from '../../loginmodal';
-// import EmojiTextarea  from 'react-emoji-textarea';
-import {userRegistartion, userToken, getUserComments as getCommentsApi, userComment as createCommentApi} from '../../../../../utils/apiCalls';
+import {userRegistartion, userToken, userComment as createCommentApi, getUserComments} from '../../../../../utils/apiCalls';
 import './index.scss';
 import Button from 'app/components/button';
 import Confirm from 'app/components/confirmModal/confirm';
 
 const CommentForm = ({
+  backendComments,
   rootCommentId,
   blogId,
 }) => {
@@ -20,8 +16,9 @@ const CommentForm = ({
   const [showLoginConfirmModal, setshowLoginConfirmModal] = useState(false);
   const [user, setuser] = useState({});
   const [isBtnDisabled, setIsBtnDisabled] = useState(true);
+ 
 
-  const handleValueChange =(e, key)=>{
+const handleValueChange =(e, key)=>{
 let val = e.target.value;
 setIsBtnDisabled(true);
 if(key === 1)
@@ -34,7 +31,6 @@ if(text){
   }
 
    const onSubmit = (e)=>{
-     debugger;
      e.preventDefault();
      rootCommentId.map((val)=>{
        sessionStorage.setItem('commentId', val.commentId);
@@ -44,7 +40,6 @@ if(text){
      let CommentId = sessionStorage.getItem('commentId');
      let date = new Date();
      let token = localStorage.getItem('user-token');
-
   
      if(user.name !== undefined || user.name != null)
      {
@@ -60,10 +55,16 @@ if(text){
      if(payload && token)
      {
       createCommentApi((resp)=>{
-        console.log(resp);
         if(resp.success === 'True')
         {
-          location.reload();
+        setAlertText('Your comment has successfully been posted !');
+         getUserComments(()=>{
+           if(payload)
+           {
+            backendComments([...rootCommentId, payload]);
+           }
+         });
+         setShowConfirmModal(true);
         }else{
           setIsBtnDisabled(true);
         }
@@ -71,7 +72,7 @@ if(text){
      }
     }else{
       let userInfo = JSON.parse(localStorage.getItem('user'));
-      if(userInfo !== "login-target" && userInfo !== null){
+      if(userInfo !== 'login-target' && userInfo !== null){
       let payload = {
         Blog_id: blogId,
         commentId: ++CommentId,
@@ -93,7 +94,14 @@ if(text){
 
           if(resp.success === 'True')
           {
-            location.reload();
+            setAlertText('Your comment has successfully been posted !');
+            getUserComments(()=>{
+              if(payload)
+           {
+            backendComments([...rootCommentId, payload]);
+           }
+            });
+            setShowConfirmModal(true);
           }else{
             setIsBtnDisabled(true);
           }
@@ -113,10 +121,8 @@ if(text){
   const onConfirm =(user)=>{
     setuser(user);
      userRegistartion((response)=>{
-      //  setUserRegister(response);
        localStorage.setItem('user',JSON.stringify(user));
        let userDetail = JSON.parse(localStorage.getItem('user'));
-       console.log(userDetail);
        let payload = {
          name:userDetail.name,
          email:userDetail.email,
@@ -126,18 +132,15 @@ if(text){
        {
         userToken((res)=>{
         localStorage.setItem('user-token', res.jwt);
-        console.log(res)
         }, payload);
        }else if(response.email[0] === 'token with this email already exists.'){
         userToken((res)=>{
           if(res.jwt)
           {
             localStorage.setItem('user-token', res.jwt);
-            console.log(res);
           }else if(res.detail === 'user not found'){
             setShowConfirmModal(true);
-// alert('user not found, check your credentials');
-setAlertText('user not found, Please check your credentials !')
+      setAlertText('user not found, Please check your credentials !')
           }
  
           }, payload);

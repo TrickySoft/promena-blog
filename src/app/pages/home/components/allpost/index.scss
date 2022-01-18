@@ -5,14 +5,16 @@
   padding: $font_large 0;
 }
 .card {
-  @include relativeblock;
+  display: flex;
+  margin: 4rem 0;
   max-width: 100%;
-  @include allcenter;
+  position: relative;
   justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
   background-size: cover;
   margin-top: $font_button;
   padding: $font_xxlarge;
-  border-radius: $font_large;
   box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 10%);
   background-color: $color_white6;
   &__title {
@@ -22,26 +24,48 @@
     text-decoration: none !important;
     cursor: pointer !important;
   }
-  &__content{
+  &__main-content{
     display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-left: 2rem;
+    height: 250px;
+    &__category{
+      margin-top: -1rem;
+      font-size: 18px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 500;
+      text-decoration: none !important;
+    }
+    h1{
+font-size: 2.5rem;
+font-weight: bold;
+letter-spacing: 1px;
+    }
+    .read-more {
+      text-align: left;
+      font-size: $font_small;
+    }
+  }
+  span {
+    margin-left: 0;
   }
   &__image {
-    width: 35%;
-    height: 200px;
+    height: 250px;
+    width: 250px;
   }
   &__ul1 {
     font-family: $monstserrat_regular;
     padding-top: $font_large;
+    padding-left: 0;
     @include flexbetween;
-    font-size: $font_large;
+    font-size:1.4rem;
     @include listnone;
   }
 }
-.read-more {
-  text-align: left;
-  font-size: $font_xlarge;
-  padding-left: $font_button
-}
+
 
 
 @media screen and (min-width: 320px) and (max-width: 760px) {
@@ -56,11 +80,15 @@
     margin-left: 0;
     padding: $font_large$font_verysmall;
     @include allcenter;
+    &__main-content{
+      &__category{
+        margin-top: 0;
+      }
+    }
     h1{
-      font-size: $font_xlarge;
+      font-size: $font_medium;
     }
     &__image {
-      width: 40%;
       height: 150px;
     }
     &__content {
@@ -109,12 +137,11 @@
       font-size: $font_small;
     }
     &__image{
-      width: 40%;
       max-height: 150px;
     }
     &__ul1 {
       font-family: "Montserrat Regular";
-      font-size: $font_small;
+      font-size: 1.4rem;
       display: flex;
       padding: 0 $font_xxlarge 0 $font_xxlarge;
       @include listnone;
@@ -129,13 +156,9 @@
 
 @media screen and (min-width: 1024px) and (max-width: 1420px) {
   .card {
-    position: relative;
-    display: block;
-    width: 100%;
-    margin-left: 0;
-    padding: $font_xxlarge $font_verysmall;
+
     h1{
-      font-size: $font_large;
+      font-size: $font_medium;
     }
     &__content {
       float: center;
@@ -146,11 +169,10 @@
       font-size: $font_large;
     }
     &__ul1 {
-      font-size: $font_xlarge;
+      font-size: 1.4rem;
       width: 100%;
       @include marpad;
       @include listnone;
-      padding: $font_xlarge $font_xxlarge 0 $font_xxlarge;
     }
   }
 }

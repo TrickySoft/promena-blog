@@ -1,4 +1,3 @@
-/* eslint-disable no-debugger */
 import React, { useState, useLayoutEffect, useEffect } from 'react';
 import './index.scss';
 import logo from '../../../../../assets/images/promena.png';
@@ -24,7 +23,6 @@ const Footer = () => {
 
   useEffect(() => {
     getCategoryDetails((res) => {
-      console.log(res);
       setCategory(res);
     });
   }, []);
@@ -56,8 +54,14 @@ const Footer = () => {
     window.scrollTo(0, 0);
   };
 
+const handleLogo = () =>{
+window.scrollTo(0, 0);
+setTimeout(() => {
+  history.push('/');
+}, 500);
+}
+
   const handleSubscribe = () => {
-    debugger
     if (ValidateEmail(email)) {
       const payload = {
         User_email_Address: email,
@@ -85,14 +89,14 @@ const Footer = () => {
     }
   };
 
-  useLayoutEffect(() => { }, [handleClick]);
+  useLayoutEffect(() => {handleClick() }, []);
 
   return (
     <div>
       {pathName !== '/admin' ? (
         <div className='footer'>
           <div className='footer__left'>
-            <a onClick={() => history.push('/')}><img src={logo} alt='my home' className='footer__logo' /></a>
+            <a onClick={() => {handleLogo()}}><img src={logo} alt='my home' className='footer__logo' /></a>
             <div className='footer__icons'>
               <ul>
                 <li>
@@ -250,9 +254,9 @@ const Footer = () => {
             >
               <option value='--Select--'>--Select--</option>
               {category.length &&
-                category.map((val) => {
+                category.map((val, index) => {
                   return (
-                    <option key={val.category_id} value={val.category_id}>
+                    <option key={index} value={val.category_id}>
                       {val.category_name}
                     </option>
                   );
@@ -270,7 +274,7 @@ const Footer = () => {
               placeholder='Enter Email'
             ></input>
             <Button
-              buttonClick={handleSubscribe}
+              buttonClick={()=>{handleSubscribe()}}
               isBtnDisabled={isBtnDisabled}
               className='footer__right__newsletter'
             >

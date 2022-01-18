@@ -1,0 +1,264 @@
+@import "../../../../../styles/variables.scss";
+@import "../../../../../styles/mixins.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  @include marpad;
+  @include textnone;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.header-wrapper {
+  background: $color-white-primary;
+  width: 100%;
+}
+.header-wrapper nav {
+  @include flexbetween;
+  margin: 0 auto;
+  padding: $font_xxlarge $font_top7;
+  height: $font_medium1;
+  box-shadow: 0 0px 0px 0.2px rgba(0, 0, 0, 0.5);
+}
+nav .content {
+  @include flexbetween;
+  background-color: $color-white-primary;
+}
+nav .content .links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  z-index: 99;
+  padding-left: 0!important;
+}
+.content a .logo {
+  color: $dark_shadow;
+  font-size: 50px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.content .links li {
+  @include listnone;
+}
+.content .links li a,
+.content .links li label {
+  color: $dark_shadow;
+  font-size: $font_xlarge;
+  font-weight: 500;
+  padding: $font_verysmall $font_xxlarge;
+  border-radius: $font_xverysmall;
+  transition: all 0.3s ease;
+}
+.content .links li a {
+  @include textnone;
+  font-size: $font_large;
+}
+.content .links li label {
+  @include displaynone;
+}
+.content .links li a:hover,
+.content .links li label:hover {
+  background: $color_white6;
+}
+.header-wrapper .search-icon,
+.header-wrapper .menu-icon {
+  color: $dark_shadow;
+  font-size: $font_xlarge;
+  cursor: pointer;
+  line-height: $font_medium1;
+  width: $font_medium1;
+  text-align: center;
+}
+.header-wrapper .menu-icon {
+  @include displaynone;
+}
+.header-wrapper #show-search:checked ~ .search-icon i::before {
+  content: "\f00d";
+}
+
+.header-wrapper input[type="checkbox"] {
+  @include displaynone;
+}
+
+/* Dropdown Menu code start */
+.content .links ul {
+  position: absolute;
+  background: $color_white6;
+  top: $font_top6;
+  z-index: -1;
+  border-bottom: 3px solid blue;
+  opacity: 0;
+  visibility: hidden;
+}
+.content .links li:hover > ul {
+  top: 6.9rem;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+}
+.social-links{
+  font-size: $font_xxlarge !important; 
+}
+.fa-3x{
+  font-size: $font_xlarge !important; 
+}
+.content .links ul li a {
+  display: block;
+  width: 100%;
+  font-size: small;
+  line-height:5rem;
+  margin: 0 !important;
+  padding: 0;
+  padding-right: 2rem !important;
+}
+.content .links ul ul {
+  position: absolute;
+  top: 0;
+  right: calc(-100% + 8px);
+}
+.content .links ul li {
+  position: relative;
+}
+.content .links ul li:hover ul {
+  top: 0;
+}
+.content .links li a.desktop-link {
+  padding: 2.9rem 0.5rem !important;
+  margin:0 2rem 0 0;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1420px) {
+  .content .links li a,
+  .content .links li label {
+    color: $dark_shadow;
+    font-size: $font_medium;
+    font-weight: 500;
+    // padding: $font_xxsmall $font_xxlarge;
+    border-radius: $font_xverysmall;
+    transition: all 0.3s ease;
+  }
+  .content {
+    padding: 0 !important;
+  }
+  
+  .header-wrapper .search-icon,
+  .header-wrapper .menu-icon {
+    color: black;
+    font-size: $font_xlarge;
+    cursor: pointer;
+    line-height: $font_medium1;
+    width: $font_medium1;
+    text-align: center;
+  }
+}
+
+/* Responsive code start */
+@media screen and (min-width: 768px) and (max-width: 1020px) {
+  .header-wrapper nav {
+    max-width: 100%;
+    padding: 3rem 8rem;
+  }
+  nav .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav .content .links {
+    margin-left: 0;
+  }
+  .content .links li a {
+    padding: $font_xxsmall $font_text;
+  }
+  .content .links li a,
+  .content .links li label {
+    color: $dark_shadow;
+    font-size: $font_verysmall;
+    font-weight: 500;
+    padding: $font_xverysmall $font_verysmall;
+    border-radius: $font_xverysmall;
+    transition: all 0.3s ease;
+  }
+  .header-wrapper .search-icon,
+  .header-wrapper .menu-icon {
+    text-align: center;
+    cursor: pointer;
+    color: $dark_shadow;
+    font-size: $font_xlarge;
+    line-height: $font_medium1;
+    width: $font_medium1;
+  }
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 760px) {
+  .header-wrapper nav {
+    padding: 3rem;
+  }
+  .header-wrapper .menu-icon {
+    display: block;
+  }
+  .header-wrapper #show-menu:checked ~ .menu-icon i::before {
+    content: "\f00d";
+  }
+  nav .content .links {
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: -100%;
+    margin-left: 0;
+    max-width: 350px;
+    overflow-y: auto;
+    background: $color-white-primary;
+    top: $font_medium1;
+    padding-bottom: $font_top5;
+    transition: all 0.3s ease;
+  }
+  nav #show-menu:checked ~ .content .links {
+    left: 0%;
+    background-color: gainsboro;
+  }
+  .content .links li {
+    margin: $font_button $font_large;
+  }
+
+
+
+  .content .links li a,
+  .content .links li label {
+    display: block;
+    cursor: pointer;
+    padding: $font_xxsmall $font_xlarge;
+    line-height: $font_top9;
+    font-size: $font_large;
+  }
+  .content .links li a.desktop-link {
+    @include displaynone;
+  }
+
+  /* dropdown responsive code start */
+  .content .links ul,
+  .content .links ul ul {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    background: none;
+    max-height: 0px;
+    overflow: hidden;
+  }
+  .content .links #show-features:checked ~ ul,
+  .content .links #show-services:checked ~ ul,
+  .content .links #show-items:checked ~ ul {
+    max-height: 100vh;
+  }
+  .content .links ul li {
+    margin: $font_xxsmall $font_verysmall;
+  }
+  .content .links ul li a {
+    font-size: $font_xlarge;
+    line-height: $font_xxlarge;
+    border-radius: $font_xverysmall !important;
+  }
+}
+
+.social-links {
+  @include flexrow;
+}
