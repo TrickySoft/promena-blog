@@ -6,6 +6,9 @@ import Banner from './staticpages/banner';
 import AllPosts from '../home/components/allpost';
 import Tabs from './staticpages/tabs';
 import Latest from './staticpages/latest post';
+import Slides from './Slides';
+import Category from './category';
+
 const Home = () => {
 
     const [switchPost, setSwitchPost] = useState(false);
@@ -38,6 +41,17 @@ const Home = () => {
                 </div>
 
             </div>
+<div className='slider'>
+<Slides/>
+</div>
+           
+              <div className='all-post'>
+              <AllPosts />
+              </div>     
+{/* <div>
+    <Banner/>
+</div> */}
+{/* <Category/> */}
         </div>
     )
 }

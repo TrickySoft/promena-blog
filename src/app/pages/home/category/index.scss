@@ -1,17 +1,14 @@
-@import "../../../../../styles/mixins.scss";
-@import "../../../../../styles//variables.scss";
+@import "../../../../styles/mixins.scss";
+@import "../../../../styles//variables.scss";
 
 // .featured-container{
 //   margin: 2rem;
 // }
-.category-component{
-  width: 100%;
-}
+
 .allpost{
   display: flex;
   flex-direction: row;
-  width: 100%;
-  // justify-content: space-evenly;
+  justify-content: space-evenly;
   align-items: center;
   margin: 0rem;
   &__left-slider{
@@ -22,7 +19,7 @@ display: flex;
 margin: 2rem;
 // justify-content: space-between;
 box-shadow: 0 0  5px 3px rgba(0, 0, 0, 0.5);
-flex-direction: row;
+flex-direction: column;
 border-radius: 5%;
 justify-content: center;
 transition:.3s;
@@ -47,7 +44,28 @@ padding: 10px 20px;
           font-size:1.4rem;
           @include listnone;
   }
-  
+  &__right-category{
+display: flex;
+margin: 2rem;
+// justify-content: space-between;
+box-shadow: 0 0  5px 3px rgba(0, 0, 0, 0.5);
+flex-direction: row;
+border-radius: 1%;
+justify-content: center;
+transition:.3s;
+align-items: center;
+&__img{
+width: 100%;
+}
+&__content{
+padding: 10px 20px;
+// height: 210px;
+}
+  }
+  &__right-category:hover{
+    box-shadow: 2px 2px 20px  8px rgba(0, 0, 0, 0.2);
+        transform:scale(1.04);
+}
   &__card-ul{
           font-family: $monstserrat_regular;
           padding-top: $font_large;
@@ -66,6 +84,13 @@ border-radius: 2%;
   height: 200px;
   max-height: 250px;
 }
+.category-image{
+border-radius: 2%;
+  width: 100%;
+  padding-right:1.5rem;
+  height: 100px;
+  max-height: 250px;
+}
 .title {
   text-decoration: none;
   color: black;
@@ -76,6 +101,18 @@ border-radius: 2%;
   color: royalblue;
   text-decoration: none;
   font-size: 25px;
+  cursor: pointer;
+    }
+.category-title {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+}
+.category-title:hover{
+  color: royalblue;
+  text-decoration: none;
+  font-size: 20px;
   cursor: pointer;
     }
     .card-title{
