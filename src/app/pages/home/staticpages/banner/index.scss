@@ -1,29 +1,37 @@
 @import "../../../../../styles/mixins.scss";
 @import "../../../../../styles/variables.scss";
-.carousel {
-  width: 100%;
-}
 
-.carousel-fade {
-  .carousel-inner {
-    .item {
-      transition-property: opacity;
+.banner {
+  position: relative;
+  &__image {
+    position: relative;
+    display: block;
+    width: 100%;
+    
+  }
+  &__content {
+    position: relative;
+    display: block;
+    h1{
+    // transform: translate(55% , -500%);
+    font-size: 4rem;
+    font-weight: 700;
+    }
+    p {
+      // transform: translate(60% , -700%);
+      font-size: 2rem;
+      font-weight: 500;
+    }
+    input {
+      // transform: translate(500% , -500%);
+      font-size: 1.2rem;
+      padding: 0.8rem 0.5rem;
+    }
+    button {
+      // transform: translate(1040% , -465%);
+      font-size: 1.4rem;
+      padding: 1rem 0.5rem;
     }
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1020px) {
-  .carousel-inner {
-    @include displaynone;
-  }
-  .wrap__banner {
-    position: absolute;
-  }
-}
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
-  .d-block {
-    @include relativeblock;
-    width: 100%;
-    height: 70vh;
-  }
-}
