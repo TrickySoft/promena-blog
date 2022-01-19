@@ -14,16 +14,17 @@
   padding: $font_xverysmall;
   &__image {
     height: 60%;
-    width: 40%;
+    width: 25%;
   }
   &__maincontent{
     display: block;
     position: relative;
-    margin-left: 1rem;
+    margin-left: 3rem;
     text-align: left;
   } 
   span {
     margin-left: 0;
+    font-size: 2rem;
   }
   h1 {
     font-size: $font_xlarge;

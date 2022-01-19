@@ -1,11 +1,16 @@
 import React from 'react';
-import banner1 from '../../../../../assets/images/Artboard1.png'
-import banner2 from '../../../../../assets/images/Artboard2.png'
-import banner3 from '../../../../../assets/images/Artboard4.png'
+// import banner1 from '../../../../../assets/images/Artboard1.png'
+// import banner2 from '../../../../../assets/images/Artboard2.png'
+// import banner3 from '../../../../../assets/images/Artboard4.png'
+import banner from '../../../../../assets/images/banner.png';
 import './index.scss'
 
 const Banner = () => {
-    return (
+
+
+  {/*
+
+      }
 <div id='demo' className='carousel slide carousel-fade' data-bs-ride='carousel'>
 
 <div className='carousel-indicators'>
@@ -33,7 +38,20 @@ const Banner = () => {
   <span className='carousel-control-next-icon'></span>
 </button>
 </div>
-    )
+    */}
+  return (
+    <div className='banner'>
+      <div className='banner__image'>
+        <img src={banner} alt='Los Angeles' className='d-block' style={{ width: '100%' }} />
+      </div>
+      <div className='banner__content'>
+        <h1>HELLO, Welcome to blog site</h1>
+        <p>Dont miss out latest news about everything...</p>
+        <input required type='text' placeholder='Enter Email'></input>
+        <button>Subscribe</button>
+      </div>
+    </div>
+  )
 }
 
 export default Banner;
