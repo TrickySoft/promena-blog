@@ -4,62 +4,53 @@
 // .featured-container{
 //   margin: 2rem;
 // }
-.category-component{
-  width: 100%;
-}
 .allpost{
   display: flex;
   flex-direction: row;
   width: 100%;
-  // justify-content: space-evenly;
   align-items: center;
-  margin: 0rem;
-  &__left-slider{
+  justify-content: space-between;
+  &__card-list{
+    margin: 2rem;
+    &__right-card{
+      box-shadow: 0 0  5px 3px rgba(0, 0, 0, 0.5);
+      border-radius: 5%;
+      transition:.3s;
+      &__img{
+      width: 100%;
+      }
+      &__content{
+      padding: 10px 20px;
+      // height: 210px;
+      }
+        }
+        &__right-card:hover{
+          box-shadow: 2px 2px 20px  8px rgba(0, 0, 0, 0.2);
+              transform:scale(1.04);
+      }
+        &__card-ul{
+                font-family: $monstserrat_regular;
+                padding-top: $font_large;
+                padding-left: 0;
+                @include flexbetween;
+                font-size:1.4rem;
+                @include listnone;
+        }
+        
+        &__card-ul{
+                font-family: $monstserrat_regular;
+                padding-top: $font_large;
+                padding-left: 0;
+                @include flexbetween;
+                font-size:1.4rem;
+                @include listnone;
+        }
+  }
+  &__category-component{
   }
 
-  &__right-card{
-display: flex;
-margin: 2rem;
-// justify-content: space-between;
-box-shadow: 0 0  5px 3px rgba(0, 0, 0, 0.5);
-flex-direction: row;
-border-radius: 5%;
-justify-content: center;
-transition:.3s;
-align-items: center;
-&__img{
-width: 100%;
 }
-&__content{
-padding: 10px 20px;
-// height: 210px;
-}
-  }
-  &__right-card:hover{
-    box-shadow: 2px 2px 20px  8px rgba(0, 0, 0, 0.2);
-        transform:scale(1.04);
-}
-  &__card-ul{
-          font-family: $monstserrat_regular;
-          padding-top: $font_large;
-          padding-left: 0;
-          @include flexbetween;
-          font-size:1.4rem;
-          @include listnone;
-  }
-  
-  &__card-ul{
-          font-family: $monstserrat_regular;
-          padding-top: $font_large;
-          padding-left: 0;
-          @include flexbetween;
-          font-size:1.4rem;
-          @include listnone;
-  }
-}
-.allpost-container{
-  width: 70%;
-}
+
 .card-image{
 border-radius: 2%;
   width: 100%;
@@ -86,3 +77,5 @@ border-radius: 2%;
       color:royalblue;
       cursor: pointer;
     }
+
+    
