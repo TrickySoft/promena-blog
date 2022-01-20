@@ -4,7 +4,7 @@
 .footer {
   @include relativeflex;
   @include rowevenly;
-  background-color: $grey10;
+  background-color: #f1f2f3;
   padding: $font_verysmall;
   ul {
    @include listnone;
@@ -21,6 +21,24 @@
     @include columncenter;
     font-size: $font_text;
     font-family: $monstserrat_regular;
+    &__head{
+      padding-bottom: 1rem;
+      &__quick-link{
+        width: 20%;
+        padding-top: 0.5rem;
+        border-bottom: 4px solid black;
+      }
+      &__tag{
+        font-size: 15px;
+        font-weight: 600;
+      }
+    }
+
+    // &__thick-line-below{
+    //   padding: 0 2px;
+    //   width: 70px;
+    //   background-color: black !important;
+    // }
     ul li a {
       color: $dark2;
       letter-spacing: 1.5px;
@@ -47,6 +65,19 @@
       margin-top: $font_xverysmall;
     }
     transition: transform 3s ease;
+    &__head{
+      padding-bottom: 1rem;
+      &__quick-link{
+        width: 20%;
+        padding-top: 0.5rem;
+        border-bottom: 4px solid black;
+      }
+      &__tag{
+        font-size: 15px;
+        font-weight: 600;
+        text-align: center;
+      }
+    }
   }
   &__center2 li a:hover:nth-child(2n + 1) {
     transform: scale(0.98);
@@ -58,6 +89,20 @@
     &__content {
       text-align: center;
       margin: $font_verysmall;
+    }
+    &__head{
+      padding-bottom: 3rem;
+      &__quick-link{
+        width: 10%;
+        position: absolute;
+        left: 21.8rem;
+        padding-top: 0.5rem;
+        border-bottom: 4px solid black;
+      }
+      &__tag{
+        font-size: 15px;
+        font-weight: 600;
+      }
     }
     &__input {
       justify-content: center;

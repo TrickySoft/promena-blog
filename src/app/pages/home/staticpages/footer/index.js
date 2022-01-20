@@ -124,6 +124,11 @@ setTimeout(() => {
             </div>
           </div>
           <div className='footer__center1'>
+          <div className='footer__center1__head'>
+          <span className='footer__center1__head__tag'>QUICK LINK</span>
+          <div className='footer__center1__head__quick-link'>
+          </div>
+          </div>
             <ul>
               <li>
                 <a onClick={handleClick} className='desktop-link'>
@@ -179,6 +184,11 @@ setTimeout(() => {
             </ul>
           </div>
           <div className='footer__center2'>
+          <div className='footer__center2__head'>
+          <span className='footer__center2__head__tag'>TAG CLOUD</span>
+          <div className='footer__center2__head__quick-link'>
+          </div>
+          </div>
             <ul>
               <li>
                 <a onClick={handleClick} className='desktop-link'>
@@ -235,6 +245,11 @@ setTimeout(() => {
             </ul>
           </div>
           <div className='footer__right'>
+          <div className='footer__right__head'>
+          <span className='footer__right__head__tag'>NEWS LETTER</span>
+          <div className='footer__right__head__quick-link'>
+          </div>
+          </div>
             <h2 className='footer__right__content'>
               Subscribe to
               <span className='footer__right__subscribe'>PROMENA</span>
