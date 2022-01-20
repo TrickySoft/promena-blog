@@ -1,59 +1,42 @@
-import React from 'react'
-import cardImg from '../../../../assets/images/card-1.jpg'
+import React, {useEffect, useState} from 'react'
+// import cardImg from '../../../../assets/images/card-1.jpg'
 import './index.scss';
+import { getPostList } from '../../../utils/apiCalls';
+import moment from 'moment';
+import { NavLink } from 'react-router-dom';
 
 const Category = () => {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+  getPostList((res)=>{
+  setPosts(res);
+  });
+      }, []);
+
     return (
-        <div>
             <div>
-<h1 className='heading'>Most Popular</h1>
+<h3 className='headings'>Most Popular</h3>
 <hr />
-<div className='category__right-category'>
+{posts.map((post, index)=>{
+  return(
+    <div key={index} className='category__right-category'>
 
 <div className='category__right-category__content'>
-  <a href='' className='category-title'>
+  <NavLink to={`/post/${post.Blog_id}`} className='category-title'>
     Want fluffy Japanese pancakes ?
-  </a>
+  </NavLink>
     <ul className='category__card-ul'>
-                <li><i className='fa fa-clock-o' aria-hidden='true'> Today</i></li>
+                <li><i className='fa fa-clock-o' aria-hidden='true'> { moment(post.datetime).format(' D MMM')}</i></li>
                 <li><i className='fa fa-eye' aria-hidden='true'></i> 150k views</li>
               </ul>
 </div>
 <div className='category__right-category__img'>
-<img src={cardImg} className='category-image' alt='' />
+<img src={post.thumbnail} className='category-image' alt='' />
 </div>
 </div>
-<div className='category__right-category'>
-
-<div className='category__right-category__content'>
-  <a href='' className='category-title'>
-    Want fluffy Japanese pancakes ?
-  </a>
-    <ul className='category__card-ul'>
-                <li><i className='fa fa-clock-o' aria-hidden='true'> Today</i></li>
-                <li><i className='fa fa-eye' aria-hidden='true'></i> 150k views</li>
-              </ul>
-</div>
-<div className='category__right-category__img'>
-<img src={cardImg} className='category-image' alt='' />
-</div>
-</div>
-<div className='category__right-category'>
-
-<div className='category__right-category__content'>
-  <a href='' className='category-title'>
-    Want fluffy Japanese pancakes ?
-  </a>
-    <ul className='category__card-ul'>
-                <li><i className='fa fa-clock-o' aria-hidden='true'> Today</i></li>
-                <li><i className='fa fa-eye' aria-hidden='true'></i> 150k views</li>
-              </ul>
-</div>
-<div className='category__right-category__img'>
-<img src={cardImg} className='category-image' alt='' />
-</div>
-</div>
-</div>
+  )
+})}
 </div>
     )
 }

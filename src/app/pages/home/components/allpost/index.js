@@ -8,6 +8,9 @@ import './index.scss';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import ReadMore from '../readmore';
 import cardImg from '../../../../../assets/images/card-1.jpg';
+import Img from '../../../../../assets/images/heroslider-image-1.jpg'
+import Img2 from '../../../../../assets/images/heroslider-image-2.jpg'
+import Img3 from '../../../../../assets/images/heroslider-image-3.jpg'
 import Category from '../../category';
 
 const AllPosts = () => {
@@ -32,7 +35,7 @@ const AllPosts = () => {
             </HelmetProvider>
               <div className='allpost__card-list__right-card'>
                 <div className='allpost__card-list__right-card__img'>
-                  <img src={cardImg} className='card-image' alt='' />
+                  <img src={Img3} className='card-image' alt='' />
                 </div>
                 <div className='allpost__card-list__right-card__content'>
                   <h5 className='card-title'>
@@ -45,7 +48,7 @@ const AllPosts = () => {
                   <ul className='allpost__card-list__card-ul'>
                     <li>
                       <i className='fa fa-clock-o' aria-hidden='true'>
-                        Today
+                         Today
                       </i>
                     </li>
                     <li>

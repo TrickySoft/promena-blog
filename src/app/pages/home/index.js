@@ -52,11 +52,6 @@ const Home = () => {
     <AllPosts/>
 </div> */}
             </div>
-              
-{/* <div>
-    <Banner/>
-</div> */}
-{/* <Category/> */}
         </div>
     )
 }

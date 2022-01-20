@@ -10,7 +10,6 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  margin: 0rem;
   &__card-ul{
           font-family: $monstserrat_regular;
           padding-top: $font_large;
@@ -21,7 +20,7 @@
   }
   &__right-category{
 display: flex;
-margin: 2rem;
+margin: 1rem;
 width: 100%;
 box-shadow: 0 0  5px 3px rgba(0, 0, 0, 0.5);
 flex-direction: row;
@@ -31,10 +30,10 @@ transition:.3s;
 align-items: center;
 &__img{
 width: 100%;
+padding-left: 5px;
 }
 &__content{
-padding: 10px 20px;
-// height: 210px;
+padding-left: 0.5rem;
 }
   }
   &__right-category:hover{
@@ -50,12 +49,7 @@ padding: 10px 20px;
           @include listnone;
   }
 }
-.heading{
-  // padding-right: 1rem;
-}
-.allpost-container{
-  width: 70%;
-}
+
 .card-image{
 border-radius: 2%;
   width: 100%;
