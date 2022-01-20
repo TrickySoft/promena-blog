@@ -6,7 +6,7 @@ const Category = () => {
     return (
         <div>
             <div>
-<h1 className='heading'>Most Popular</h1>
+<h3 className='headings'>Most Popular</h3>
 <hr />
 <div className='category__right-category'>
 

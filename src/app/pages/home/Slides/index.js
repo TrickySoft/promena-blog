@@ -2,34 +2,63 @@ import React from 'react';
 import './index.scss';
 import Img from '../../../../assets/images/heroslider-image-1.jpg'
 import cardImg from '../../../../assets/images/card-1.jpg'
-// import Banner from '../staticpages/banner';
-// import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const Slides = () => {
-    // let settings = {
-    //     dots: true,
-    //     infinite: true,
-    //     speed: 500,
-    //     slidesToShow: 4,
-    //     slidesToScroll: 1
-    //   };
-
+  
     return (
-        <div className='featured-container'>
+     <div className='featured-container'>
 <h1 className='featured-container__featured-title'>Featured</h1>
-
 <div className='featured'>
 <div className='featured__left-slider'>
-{/* <Slider {...settings}>
-{[1,2,3,4].map((val, index)=>{
-    <div key={index}>{val} <img src={Img} alt='' className='slider-img' />
-    </div>
-})}
+ <div className='contain'>
+  <div id='myCarousel' className='carousel slide' data-ride='carousel' data-interval='false'>
+    {/* <ol className='carousel-indicators'>
+      <li data-target='#myCarousel'  className='active'></li>
+      <li data-target='#myCarousel' ></li>
+      <li data-target='#myCarousel' ></li>
+    </ol> */}
 
-</Slider> */}
- <img src={Img} alt='' className='slider-img' />
+    <div className='carousel-inner'>
+
+      <div className='item active'>
+        <img src={Img} alt='Los Angeles' className='slider-img' />
+        <div className='carousel-caption featured__caption'>
+          <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h3>
+          <p> Want fluffy Japanese pancakes but can’t fly to Tokyo?</p>
+        </div>
+      </div>
+
+      <div className='item'>
+        <img src={Img} alt='Chicago' className='slider-img' />
+        <div className='carousel-caption featured__caption'>
+          <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
+          <p> Want fluffy Japanese pancakes but can’t fly to Tokyo?</p>
+        </div>
+      </div>
+    
+      <div className='item'>
+        <img src={Img} alt='New York' className='slider-img' />
+        <div className='carousel-caption featured__caption'>
+          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+          <p> Want fluffy Japanese pancakes but can’t fly to Tokyo?</p>
+        </div>
+      </div>
+  
+    </div>
+
+    <a className='left carousel-control' href='#myCarousel' data-slide='prev'>
+      <span className='glyphicon glyphicon-chevron-left'></span>
+      <span className='sr-only'></span>
+    </a>
+    <a className='right carousel-control' href='#myCarousel' data-slide='next'>
+      <span className='glyphicon glyphicon-chevron-right'></span>
+      <span className='sr-only'></span>
+    </a>
+  </div>
+</div>
+
 </div>
 <div className='featured__right-card'>
 <div className='featured__right-card__img'>

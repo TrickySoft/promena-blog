@@ -45,7 +45,7 @@ const AllPosts = () => {
                   <ul className='allpost__card-list__card-ul'>
                     <li>
                       <i className='fa fa-clock-o' aria-hidden='true'>
-                        Today
+                         Today
                       </i>
                     </li>
                     <li>
