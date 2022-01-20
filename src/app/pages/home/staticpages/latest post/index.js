@@ -24,14 +24,16 @@ const Latest = () => {
                 </div>
                 <div className='trending'>
                 <button>Categories</button>
-                <div className='trending__posts'>
+                <div className='trending__content'>
                        {
                         postList.map(post => {
                             var url = post.thumbnail;
                             return (
-                              <div className='posts' key={post.Blog_id}>
+                              <div className='trending__posts' key={post.Blog_id}>
+                              <div className='trending__posts__image'>
                                 <img src={url} key={post.thumbnail} className='posts__image' />
-                                <div className='posts__maincontent'>
+                                </div>
+                                <div className='trending__posts__maincontent'>
                                   <NavLink className='posts__link' to={`/post/${post.Blog_id}`}>
                                     {post.category}
                                   </NavLink>

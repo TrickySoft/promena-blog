@@ -2,8 +2,8 @@ import React from 'react';
 // import banner1 from '../../../../../assets/images/Artboard1.png'
 // import banner2 from '../../../../../assets/images/Artboard2.png'
 // import banner3 from '../../../../../assets/images/Artboard4.png'
-import banner from '../../../../../assets/images/banner.png';
-import './index.scss'
+import banner from '../../../../../assets/images/banner1.png';
+import './index.scss';
 
 const Banner = () => {
 
@@ -41,14 +41,13 @@ const Banner = () => {
     */}
   return (
     <div className='banner'>
+      <div className='banner__content'>
+        <h1>HELLO, Everyone</h1>
+        <h1><span>Welcome</span> to blog site</h1>
+        <p>Dont miss out latest news about everything...</p>
+      </div>
       <div className='banner__image'>
         <img src={banner} alt='Los Angeles' className='d-block' style={{ width: '100%' }} />
-      </div>
-      <div className='banner__content'>
-        <h1>HELLO, Welcome to blog site</h1>
-        <p>Dont miss out latest news about everything...</p>
-        <input required type='text' placeholder='Enter Email'></input>
-        <button>Subscribe</button>
       </div>
     </div>
   )

@@ -1,36 +1,41 @@
 @import "../../../../../styles/mixins.scss";
 @import "../../../../../styles/variables.scss";
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand+SC|Roboto&display=swap');
 
 .banner {
   position: relative;
+  display: flex;
+  padding: 3rem 0;
+  background-color: #f1f2f3;
+  justify-content: space-evenly;
+  align-items: center;
   &__image {
     position: relative;
     display: block;
-    width: 100%;
+    width: 40%;
     
   }
   &__content {
     position: relative;
     display: block;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
     h1{
     // transform: translate(55% , -500%);
-    font-size: 4rem;
-    font-weight: 700;
+    font-size: 5rem;
+    font-weight: 800;
+    font-family: "Lucida Bright", sans-serif;
+
+    span {
+      color: blue;
+    }
     }
     p {
       // transform: translate(60% , -700%);
       font-size: 2rem;
       font-weight: 500;
-    }
-    input {
-      // transform: translate(500% , -500%);
-      font-size: 1.2rem;
-      padding: 0.8rem 0.5rem;
-    }
-    button {
-      // transform: translate(1040% , -465%);
-      font-size: 1.4rem;
-      padding: 1rem 0.5rem;
+      font-family: "Goudy Bookletter 1911", sans-serif;
     }
   }
 }
