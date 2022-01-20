@@ -6,7 +6,8 @@ const Category = () => {
     return (
         <div>
             <div>
-{/* <h1 className=''>Featured</h1> */}
+<h1 className='heading'>Most Popular</h1>
+<hr />
 <div className='category__right-category'>
 
 <div className='category__right-category__content'>
