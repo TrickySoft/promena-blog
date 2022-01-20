@@ -29,25 +29,30 @@ const Home = () => {
                     <Postlist />
     </div> */}
             </div>
+            <div className='slider'>
+              <Slides/>
+              </div>
+            <div className='features'>
+                   <div className='features__alPost'>
+                   <AllPosts />
+                   </div>
+                    <div className='features__category'>
+                 <Category/>
+                </div>
+                </div>
+
             <div className='Latest__posts'>
                 <Latest />
             </div>
             <div className='post-tab'>
-                <div className='all-posts items'>
-                    <AllPosts />
-                </div>
                 <div className='all-tabs items'>
                     <Tabs />
                 </div>
-
+{/* <div>
+    <AllPosts/>
+</div> */}
             </div>
-<div className='slider'>
-<Slides/>
-</div>
-           
-              <div className='all-post'>
-              <AllPosts />
-              </div>     
+              
 {/* <div>
     <Banner/>
 </div> */}

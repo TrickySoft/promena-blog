@@ -18,7 +18,20 @@
     max-height: 100%;
   }
 }
-
+.features{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  &__alPost{
+width: 75%;
+margin: 1rem;
+  }
+  &__category{
+width: 25%;
+margin: 1rem;
+  }
+}
 .post-tab {
   @include flexrow;
   width: 100%;
