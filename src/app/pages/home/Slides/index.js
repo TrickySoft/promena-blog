@@ -1,7 +1,9 @@
 import React from 'react';
 import './index.scss';
 import Img from '../../../../assets/images/heroslider-image-1.jpg'
-import cardImg from '../../../../assets/images/card-1.jpg'
+import Img2 from '../../../../assets/images/heroslider-image-2.jpg'
+import Img3 from '../../../../assets/images/heroslider-image-3.jpg'
+// import cardImg from '../../../../assets/images/card-1.jpg'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -31,7 +33,7 @@ const Slides = () => {
       </div>
 
       <div className='item'>
-        <img src={Img} alt='Chicago' className='slider-img' />
+        <img src={Img2} alt='Chicago' className='slider-img' />
         <div className='carousel-caption featured__caption'>
           <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
           <p> Want fluffy Japanese pancakes but can’t fly to Tokyo?</p>
@@ -39,7 +41,7 @@ const Slides = () => {
       </div>
     
       <div className='item'>
-        <img src={Img} alt='New York' className='slider-img' />
+        <img src={Img3} alt='New York' className='slider-img' />
         <div className='carousel-caption featured__caption'>
           <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
           <p> Want fluffy Japanese pancakes but can’t fly to Tokyo?</p>
@@ -62,7 +64,7 @@ const Slides = () => {
 </div>
 <div className='featured__right-card'>
 <div className='featured__right-card__img'>
-<img src={cardImg} className='card-image' alt='' />
+<img src={Img} className='card-image' alt='' />
 </div>
 <div className='featured__right-card__content'>
 <h5 className='card-title'><strong className='strong-text'>World ◦</strong> &nbsp;Travel ◦</h5>
