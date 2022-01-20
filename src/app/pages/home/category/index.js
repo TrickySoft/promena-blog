@@ -11,11 +11,12 @@ const Category = () => {
   useEffect(() => {
   getPostList((res)=>{
   setPosts(res);
+  console.log(res)
   });
       }, []);
 
     return (
-            <div>
+            <div className='category-container'>
 <h3 className='headings'>Most Popular</h3>
 <hr />
 {posts.map((post, index)=>{
@@ -24,11 +25,11 @@ const Category = () => {
 
 <div className='category__right-category__content'>
   <NavLink to={`/post/${post.Blog_id}`} className='category-title'>
-    Want fluffy Japanese pancakes ?
+  {post.title.substring(0, 20) + '...'}
   </NavLink>
     <ul className='category__card-ul'>
                 <li><i className='fa fa-clock-o' aria-hidden='true'> { moment(post.datetime).format(' D MMM')}</i></li>
-                <li><i className='fa fa-eye' aria-hidden='true'></i> 150k views</li>
+                <li><i className='fa fa-eye' aria-hidden='true'></i> 15k views</li>
               </ul>
 </div>
 <div className='category__right-category__img'>
