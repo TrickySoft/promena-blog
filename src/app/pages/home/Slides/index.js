@@ -1,14 +1,23 @@
-import React from 'react';
+/* eslint-disable no-unused-vars */
+import React, {useEffect, useState} from 'react'
+import Img from '../../../../assets/images/Artboard1.png'
+import Img2 from '../../../../assets/images/Artboard2.png'
+import Img3 from '../../../../assets/images/Artboard3.png'
 import './index.scss';
-import Img from '../../../../assets/images/heroslider-image-1.jpg'
-import Img2 from '../../../../assets/images/heroslider-image-2.jpg'
-import Img3 from '../../../../assets/images/heroslider-image-3.jpg'
-// import cardImg from '../../../../assets/images/card-1.jpg'
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import { getPostList } from '../../../utils/apiCalls';
+import moment from 'moment';
+import { NavLink } from 'react-router-dom';
 
 const Slides = () => {
-  
+    const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+  getPostList((res)=>{
+  setPosts(res);
+  console.log(res)
+  });
+      }, []);
+
     return (
      <div className='featured-container'>
 <h1 className='featured-container__featured-title'>Featured</h1>

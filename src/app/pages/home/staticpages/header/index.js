@@ -4,6 +4,7 @@ import logo from '../../../../../assets/images/promena.png'
 import { NavLink , useLocation } from 'react-router-dom';
 import { useHistory } from 'react-router';
 import { getCategoryDetails, getMenuDetails } from '../../../../utils/apiCalls';
+import PopUp from 'app/components/popup';
 
 const Header = () => {
   const location = useLocation();
@@ -11,6 +12,7 @@ const Header = () => {
   let pathName = location.pathname;
   const [menu, setMenu] = useState('');
   const [category, setcategory] = useState('');
+  const [showConfirm, setShowConfirm] = useState(false);
 
   useEffect(() => {
     getMenuDetails((response) => {
@@ -22,6 +24,9 @@ const Header = () => {
     });
   }, []);
 
+const handleClick = ()=>{
+  setShowConfirm(true);
+}
 
   return (
     <div>
@@ -33,6 +38,8 @@ const Header = () => {
             <div className='content'>
               <a onClick={() => history.push('/')}><img src={logo} className='logo' alt='logo' /></a>
               <ul className='links'>
+              <li><a onClick={() => history.push('/')}><i className='fas fa-home'></i> &nbsp;
+              Home</a></li>
                 {menu.length && menu.map((val, index) => {
                   return (
                     <li key={index}>
@@ -81,6 +88,7 @@ const Header = () => {
                     </li>
                   </ul>
                 </li>
+                <li>{showConfirm && <PopUp onCancel={()=>{setShowConfirm(false)}}/>}<i onClick={handleClick} className='fas fa-hamburger'></i></li>
               </ul>
             </div>
           </nav>

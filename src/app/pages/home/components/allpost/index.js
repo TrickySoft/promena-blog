@@ -39,18 +39,16 @@ const AllPosts = () => {
                 </div>
                 <div className='allpost__card-list__right-card__content'>
                   <h5 className='card-title'>
-                    <strong className='strong-text'>World ◦</strong>{' '}
-                    &nbsp;Travel ◦
+                    <strong className='strong-text'>{post.category} ◦</strong>
+                   
                   </h5>
-                  <a href='' className='title'>
-                    Want fluffy Japanese pancakes but can’t fly to Tokyo?
-                  </a>
+                  <NavLink to={`/post/${post.Blog_id}`} className='title'>
+    <div>
+    <ReadMore Blog_id={post.Blog_id} post = {post.content}/>
+    </div>
+                </NavLink>
                   <ul className='allpost__card-list__card-ul'>
-                    <li>
-                      <i className='fa fa-clock-o' aria-hidden='true'>
-                         Today
-                      </i>
-                    </li>
+                  <li><i className='fa fa-clock-o' aria-hidden='true'> { moment(post.datetime).format(' D MMM')}</i></li>
                     <li>
                       <i className='fa fa-eye' aria-hidden='true'></i> 75 reads
                     </li>

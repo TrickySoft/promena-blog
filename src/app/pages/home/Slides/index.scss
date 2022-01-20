@@ -11,8 +11,8 @@
 }
 
 .carousel-control{
-    border-top-left-radius: 5% !important;
-    border-top-right-radius: 5% !important;
+    // border-top-left-radius: 5% !important;
+    // border-top-right-radius: 5% !important;
 }
 .featured{
     display: flex;
@@ -33,13 +33,13 @@
     }
     &__left-slider:hover{
         box-shadow: 0 0  15px rgba(0, 0, 0, 0.5);
-        border-top-left-radius: 5%;
-        border-top-right-radius: 5%;
+        // border-top-left-radius: 5%;
+        // border-top-right-radius: 5%;
     }
     &__right-card{
 width: calc(25%);
 display: flex;
-box-shadow: 0 0  5px 3px rgba(0, 0, 0, 0.5);
+box-shadow: 0   3px 5px rgba(0, 0, 0, 0.5);
 flex-direction: column;
 border-radius: 5%;
 justify-content: center;
