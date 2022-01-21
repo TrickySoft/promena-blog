@@ -40,3 +40,16 @@
   }
 }
 
+
+@media screen and (min-width: 320px) and (max-width: 760px) {
+  .banner {
+    &__content {
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

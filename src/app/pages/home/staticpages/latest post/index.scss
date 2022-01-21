@@ -3,7 +3,7 @@
 
 .allposts {
     position: relative;
-   padding: 0 5rem;
+   padding: 1rem 5rem;
    display: flex;
    width: 100%;
    justify-content: space-between;
@@ -11,6 +11,27 @@
 .latest {
    position: relative;
    width: 60%;
+//    &__posts {
+//        width: 60%;
+//    }
+   &__post {
+       display: flex;
+       margin-top: 2rem;
+       &__image {
+        width: 40%;
+        img {
+            width: 80%;
+            height: 20vh;
+        }
+    }
+    ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__maincontent {
+        width: 60%;
+    }
+   }
    button {
        font-size: 3rem;
        letter-spacing: 5px;
@@ -62,6 +83,18 @@
       padding: 0 2rem;
       .latest {
         width: 100%;
+    }
+    .trending {
+        width: 100%;
+        &__posts {
+            &__image {
+                width: 40%;
+                img {
+                    width: 80%;
+                    height: 15vh;
+                }
+            }
+        }
     }
     }
    
