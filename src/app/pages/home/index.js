@@ -8,6 +8,7 @@ import Tabs from './staticpages/tabs';
 import Latest from './staticpages/latest post';
 import Slides from './Slides';
 import Category from './category';
+import Postlist from './postlist';
 
 const Home = () => {
 
@@ -45,12 +46,13 @@ const Home = () => {
                 <Latest />
             </div>
             <div className='post-tab'>
-                <div className='all-tabs items'>
+                {/* <div className='all-tabs items'>
                     <Tabs />
-                </div>
+                </div> */}
 {/* <div>
     <AllPosts/>
 </div> */}
+<Postlist/>
             </div>
         </div>
     )

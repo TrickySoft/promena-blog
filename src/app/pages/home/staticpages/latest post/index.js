@@ -37,7 +37,7 @@ const Latest = () => {
                                   <NavLink className='posts__link' to={`/post/${post.Blog_id}`}>
                                     {post.category}
                                   </NavLink>
-                                  <h1>{post.title}</h1>
+                                  <h3>{post.title}</h3>
                                   
                                 </div>
                               </div>
