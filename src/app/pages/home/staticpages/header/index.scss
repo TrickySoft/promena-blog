@@ -11,8 +11,7 @@
   background: $color-white-primary;
   width: 100%;
 }
-.fa-hamburger{
-  font-size: 20px;
+.hamburger{
   cursor: pointer;
 }
 .header-wrapper nav {
@@ -35,9 +34,8 @@ nav .content .links {
 }
 .content a .logo {
   color: $dark_shadow;
-  font-size: 50px;
-  font-weight: 500;
   cursor: pointer;
+  height: 45px;
 }
 .content .links li {
   @include listnone;
