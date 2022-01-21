@@ -2,23 +2,18 @@
 @import "../../../../styles/mixins.scss";
 
 .post-container {
-  width: 100% !important;
-  padding: $font_xxlarge $font_top8 !important;
+  // width: 100% !important;
+  padding: 2rem 10rem  !important;
+  margin: 2rem;
 }
 .post-wrapper {
   @include flexrow;
-  justify-content: space-between;
-  width: 100%;
-}
-.blogpost {
-  width: 60%;
-}
-.post-sidebar {
-  width: 40%;
+  justify-content: center;
+  align-items: center;
 }
 .post-read-button {
   text-align: center;
-  width: 100%;
+  width: 90%;
   padding: $font_xxlarge;
   position: relative;
 }

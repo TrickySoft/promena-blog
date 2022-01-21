@@ -31,7 +31,7 @@ const BlogPost = (props) => {
     <div className='blog__container'>
       <div className='post-thumb'>
 
-        <span className='blog__post__tag'>{post.category}</span>
+        <span className='blog__post__tag'>{post.title}</span>
         <img className='blog__img' src={post.thumbnail} />
       </div>
       <div className='blog__text'>
@@ -55,7 +55,7 @@ const BlogPost = (props) => {
       <div className='chart-wrap'>
         <Chart />
       </div>
-      <p className='mt-5 text-muted'>Posted on: {moment(post.date_created).format('MMM Do YY')} by Ashwin</p>
+      {/* <p className='mt-5 text-muted'>Posted on: {moment(post.date_created).format('MMM Do YY')} by Ashwin</p> */}
     </div>
   );
 }

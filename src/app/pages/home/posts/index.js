@@ -1,5 +1,6 @@
 import React, {useLayoutEffect} from 'react'
 import BlogPost from '../components/blogpost';
+import Postlist from '../postlist';
 import Tab from '../staticpages/tab';
 import './index.scss'
 
@@ -22,10 +23,11 @@ const Post = (props) => {
 
 <div className='common post-sidebar'><Tab /></div>
 </div>
-<div className='post-read-button '>
+{/* <div className='post-read-button '>
 
   <span onClick={handleClick} className='read-next' role='button' >Read Next <i className='fas fa-angle-down'></i></span>
-</div>
+</div> */}
+<Postlist/>
 </div>
 
    )

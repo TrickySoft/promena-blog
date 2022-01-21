@@ -136,7 +136,7 @@
 
 @mixin flexrow {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 @mixin flexcolumn {
