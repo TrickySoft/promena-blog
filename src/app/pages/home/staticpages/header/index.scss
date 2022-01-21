@@ -167,6 +167,9 @@ nav .content .links {
   nav .content .links {
     margin-left: 0;
   }
+  .content a .logo {
+    margin-left: -2rem;
+  }
   .content .links li a {
     padding: $font_xxsmall $font_text;
   }

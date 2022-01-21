@@ -112,3 +112,14 @@
   top: 1rem;
   font-size: 17px;
 }
+
+@media screen and (min-width: 320px) and (max-width:760px) {
+  .postlist-container {
+    display: block;
+    &__postlist {
+      &__right-postlist {
+        margin : 0;
+      }
+    }
+  }
+}

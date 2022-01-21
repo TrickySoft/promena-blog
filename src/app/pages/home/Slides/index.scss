@@ -115,10 +115,23 @@ height: 210px;
         width: 75%;
         margin: auto;
         margin-top: 2rem;
+        &__content {
+            height: 15rem;
+        }
+    }
+    &__caption {
+        top: 8rem;
+        color: #e9ecef;
     }
 }
 .slider-img {
     width: 100%;
+}
+.title {
+    font-size: 1.5rem;
+}
+.title:hover {
+    font-size: 1.5rem;
 }
 }
 
