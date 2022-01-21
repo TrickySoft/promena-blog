@@ -131,116 +131,132 @@ setTimeout(() => {
           </div>
             <ul>
               <li>
-                <a onClick={handleClick} className='desktop-link'>
+                <a onClick={handleClick} className='footer__center1__desktop-link'>
 
                   <i className='fas fa-arrow-alt-circle-right'></i> Advertize
                 </a>
+                <div className='footer__center1__desktop-link__dotted-line'>______________</div>
+     
               </li>
-              <li>
-                <a onClick={handleClick} className='desktop-link'>
+              {/* <li>
+                <a onClick={handleClick} className='footer__center1__desktop-link'>
 
                   <i className='fas fa-arrow-alt-circle-right'></i> Shop SEJ
+                  <div className='footer__center1__desktop-link__dotted-line'>__________</div>
                 </a>
-              </li>
+             
+              </li> */}
               <li>
-                <a onClick={handleClick} className='desktop-link'>
+                <a onClick={handleClick} className='footer__center1__desktop-link'>
 
                   <i className='fas fa-arrow-alt-circle-right'></i> Privacy
                   Policy
                 </a>
+                <div className='footer__center1__desktop-link__dotted-line'>______________</div>
+             
               </li>
               <li>
-                <a onClick={handleClick} className='desktop-link'>
+                <a onClick={handleClick} className='footer__center1__desktop-link'>
 
                   <i className='fas fa-arrow-alt-circle-right'></i> Contact
                 </a>
+                <div className='footer__center1__desktop-link__dotted-line'>______________</div>
+             
               </li>
               <li>
-                <a onClick={handleClick} className='desktop-link'>
+                <a onClick={handleClick} className='footer__center1__desktop-link'>
 
                   <i className='fas fa-arrow-alt-circle-right'></i> About
                 </a>
+                <div className='footer__center1__desktop-link__dotted-line'>______________</div>
+             
               </li>
-              <li>
-                <a onClick={handleClick} className='desktop-link'>
+              {/* <li>
+                <a onClick={handleClick} className='footer__center1__desktop-link'>
 
                   <i className='fas fa-arrow-alt-circle-right'></i> Toolbox
+                  <div className='footer__center1__desktop-link__dotted-line'>__________</div>
                 </a>
-              </li>
-              <li>
-                <a onClick={handleClick} className='desktop-link'>
+             
+              </li> */}
+              {/* <li>
+                <a onClick={handleClick} className='footer__center1__desktop-link'>
 
                   <i className='fas fa-arrow-alt-circle-right'></i> Press
                   Materials
+                  <div className='footer__center1__desktop-link__dotted-line'>__________</div>
                 </a>
+             
               </li>
               <li>
-                <a onClick={handleClick} className='desktop-link'>
+                <a onClick={handleClick} className='footer__center1__desktop-link'>
 
                   <i className='fas fa-arrow-alt-circle-right'></i> Do Not Sell
                   My Personal Info
+                  <div className='footer__center1__desktop-link__dotted-line'>__________</div>
                 </a>
-              </li>
+             
+              </li> */}
             </ul>
           </div>
           <div className='footer__center2'>
           <div className='footer__center2__head'>
-          <span className='footer__center2__head__tag'>TAG CLOUD</span>
+          <span className='footer__center2__head__tag'>TAGCLOUD</span>
           <div className='footer__center2__head__quick-link'>
           </div>
           </div>
             <ul>
               <li>
-                <a onClick={handleClick} className='desktop-link'>
-                  <i className='fas fa-arrow-alt-circle-right'></i> SEO Guide
-                </a>
+                <button onClick={handleClick} className='footer__center2__desktop-link'>
+                   SEO Guide
+                </button>
               </li>
-              <li>
-                <a onClick={handleClick} className='desktop-link'>
+              {/* <li>
+                <button onClick={handleClick} className='footer__center2__desktop-link'>
 
-                  <i className='fas fa-arrow-alt-circle-right'></i> How Search
+                   Search
                   Engines Work
-                </a>
-              </li>
+                </button>
+              </li> */}
               <li>
-                <a onClick={handleClick} className='desktop-link'>
+                <button onClick={handleClick} className='footer__center2__desktop-link'>
 
-                  <i className='fas fa-arrow-alt-circle-right'></i> Local SEO
-                </a>
+                   Local SEO
+                </button>
               </li>
-              <li>
-                <a onClick={handleClick} className='desktop-link'>
+              {/* <li>
+                <button onClick={handleClick} className='footer__center2__desktop-link'>
 
-                  <i className='fas fa-arrow-alt-circle-right'></i> Link
+                   Link
                   Building Guide
-                </a>
+                </button>
               </li>
               <li>
-                <a onClick={handleClick} className='desktop-link'>
+                <button onClick={handleClick} className='footer__center2__desktop-link'>
 
-                  <i className='fas fa-arrow-alt-circle-right'></i> On-Page SEO
+                   On-Page SEO
                   Guide
-                </a>
-              </li>
-              <li>
-                <a onClick={handleClick} className='desktop-link'>
+                </button>
+              </li> */}
+              {/* <li>
+                <button onClick={handleClick} className='footer__center2__desktop-link'>
 
-                  <i className='fas fa-arrow-alt-circle-right'></i> Technical
+                   Technical
                   SEO Guide
-                </a>
-              </li>
+                </button>
+              </li> */}
               <li>
-                <a onClick={handleClick} className='desktop-link'>
+                <button onClick={handleClick} className='footer__center2__desktop-link'>
 
-                  <i className='fas fa-arrow-alt-circle-right'></i> How to Do an
+                   
                   SEO Audit
-                </a>
+                </button>
               </li>
               <li>
-                <a onClick={handleClick} className='desktop-link'>
+                <button onClick={handleClick} className='footer__center2__desktop-link'>
 
-                  <i className='fas fa-arrow-alt-circle-right'></i> SEO Tools
-                </a>
+                   SEO Tools
+                </button>
               </li>
             </ul>
           </div>
@@ -251,7 +267,7 @@ setTimeout(() => {
           </div>
           </div>
             <h2 className='footer__right__content'>
-              Subscribe to
+              Subscribe to &nbsp;
               <span className='footer__right__subscribe'>PROMENA</span>
             </h2>
             <p className='footer__right__content'>

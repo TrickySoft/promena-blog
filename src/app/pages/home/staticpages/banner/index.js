@@ -6,7 +6,7 @@ const Banner = () => {
   return (
     <div className='banner'>
       <div className='banner__content'>
-        <h1>HELLO, Everyone</h1>
+        <h1>Hello, Everyone</h1>
         <h1><span>Welcome</span> to blog site</h1>
         <p>Dont miss out latest news about everything...</p>
       </div>

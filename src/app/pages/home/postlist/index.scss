@@ -34,12 +34,15 @@
   transition:.3s;
   align-items: center;
   &__img{
-  width: 100%;
+  // width: 100%;
   
   }
   &__content{
   width: 100%;
   padding-left: 1rem;
+  &__title{
+    font-size: 12px;
+  }
   }
     }
     &__right-postlist:hover{
@@ -49,7 +52,7 @@
     &__card-ul{
             font-family: $monstserrat_regular;
             padding-top: $font_large;
-            padding-left: 0;
+            padding-right: 1rem;
             @include flexbetween;
             font-size:1.4rem;
             @include listnone;
@@ -59,11 +62,11 @@
   .card-image{
   border-radius: 2%;
     width: 100%;
-    height: 200px;
-    max-height: 250px;
+    // height: 200px;
+    // max-height: 250px;
   }
   .postlist-image{
-  border-radius: 2%;
+  border-radius: 50%;
     width: 100%;
     padding:0 1rem;
     height: 100px;
