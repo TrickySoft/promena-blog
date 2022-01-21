@@ -5,7 +5,7 @@ import { NavLink , useLocation } from 'react-router-dom';
 import { useHistory } from 'react-router';
 import { getCategoryDetails, getMenuDetails } from '../../../../utils/apiCalls';
 import PopUp from 'app/components/popup';
-
+import hembuger from '../../../../../assets/images/hemburger.jpg'
 const Header = () => {
   const location = useLocation();
   const history = useHistory();
@@ -88,7 +88,7 @@ const handleClick = ()=>{
                     </li>
                   </ul>
                 </li>
-                <li>{showConfirm && <PopUp onCancel={()=>{setShowConfirm(false)}}/>}<i onClick={handleClick} className='fas fa-hamburger'></i></li>
+                <li>{showConfirm && <PopUp onCancel={()=>{setShowConfirm(false)}}/>}<img src={hembuger} alt='' onClick={handleClick} className='hamburger'/></li>
               </ul>
             </div>
           </nav>

@@ -128,6 +128,7 @@ setTimeout(() => {
           <span className='footer__center1__head__tag'>QUICK LINK</span>
           <div className='footer__center1__head__quick-link'>
           </div>
+          <hr  className='footer__center1__link-line'/>
           </div>
             <ul>
               <li>
@@ -204,6 +205,7 @@ setTimeout(() => {
           <span className='footer__center2__head__tag'>TAGCLOUD</span>
           <div className='footer__center2__head__quick-link'>
           </div>
+          <hr  className='footer__center2__link-line'/>
           </div>
             <ul>
               <li>
@@ -265,6 +267,7 @@ setTimeout(() => {
           <span className='footer__right__head__tag'>NEWS LETTER</span>
           <div className='footer__right__head__quick-link'>
           </div>
+          <hr  className='footer__right__link-line'/>
           </div>
             <h2 className='footer__right__content'>
               Subscribe to &nbsp;
@@ -283,11 +286,11 @@ setTimeout(() => {
                 handleOnChange(e, 2);
               }}
             >
-              <option value='--Select--'>--Select--</option>
+              <option  style={{fontSize:'17px'}} value='--Select--'>--Select--</option>
               {category.length &&
                 category.map((val, index) => {
                   return (
-                    <option key={index} value={val.category_id}>
+                    <option className='select-options' key={index} value={val.category_id}>
                       {val.category_name}
                     </option>
                   );
