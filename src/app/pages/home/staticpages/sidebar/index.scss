@@ -24,10 +24,11 @@
   } 
   span {
     margin-left: 0;
-    font-size: 2rem;
+    font-size: $font_large;
+    background-color: #f1f2f3 !important;
   }
   h1 {
-    font-size: $font_xlarge;
+    font-size: $font_large;
     font-weight: 600;
   }
   &__link {
@@ -97,11 +98,11 @@
 
 @media screen and (min-width: 320px) and (max-width: 760px) {
   .posts {
-    padding: $font_verysmall 0;
+    padding: 0;
     &__image {
-      height: 25vh;
       padding: 0;
-      padding-top: $font_large;
+      width: 40%;
+      height: 30vh;
     }
     &__ul {
       padding: 0;
