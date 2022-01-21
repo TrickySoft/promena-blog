@@ -123,7 +123,6 @@ setTimeout(() => {
               </ul>
             </div>
           </div>
-          <div className='footer__center'>
           <div className='footer__center1'>
           <div className='footer__center1__head'>
           <span className='footer__center1__head__tag'>QUICK LINK</span>
@@ -263,7 +262,7 @@ setTimeout(() => {
               </li>
             </ul>
           </div>
-          </div>
+         
           <div className='footer__right'>
           <div className='footer__right__head'>
           <span className='footer__right__head__tag'>NEWS LETTER</span>

@@ -16,6 +16,9 @@
   &__logo{
     cursor: pointer;
   }
+  &__center {
+    display: flex;
+  }
   &__center1 {
     @include relativeblock;
     @include columncenter;
