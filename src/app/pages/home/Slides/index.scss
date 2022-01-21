@@ -105,6 +105,21 @@ height: 210px;
         font-size: 15px;
       }
 
-
+@media screen and (min-width : 320px) and (max-width: 760px) {
+.featured-container{
+    display: block;
+}
+.featured {
+    display: block;
+    &__right-card {
+        width: 75%;
+        margin: auto;
+        margin-top: 2rem;
+    }
+}
+.slider-img {
+    width: 100%;
+}
+}
 
       
