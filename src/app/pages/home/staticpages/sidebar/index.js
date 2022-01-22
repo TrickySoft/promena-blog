@@ -29,7 +29,7 @@ const Sidebar = (props) => {
                   {post.category}
                 </NavLink>
                 <h1>{post.title}</h1>
-                <ReadMore Blog_id={post.Blog_id} post={post.content} />
+                {/* <ReadMore Blog_id={post.Blog_id} post={post.content} /> */}
               
               <ul className='posts__ul'>
                 <li><i className='fa fa-clock-o' aria-hidden='true'> {moment(post.date_created).format('MMM-Do-YY, hh:mm A')}</i></li>
