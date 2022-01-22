@@ -287,7 +287,7 @@ setTimeout(() => {
                 handleOnChange(e, 2);
               }}
             >
-              <option  style={{fontSize:'17px'}} value='--Select--'>--Select--</option>
+              <option  value='--Select--'>--Select--</option>
               {category.length &&
                 category.map((val, index) => {
                   return (

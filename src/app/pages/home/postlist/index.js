@@ -16,7 +16,7 @@ const Postlist = () => {
       }, []);
 
     return (
-        <div>
+        <div className='list-container'>
         <span className='headings'>Most Visited</span>
 <hr style={{width:'10%'}}/>
             <div className='postlist-container'>
