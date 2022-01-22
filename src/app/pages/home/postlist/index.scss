@@ -43,6 +43,12 @@
   &__title{
     font-size: 12px;
   }
+  &__postlist-title {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+  }
   }
     }
     &__right-postlist:hover{
@@ -82,18 +88,6 @@
     color: royalblue;
     text-decoration: none;
     font-size: 25px;
-    cursor: pointer;
-      }
-  .postlist-title {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    cursor: pointer;
-  }
-  .postlist-title:hover{
-    color: royalblue;
-    text-decoration: none;
-    font-size: 20px;
     cursor: pointer;
       }
       .card-title{

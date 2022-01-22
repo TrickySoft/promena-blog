@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
@@ -7,11 +6,6 @@ import moment from 'moment';
 import './index.scss';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import ReadMore from '../readmore';
-import cardImg from '../../../../../assets/images/card-1.jpg';
-import Img from '../../../../../assets/images/heroslider-image-1.jpg'
-import Img2 from '../../../../../assets/images/heroslider-image-2.jpg'
-import Img3 from '../../../../../assets/images/heroslider-image-3.jpg'
-import Category from '../../category';
 
 const AllPosts = () => {
   const [postList, setPostList] = useState([]);
@@ -24,7 +18,6 @@ const AllPosts = () => {
   return (
     <div className='allpost'>
       {postList.map((post, index) => {
-        var url = post.thumbnail;
         return(
           <div className='allpost__card-list' key={index}>
             <HelmetProvider>
@@ -35,7 +28,7 @@ const AllPosts = () => {
             </HelmetProvider>
               <div className='allpost__card-list__right-card'>
                 <div className='allpost__card-list__right-card__img'>
-                  <img src={Img3} className='card-image' alt='' />
+                  <img src={post.thumbnail} className='card-image' alt='' />
                 </div>
                 <div className='allpost__card-list__right-card__content'>
                   <h5 className='card-title'>

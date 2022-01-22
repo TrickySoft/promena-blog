@@ -7,9 +7,24 @@ import './index.scss';
 import { getPostList } from '../../../utils/apiCalls';
 import moment from 'moment';
 import { NavLink } from 'react-router-dom';
+// import $ from 'jquery'
 
 const Slides = () => {
     const [posts, setPosts] = useState([]);
+
+    // $('.carousel').carousel({
+    //   interval: 2000
+    // })
+  
+    // $('.carousel').carousel('pause') ;
+  
+    // $('.carousel').hover(function(){
+    //   $('.carousel').carousel('cycle') ;
+    // }) ;
+  
+    // $('.carousel').mouseleave(function(){
+    //   $('.carousel').carousel('pause') ;
+    // }); 
 
   useEffect(() => {
   getPostList((res)=>{
@@ -24,7 +39,7 @@ const Slides = () => {
 <div className='featured'>
 <div className='featured__left-slider'>
  <div className='contain'>
-  <div id='myCarousel' className='carousel slide' data-ride='carousel' data-interval='false'>
+  <div id='myCarousel' className='carousel slide' data-ride='carousel' data-pause =  'false' data-interval='false'>
     {/* <ol className='carousel-indicators'>
       <li data-target='#myCarousel'  className='active'></li>
       <li data-target='#myCarousel' ></li>
