@@ -144,3 +144,19 @@ border-top-left-radius: 5%;
 }
 
       
+@media screen and (min-width : 768px) and (max-width: 1020px) {
+    .featured {
+        display: block;
+        &__caption {
+            color: #e9ecef;
+        }
+        &__right-card {
+            width: 80%;
+            margin: auto;
+            margin-top: 2rem;
+        }
+    }
+    .slider-img {
+        width: 100%;
+    }
+}
