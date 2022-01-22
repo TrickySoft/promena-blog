@@ -18,8 +18,8 @@ const Postlist = () => {
     return (
         <div className='list-container'>
 <div className='list-container__headings'>
-<span>Most Visited</span>
-<hr style={{width:'10%'}}/>
+<h3>Most Visited</h3>
+<hr style={{width:'20%'}}/>
 </div>
             <div className='postlist-container'>
 

@@ -5,12 +5,13 @@
   margin: 2rem;
   &__headings{
     padding-left: 2rem;
-    font-size: 17px;
+    padding-top: 2rem;
+    font-size: 30px;
   }
 }
 .postlist-container{
   width: 100%;
-  margin: 1rem 1rem 1rem 0;
+  margin: 0rem 1rem 1rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,8 +25,8 @@
             font-family: $monstserrat_regular;
             padding-top: $font_large;
             padding-left: 0;
-            @include flexbetween;
             font-size:1.4rem;
+            margin: 1rem;
             @include listnone;
     }
     &__right-postlist{

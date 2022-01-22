@@ -1,8 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, {useEffect, useState} from 'react'
-import Img from '../../../../assets/images/Artboard1.png'
-import Img2 from '../../../../assets/images/Artboard2.png'
-import Img3 from '../../../../assets/images/Artboard3.png'
+import Img4 from '../../../../assets/images/news-4.jpg'
+import Img8 from '../../../../assets/images/news-8.jpg'
+import Img3 from '../../../../assets/images/news-3.jpg'
+import Img2 from '../../../../assets/images/news-2.jpg'
 import './index.scss';
 import { getPostList } from '../../../utils/apiCalls';
 import moment from 'moment';
@@ -49,26 +50,35 @@ const Slides = () => {
     <div className='carousel-inner'>
 
       <div className='item active'>
-        <img src={Img} alt='Los Angeles' className='slider-img' />
+        <img src={Img4} alt='Los Angeles' className='slider-img' />
         <div className='carousel-caption featured__caption'>
-          <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h3>
-          <p> Want fluffy Japanese pancakes but can’t fly to Tokyo?</p>
+          <h3>Want fluffy Japanese pancakes but can’t fly to Tokyo?</h3>
+          <ul className='featured__card-ul'>
+                <li><i className='fa fa-clock-o' aria-hidden='true'> 3 min read</i></li>
+                <li><i className='fa fa-eye' aria-hidden='true'></i> 15k views</li>
+              </ul>
         </div>
       </div>
 
       <div className='item'>
-        <img src={Img2} alt='Chicago' className='slider-img' />
+        <img src={Img3} alt='Chicago' className='slider-img' />
         <div className='carousel-caption featured__caption'>
-          <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
-          <p> Want fluffy Japanese pancakes but can’t fly to Tokyo?</p>
+          <h3>Want fluffy Japanese pancakes but can’t fly to Tokyo?</h3>
+          <ul className='featured__card-ul'>
+                <li><i className='fa fa-clock-o' aria-hidden='true'> 3 min read</i></li>
+                <li><i className='fa fa-eye' aria-hidden='true'></i> 15k views</li>
+              </ul>
         </div>
       </div>
     
       <div className='item'>
-        <img src={Img3} alt='New York' className='slider-img' />
+        <img src={Img8} alt='New York' className='slider-img' />
         <div className='carousel-caption featured__caption'>
-          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-          <p> Want fluffy Japanese pancakes but can’t fly to Tokyo?</p>
+          <h3>Want fluffy Japanese pancakes but can’t fly to Tokyo?</h3>
+          <ul className='featured__card-ul'>
+                <li><i className='fa fa-clock-o' aria-hidden='true'> 3 min read</i></li>
+                <li><i className='fa fa-eye' aria-hidden='true'></i> 15k views</li>
+              </ul>
         </div>
       </div>
   
@@ -88,7 +98,7 @@ const Slides = () => {
 </div>
 <div className='featured__right-card'>
 <div className='featured__right-card__img'>
-<img src={Img} className='card-image' alt='' />
+<img src={Img2} className='card-image' alt='' />
 </div>
 <div className='featured__right-card__content'>
 <h5 className='card-title'><strong className='strong-text'>World ◦</strong> &nbsp;Travel ◦</h5>

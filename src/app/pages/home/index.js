@@ -25,10 +25,6 @@ const Home = () => {
                 <div className='wrap__banner'>
                     <Banner />
                 </div>
-                {/* 
-                <div className='wrap__postlist'>
-                    <Postlist />
-    </div> */}
             </div>
             <div className='slider'>
               <Slides/>
@@ -46,13 +42,7 @@ const Home = () => {
                 <Latest />
             </div>
             <div className='post-tab'>
-                {/* <div className='all-tabs items'>
-                    <Tabs />
-                </div> */}
-{/* <div>
-    <AllPosts/>
-</div> */}
-<Postlist/>
+                <Postlist/>
             </div>
         </div>
     )

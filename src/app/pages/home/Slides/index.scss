@@ -9,7 +9,6 @@
     margin: 2rem;
     }
 }
-
 .carousel-control{
     // border-top-left-radius: 5% !important;
     // border-top-right-radius: 5% !important;
@@ -23,20 +22,25 @@
     &__left-slider{
         transition:.3s;
     }
+    &__card-ul{
+        font-family: $monstserrat_regular;
+        padding-top: $font_large;
+        padding-left: 0;
+        font-size:1.4rem;
+        @include listnone;
+}
     &__caption{
-        color: $dark2;
+        font-family: $monstserrat_regular;
+        color: $color-white-primary;
         transition:.3s;
     }
     &__caption:hover{
         color: $dark2;
         transform:scale(1.04);
+        font-family: $monstserrat_regular;
+        color: $color-white-primary;
     }
-    // &__left-slider:hover{
-    //     box-shadow: 0 0  15px rgba(0, 0, 0, 0.5);
-    //     // border-top-left-radius: 5%;
-    //     overflow: hidden;
-    //     // border-top-right-radius: 5%;
-    // }
+    
     &__right-card{
 width: calc(25%);
 display: flex;
@@ -64,9 +68,9 @@ height: 210px;
             font-family: $monstserrat_regular;
             padding-top: $font_large;
             padding-left: 0;
-            @include flexbetween;
+            display: flex;
+            justify-content: space-around;
             font-size:1.4rem;
-            @include listnone;
     }
 }
 
