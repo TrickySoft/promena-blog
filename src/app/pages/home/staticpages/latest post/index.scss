@@ -100,3 +100,43 @@
     }
    
   }
+
+  @media screen and (min-width: 768px) and (max-width:1020px) {
+      .allposts {
+          display: block;
+          padding: 0 2rem;
+          .latest {
+              display: block;
+              width: 100%;
+              &__post {
+                  &__image {
+                      width: 35%;
+                  }
+              }
+          }
+          .trending {
+              width: 100%;
+              display: block;
+              margin-top: 2rem;
+              button {
+                  margin-bottom: 1rem;
+              }
+              &__content {
+                  display: flex;
+              }
+              &__posts {
+                  margin: 1rem 0;
+                  padding: 0;
+                  &__image {
+                      width: 70%;
+                      margin-left: 1rem;
+                      height: auto;
+                  }
+                  h3 {
+                      font-size: 1.4rem;
+                      margin: 1rem 0 2rem 0;
+                  }
+              }
+          }
+      }
+  }
