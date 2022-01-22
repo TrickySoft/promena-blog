@@ -222,7 +222,6 @@ setTimeout(() => {
               </li> */}
               <li>
                 <button onClick={handleClick} className='footer__center2__desktop-link'>
-
                    Local SEO
                 </button>
               </li>
