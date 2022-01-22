@@ -17,8 +17,10 @@ const Postlist = () => {
 
     return (
         <div className='list-container'>
-        <span className='headings'>Most Visited</span>
+<div className='list-container__headings'>
+<span>Most Visited</span>
 <hr style={{width:'10%'}}/>
+</div>
             <div className='postlist-container'>
 
 {posts.map((post, index)=>{

@@ -3,6 +3,10 @@
 
 .list-container{
   margin: 2rem;
+  &__headings{
+    padding-left: 2rem;
+    font-size: 17px;
+  }
 }
 .postlist-container{
   width: 100%;
