@@ -49,12 +49,6 @@ padding-left: 1rem;
   }
 }
 
-.card-image{
-border-radius: 2%;
-  width: 100%;
-  height: 200px;
-  max-height: 250px;
-}
 .category-image{
 border-radius: 2%;
   width: 100%;
@@ -62,35 +56,9 @@ border-radius: 2%;
   height: 100px;
   max-height: 250px;
 }
-.title {
-  text-decoration: none;
-  color: black;
-  font-size: 25px;
-  cursor: pointer;
-}
-.title:hover{
-  color: royalblue;
-  text-decoration: none;
-  font-size: 25px;
-  cursor: pointer;
-    }
 .category-title {
   text-decoration: none;
   color: black;
   font-size: 18px;
   cursor: pointer;
 }
-.category-title:hover{
-  color: royalblue;
-  text-decoration: none;
-  font-size: 20px;
-  cursor: pointer;
-    }
-    .card-title{
-      color: #42ba96;
-      cursor: pointer;
-    }
-    .strong-text{
-      color:royalblue;
-      cursor: pointer;
-    }

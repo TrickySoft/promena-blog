@@ -3,8 +3,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import PropTypes from 'prop-types';
 import './index.scss';
-import Button from '../../components/button/index';
-import Confirm from '../../components/confirmModal/confirm';
 import Category from 'app/pages/home/category';
 import Loader from '../loader';
 
@@ -13,7 +11,7 @@ const PopUp = ({ id, onCancel, onConfirm, commonTitle }) => {
 
 
   useEffect(() => {
-    setTimeout(() => setSpinner(false), 1000)
+    setTimeout(() => setSpinner(false), 500)
   }, []);
 
   const handleClick = (e) => {

@@ -31,11 +31,12 @@
         color: $dark2;
         transform:scale(1.04);
     }
-    &__left-slider:hover{
-        box-shadow: 0 0  15px rgba(0, 0, 0, 0.5);
-        // border-top-left-radius: 5%;
-        // border-top-right-radius: 5%;
-    }
+    // &__left-slider:hover{
+    //     box-shadow: 0 0  15px rgba(0, 0, 0, 0.5);
+    //     // border-top-left-radius: 5%;
+    //     overflow: hidden;
+    //     // border-top-right-radius: 5%;
+    // }
     &__right-card{
 width: calc(25%);
 display: flex;
@@ -78,10 +79,17 @@ height: 210px;
 .slider-img{
     width: 700px;
     height: 425px;
-// border-top-right-radius: 5%;
-// border-top-left-radius: 5%;
+border-top-right-radius: 5%;
+border-top-left-radius: 5%;
 }
-
+.carousel{
+    overflow: hidden;
+    border-top-right-radius: 5%;
+border-top-left-radius: 5%; 
+}
+.carousel:hover{
+    overflow: hidden;
+}
 .title {
     text-decoration: none;
     color: black;

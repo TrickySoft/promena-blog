@@ -27,10 +27,12 @@ const Category = () => {
   <NavLink to={`/post/${post.Blog_id}`} className='category-title'>
   {post.title.substring(0, 20) + '...'}
   </NavLink>
-    <ul className='category__card-ul'>
-                <li><i className='fa fa-clock-o' aria-hidden='true'> { moment(post.datetime).format(' D MMM')}</i></li>
+<div>
+<ul className='category__card-ul'>
+                <li><i className='fa fa-clock-o' aria-hidden='true'> { moment(post.datetime).format('D MMM')}</i></li>
                 <li><i className='fa fa-eye' aria-hidden='true'></i> 15k views</li>
               </ul>
+</div>
 </div>
 <div className='category__right-category__img'>
 <img src={post.thumbnail} className='category-image' alt='' />
