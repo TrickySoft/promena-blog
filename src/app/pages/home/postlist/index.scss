@@ -63,12 +63,13 @@
           transform:scale(1.04);
   }
     &__card-ul{
-            font-family: $monstserrat_regular;
-            padding-top: $font_large;
-            padding-right: 1rem;
-            @include flexbetween;
-            font-size:1.4rem;
-            @include listnone;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-family: $monstserrat_regular;
+      padding-top: $font_large;
+      padding-right: 1rem;
+      font-size:1.4rem;
     }
   }
   
