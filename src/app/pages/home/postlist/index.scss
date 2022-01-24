@@ -117,3 +117,24 @@
     }
   }
 }
+
+@media screen and (min-width: 768px) and (max-width:1020px) {
+  .postlist-main {
+    padding: 0 1rem ;
+  .postlist-container {
+    margin: 0;
+    &__postlist{
+      &__right-postlist{
+        margin: 1rem;
+        &__content {
+          padding-left: 0;
+        }
+      }
+      &__card-ul {
+        padding: 0;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+}
