@@ -2,8 +2,8 @@
 @import "../../../../styles/mixins.scss";
 
 .post-container {
-  // width: 100% !important;
-  padding: 2rem 10rem  !important;
+  // width: 100%;
+  // padding: 2rem 10rem  !important;
   margin: 2rem;
 }
 .post-wrapper {
@@ -43,6 +43,7 @@
   .post-wrapper {
     display: block;
     width: 100%;
+    max-width: 380px;
   }
   .blogpost {
     width: 100%;

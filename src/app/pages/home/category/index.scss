@@ -54,3 +54,10 @@ border-radius: 2%;
   font-size: 18px;
   cursor: pointer;
 }
+
+@media screen and (min-width : 320px) and (max-width : 760px) {
+  .category-title {
+    font-size: 2rem;
+  }
+  
+}

@@ -84,9 +84,21 @@
       padding: 0 2rem;
       .latest {
         width: 100%;
+        &__post {
+            ul {
+                padding-left: 0;
+            }
+            &__maincontent {
+                h3 {
+                    font-size: 2rem;
+                    margin: 1rem 0 1rem 0;
+                }
+            }
+        }
     }
     .trending {
         width: 100%;
+        padding-bottom: 1rem;
         &__posts {
             &__image {
                 width: 40%;

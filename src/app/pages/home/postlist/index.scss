@@ -2,7 +2,6 @@
 @import "../../../../styles//variables.scss";
 
 .list-container{
-  margin: 2rem;
   &__headings{
     padding-left: 2rem;
     padding-top: 2rem;
@@ -129,11 +128,13 @@
 @media screen and (min-width: 768px) and (max-width:1020px) {
   .postlist-main {
     padding: 0 1rem ;
+  }
   .postlist-container {
     margin: 0;
     &__postlist{
       &__right-postlist{
         margin: 1rem;
+        padding: 1rem 0;
         &__content {
           padding-left: 0;
         }
@@ -141,8 +142,38 @@
       &__card-ul {
         padding: 0;
         font-size: 1.2rem;
+        margin: 0;
       }
+    }
+    .postlist-image {
+      width: 90%;
+      height: 80px;
+
+    }
+  }
+  .list-container {
+    &__headings {
+      padding: 0;
     }
   }
 }
+
+
+@media screen and (min-width: 1024px) and (max-width:1420px) {
+
+  .postlist-container {
+    &__postlist {
+    &__right-postlist {
+      img {
+        width: 75%;
+      }
+      &__content {
+        padding-left: 0;
+      }
+    }
+  }
+    .postlist-image {
+      width: 90%;
+    }
+  }
 }

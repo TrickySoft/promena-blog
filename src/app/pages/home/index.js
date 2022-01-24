@@ -2,9 +2,8 @@
 import React, { useState } from 'react'
 import './index.scss';
 import Banner from './staticpages/banner';
-// import Postlist from './postlist';
 import AllPosts from '../home/components/allpost';
-import Tabs from './staticpages/tabs';
+// import Tabs from './staticpages/tabs';
 import Latest from './staticpages/latest post';
 import Slides from './Slides';
 import Category from './category';
@@ -27,22 +26,22 @@ const Home = () => {
                 </div>
             </div>
             <div className='slider'>
-              <Slides/>
-              </div>
+                <Slides />
+            </div>
             <div className='features'>
-                   <div className='features__alPost'>
-                   <AllPosts />
-                   </div>
-                    <div className='features__category'>
-                 <Category/>
+                <div className='features__alPost'>
+                    <AllPosts />
                 </div>
+                <div className='features__category'>
+                    <Category />
                 </div>
+            </div>
 
             <div className='Latest__posts'>
                 <Latest />
             </div>
             <div className='post-tab'>
-                <Postlist/>
+                <Postlist />
             </div>
         </div>
     )
