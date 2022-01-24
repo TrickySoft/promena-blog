@@ -207,7 +207,7 @@ setTimeout(() => {
           </div>
           <hr  className='footer__center2__link-line'/>
           </div>
-            <ul>
+            <ul className='footer__center2_ul'>
               <li>
                 <button onClick={handleClick} className='footer__center2__desktop-link'>
                    SEO Guide

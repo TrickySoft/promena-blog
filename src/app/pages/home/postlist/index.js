@@ -9,18 +9,18 @@ const Postlist = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    getPostList((res) => {
-      setPosts(res);
-    });
-  }, []);
+  getPostList((res)=>{
+  setPosts(res);
+  });
+      }, []);
 
-  return (
-    <div className='list-container'>
-      <div className='list-container__headings'>
-        <h3>Most Visited</h3>
-        <hr style={{ width: '20%' }} />
-      </div>
-      <div className='postlist-container'>
+    return (
+        <div className='list-container'>
+<div className='list-container__headings'>
+<h3>Most Visited</h3>
+<hr style={{width:'20%'}}/>
+</div>
+<div className='postlist-container'>
 
         {posts.map((post, index) => {
           return (

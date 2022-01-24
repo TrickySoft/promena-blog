@@ -70,8 +70,11 @@ height: 280px;
             padding-top: $font_large;
             padding-left: 0;
             display: flex;
-            justify-content: space-around;
+            justify-content:space-evenly;
             font-size:1.4rem;
+    }
+    &__card-ul li{
+
     }
 }
 
