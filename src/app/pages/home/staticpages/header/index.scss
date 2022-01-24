@@ -25,7 +25,7 @@ nav .content {
   @include flexbetween;
   background-color: $color-white-primary;
 }
-nav .content .links {
+nav .content .link {
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
@@ -37,11 +37,11 @@ nav .content .links {
   cursor: pointer;
   height: 45px;
 }
-.content .links li {
+.content .link li {
   @include listnone;
 }
-.content .links li a,
-.content .links li label {
+.content .link li a,
+.content .link li label {
   color: $dark_shadow;
   font-size: $font_xlarge;
   font-weight: 500;
@@ -49,15 +49,15 @@ nav .content .links {
   border-radius: $font_xverysmall;
   transition: all 0.3s ease;
 }
-.content .links li a {
+.content .link li a {
   @include textnone;
   font-size: $font_large;
 }
-.content .links li label {
+.content .link li label {
   @include displaynone;
 }
-.content .links li a:hover,
-.content .links li label:hover {
+.content .link li a:hover,
+.content .link li label:hover {
   background: $color_white6;
 }
 .header-wrapper .search-icon,
@@ -81,7 +81,7 @@ nav .content .links {
 }
 
 /* Dropdown Menu code start */
-.content .links ul {
+.content .link ul {
   position: absolute;
   background: $color_white6;
   top: $font_top6;
@@ -90,7 +90,7 @@ nav .content .links {
   opacity: 0;
   visibility: hidden;
 }
-.content .links li:hover > ul {
+.content .link li:hover > ul {
   top: 6.9rem;
   opacity: 1;
   visibility: visible;
@@ -102,7 +102,7 @@ nav .content .links {
 .fa-3x{
   font-size: $font_xlarge !important; 
 }
-.content .links ul li a {
+.content .link ul li a {
   display: block;
   width: 100%;
   font-size: small;
@@ -112,25 +112,25 @@ nav .content .links {
   padding-left: 1rem !important;
   padding-right: 2rem !important;
 }
-.content .links ul ul {
+.content .link ul ul {
   position: absolute;
   top: 0;
   right: calc(-100% + 8px);
 }
-.content .links ul li {
+.content .link ul li {
   position: relative;
 }
-.content .links ul li:hover ul {
+.content .link ul li:hover ul {
   top: 0;
 }
-.content .links li a.desktop-link {
+.content .link li a.desktop-link {
   padding: 3.1rem 0.5rem !important;
   margin:0 2rem 0 0;
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1420px) {
-  .content .links li a,
-  .content .links li label {
+  .content .link li a,
+  .content .link li label {
     color: $dark_shadow;
     font-size: $font_medium;
     font-weight: 500;
@@ -165,17 +165,17 @@ nav .content .links {
     align-items: center;
     justify-content: space-between;
   }
-  nav .content .links {
+  nav .content .link {
     margin-left: 0;
   }
   .content a .logo {
     margin-left: -2rem;
   }
-  .content .links li a {
+  .content .link li a {
     padding: $font_xxsmall $font_text;
   }
-  .content .links li a,
-  .content .links li label {
+  .content .link li a,
+  .content .link li label {
     color: $dark_shadow;
     font-size: $font_verysmall;
     font-weight: 500;
@@ -205,7 +205,7 @@ nav .content .links {
   .header-wrapper #show-menu:checked ~ .menu-icon i::before {
     content: "\f00d";
   }
-  nav .content .links {
+  nav .content .link {
     display: block;
     position: fixed;
     height: 100%;
@@ -219,31 +219,31 @@ nav .content .links {
     padding-bottom: $font_top5;
     transition: all 0.3s ease;
   }
-  nav #show-menu:checked ~ .content .links {
+  nav #show-menu:checked ~ .content .link {
     left: 0%;
     background-color: gainsboro;
   }
-  .content .links li {
+  .content .link li {
     margin: $font_button $font_large;
   }
 
 
 
-  .content .links li a,
-  .content .links li label {
+  .content .link li a,
+  .content .link li label {
     display: block;
     cursor: pointer;
     padding: $font_xxsmall $font_xlarge;
     line-height: $font_top9;
     font-size: $font_large;
   }
-  .content .links li a.desktop-link {
+  .content .link li a.desktop-link {
     @include displaynone;
   }
 
   /* dropdown responsive code start */
-  .content .links ul,
-  .content .links ul ul {
+  .content .link ul,
+  .content .link ul ul {
     position: static;
     opacity: 1;
     visibility: visible;
@@ -251,15 +251,15 @@ nav .content .links {
     max-height: 0px;
     overflow: hidden;
   }
-  .content .links #show-features:checked ~ ul,
-  .content .links #show-services:checked ~ ul,
-  .content .links #show-items:checked ~ ul {
+  .content .link #show-features:checked ~ ul,
+  .content .link #show-services:checked ~ ul,
+  .content .link #show-items:checked ~ ul {
     max-height: 100vh;
   }
-  .content .links ul li {
+  .content .link ul li {
     margin: $font_xxsmall $font_verysmall;
   }
-  .content .links ul li a {
+  .content .link ul li a {
     font-size: $font_xlarge;
     line-height: $font_xxlarge;
     border-radius: $font_xverysmall !important;

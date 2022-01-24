@@ -22,12 +22,12 @@ const Post = (props) => {
 </div>
 
 <div className='common post-sidebar'><Tab /></div>
+<Postlist/>
 </div>
 {/* <div className='post-read-button '>
 
   <span onClick={handleClick} className='read-next' role='button' >Read Next <i className='fas fa-angle-down'></i></span>
 </div> */}
-<Postlist/>
 </div>
 
    )

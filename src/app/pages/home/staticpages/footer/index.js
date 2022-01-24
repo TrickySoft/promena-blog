@@ -286,15 +286,17 @@ setTimeout(() => {
                 handleOnChange(e, 2);
               }}
             >
-              <option  style={{fontSize:'17px'}} value='--Select--'>--Select--</option>
+     <optgroup>
+     <option value='--Select--'>--Select--</option>
               {category.length &&
                 category.map((val, index) => {
                   return (
-                    <option className='select-options' key={index} value={val.category_id}>
+                    <option key={index} value={val.category_id}>
                       {val.category_name}
                     </option>
                   );
                 })}
+     </optgroup>
             </select>
             <input
               required

@@ -1,24 +1,22 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types';
 import './index.scss';
 import Category from 'app/pages/home/category';
 import Loader from '../loader';
 
-const PopUp = ({ id, onCancel, onConfirm, commonTitle }) => {
+const PopUp = ({ onCancel, commonTitle }) => {
   const [ spinner, setSpinner ] = useState(true);
 
 
   useEffect(() => {
-    setTimeout(() => setSpinner(false), 500)
+    setTimeout(() => setSpinner(false), 1000)
   }, []);
 
   const handleClick = (e) => {
     if (e?.target.id === 'dialog-target') {
       onCancel();
-    } else if (e?.target.id === 'dialog-target-table') {
-      handleCancelAddPopup();
     }
     return;
   }

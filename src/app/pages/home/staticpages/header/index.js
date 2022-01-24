@@ -37,7 +37,7 @@ const handleClick = ()=>{
             <label htmlFor='show-menu' className='menu-icon'><i className='fas fa-bars'></i></label>
             <div className='content'>
               <a onClick={() => history.push('/')}><img src={logo} className='logo' alt='logo' /></a>
-              <ul className='links'>
+              <ul className='link'>
               <li><a onClick={() => history.push('/')}><i className='fas fa-home'></i> &nbsp;
               Home</a></li>
                 {menu.length && menu.map((val, index) => {
@@ -88,8 +88,8 @@ const handleClick = ()=>{
                     </li>
                   </ul>
                 </li>
-                <li>{showConfirm && <PopUp onCancel={()=>{setShowConfirm(false)}}/>}<img src={hembuger} alt='' onClick={handleClick} className='hamburger'/></li>
               </ul>
+              {showConfirm && <PopUp onCancel={()=>{setShowConfirm(false)}}/>}<img src={hembuger} alt='' onClick={handleClick} className='hamburger'/>
             </div>
           </nav>
         </div> ):null}
