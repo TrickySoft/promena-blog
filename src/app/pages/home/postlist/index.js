@@ -26,7 +26,7 @@ const Postlist = () => {
           return (
             <div key={index} className='postlist-container__postlist__right-postlist'>
               <div className='postlist-container__postlist__right-postlist__img'>
-                <img src={post.thumbnail} className='postlist-image' alt='' />
+                <img src={post.thumbnail} className='postlist-img' alt='' />
               </div>
               <div className='postlist-container__postlist__right-postlist__content'>
                 <NavLink to={`/post/${post.Blog_id}`} className='postlist-container__postlist__right-postlist__content__postlist-title'>
