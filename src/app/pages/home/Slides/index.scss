@@ -164,3 +164,14 @@ border-top-left-radius: 5%;
         width: 100%;
     }
 }
+
+@media screen and (min-width : 1024px) and (max-width: 1420px) {
+    .title {
+        font-size: 1.8rem;
+    }
+    .featured {
+        &__card-ul {
+            font-size: 1.2rem;
+        }
+    }
+}
