@@ -4,8 +4,9 @@
 .footer {
   @include relativeflex;
   @include rowevenly;
-  background-color: #f1f2f3;
+  background-color: #1F3447;
   padding: $font_verysmall;
+  color: white;
   ul {
    @include listnone;
   }
@@ -33,7 +34,7 @@
       &__quick-link{
         width: 35%;
         padding-top: 0.5rem;
-       border-bottom: 3px solid $dark2;
+       border-bottom: 2px solid white;
       }
       &__tag{
         font-size: 15px;
@@ -48,7 +49,7 @@
   }
  }
     ul li a {
-      color: $dark2;
+      color: white;
       letter-spacing: 1.5px;
     }
     li {
@@ -67,6 +68,7 @@
     font-family: $monstserrat_regular;
     &__link-line{
       margin-top: -0.1rem;
+      color: white;
     }
     ul li a {
       color: $dark2;
@@ -81,7 +83,7 @@
       &__quick-link{
         width: 40%;
         padding-top: 0.5rem;
-       border-bottom: 3px solid $dark2;
+       border-bottom: 2px solid white;
       }
       &__tag{
         font-size: 15px;
@@ -100,6 +102,7 @@
       margin: 0 5px 10px 0; 
       border: 1px solid #ebebeb; 
       background: #f2f3f5;
+      color: #1f3447;
  }
  &__desktop-link:hover{
   color: #0077b5;
@@ -129,7 +132,7 @@
         position: absolute;
         left: 19.4rem;
         padding-top: 0.5rem;
-       border-bottom: 3px solid $dark2;
+       border-bottom: 2px solid white;
       }
       &__tag{
         font-size: 15px;
@@ -150,7 +153,7 @@
       border-right-style: none !important;
     }
     &__newsletter {
-      color: $color-white-primary;
+      color: black;
       width: 20%;
       background-color: $blue1;
       transition: transform 0.5s ease;
@@ -181,6 +184,7 @@
       border-radius: 30px 0 0 30px;
       max-width: 300px;
       font-size: .875rem;
+      color: #1f3447;
       margin: 0 -1rem;
       border: 1px solid #ebebeb; 
     }

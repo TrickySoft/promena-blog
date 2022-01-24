@@ -99,6 +99,9 @@
 // }
 
 @media screen and (min-width: 320px) and (max-width: 760px) {
+  .main1 {
+    display: block;
+  }
   .posts {
     padding: 0;
     &__image {
