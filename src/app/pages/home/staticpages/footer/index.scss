@@ -157,16 +157,17 @@
       border-right-style: none !important;
     }
     &__newsletter {
-      color: black;
+      color: #fff;
       width: 20%;
       background-color: $blue1;
       transition: transform 0.5s ease;
       font-size: 14px;
       border-radius: 0 30px 30px 0;
-      padding: 10.1px 30px 14.1px 12px;
+      padding: 9px 30px 13px 12px;
       line-height: 24px;
       max-width: 300px;
       margin: 0 -0.6rem;
+      cursor: pointer;
     }
     &__newsletter:hover {
       transform: scale(0.98);
@@ -249,6 +250,11 @@
     background-color: $dark_shadow;
   }
 }
+.button{
+  &__disabled{
+    padding: 10.1px 30px 14.1px 12px;
+  }
+}
 body {
   overflow-x: hidden;
 }
@@ -286,6 +292,11 @@ body {
     }
     &__content {
       padding-right: $font_top8;
+    }
+  }
+  .button{
+    &__disabled{
+      padding: 10.1px 6px 14.1px 2px;
     }
   }
 }
