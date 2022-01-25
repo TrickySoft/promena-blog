@@ -133,8 +133,8 @@
       &__quick-link{
         width: 10%;
         position: absolute;
-        left: 19.4rem;
-        padding-top: 0.5rem;
+        left: 19.6rem;
+        padding-top: 0.6rem;
        border-bottom: 2px solid white;
       }
       &__tag{
@@ -148,8 +148,9 @@
       padding: $font_xverysmall;
       width: 40%;
       font-size: 10px;
+      color: $dark2;
       margin: $font_xverysmall;
-      padding: 11px 25px 11px 25px;
+      padding: 11px 12px 11px 12px;
       line-height: 24px;
       max-width: 300px;
       border: 1px solid #ebebeb; 
@@ -162,7 +163,7 @@
       transition: transform 0.5s ease;
       font-size: 14px;
       border-radius: 0 30px 30px 0;
-      padding: 9px 30px 12px 12px;
+      padding: 10.1px 30px 14.1px 12px;
       line-height: 24px;
       max-width: 300px;
       margin: 0 -0.6rem;
