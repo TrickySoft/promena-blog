@@ -106,9 +106,9 @@ const Slides = () => {
     Want fluffy Japanese pancakes but can’t fly to Tokyo?
     </a>
     <ul className='featured__card-ul'>
-                <li><i className='fa fa-clock-o' aria-hidden='true'> Today</i></li>
-                <li><i className='fa fa-eye' aria-hidden='true'></i> 75 reads</li>
-                <li><i className='fa fa-clock-o' aria-hidden='true'></i> 3 min read</li>
+                <li><i className='fa fa-clock-o featured__card-ul__fa' aria-hidden='true'> Today</i></li>
+                <li><i className='fa fa-eye featured__card-ul__fa' aria-hidden='true'></i> 75 reads</li>
+                <li><i className='fa fa-clock-o featured__card-ul__fa' aria-hidden='true'></i> 3 min read</li>
               </ul>
 </div>
 </div>
