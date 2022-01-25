@@ -53,15 +53,13 @@ nav .content .link {
   @include textnone;
   font-size: $font_large;
 }
-.content .link li a:hover{
-color: #4da7d4;
-}
 .content .link li label {
   @include displaynone;
 }
 .content .link li a:hover,
 .content .link li label:hover {
   background: $color_white6;
+  color: #4da7d4;
 }
 .header-wrapper .search-icon,
 .header-wrapper .menu-icon {
