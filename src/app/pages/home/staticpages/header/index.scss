@@ -53,6 +53,9 @@ nav .content .link {
   @include textnone;
   font-size: $font_large;
 }
+.content .link li a:hover{
+color: #4da7d4;
+}
 .content .link li label {
   @include displaynone;
 }
