@@ -62,14 +62,15 @@
       box-shadow: 2px 2px 20px  8px rgba(0, 0, 0, 0.2);
           transform:scale(1.04);
   }
-    &__card-ul{
-            font-family: $monstserrat_regular;
-            padding-top: $font_large;
-            padding-right: 1rem;
-            @include flexbetween;
-            font-size:1.4rem;
-            @include listnone;
-    }
+  &__card-ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: $monstserrat_regular;
+          padding-top: $font_large;
+          padding-right: 1rem;
+          font-size:1.4rem;
+  }
   }
   
   .card-image{
@@ -78,7 +79,7 @@
     // height: 200px;
     // max-height: 250px;
   }
-  .postlist-image{
+  .postlist-img{
   border-radius: 50%;
     width: 100%;
     padding:0 1rem;

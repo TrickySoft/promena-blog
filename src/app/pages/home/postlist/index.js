@@ -9,24 +9,24 @@ const Postlist = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    getPostList((res) => {
-      setPosts(res);
-    });
-  }, []);
+  getPostList((res)=>{
+  setPosts(res);
+  });
+      }, []);
 
-  return (
-    <div className='list-container'>
-      <div className='list-container__headings'>
-        <h3>Most Visited</h3>
-        <hr style={{ width: '20%' }} />
-      </div>
-      <div className='postlist-container'>
+    return (
+        <div className='list-container'>
+<div className='list-container__headings'>
+<h3>Most Visited</h3>
+<hr style={{width:'20%'}}/>
+</div>
+<div className='postlist-container'>
 
         {posts.map((post, index) => {
           return (
             <div key={index} className='postlist-container__postlist__right-postlist'>
               <div className='postlist-container__postlist__right-postlist__img'>
-                <img src={post.thumbnail} className='postlist-image' alt='' />
+                <img src={post.thumbnail} className='postlist-img' alt='' />
               </div>
               <div className='postlist-container__postlist__right-postlist__content'>
                 <NavLink to={`/post/${post.Blog_id}`} className='postlist-container__postlist__right-postlist__content__postlist-title'>

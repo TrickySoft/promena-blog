@@ -70,12 +70,15 @@
       margin-top: -0.1rem;
       color: white;
     }
+    &__ul{
+      // margin-top: 2rem;
+    }
     ul li a {
       color: $dark2;
       letter-spacing: 2px;
     }
     li {
-      margin-top: $font_xverysmall;
+      padding: 0.2rem;
     }
     transition: transform 3s ease;
     &__head{
