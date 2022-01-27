@@ -32,10 +32,12 @@ const BlogPost = (props) => {
       <div className='post-thumb'>
 
         <span className='blog__post__tag'>{post.title}</span>
-        <img className='blog__img' src={post.thumbnail} />
+        <div className='blog__image'>
+          <img src={post.thumbnail} />
+        </div>
       </div>
       <div className='blog__text'>
-      <div dangerouslySetInnerHTML={{__html: post.content}} style={{fontSize:'18px', marginTop:'1rem'}}></div>
+        <div dangerouslySetInnerHTML={{ __html: post.content }} style={{ fontSize: '18px', marginTop: '1rem' }}></div>
         <div className='comment1'>
           <button className='comment1__button1' onClick={handleComment}>Comment</button>
         </div>
@@ -46,7 +48,7 @@ const BlogPost = (props) => {
         {comment &&
           <div className='comment-wrap comment-items'>
             <Comments
-              blogId = {props.match.params.postId}
+              blogId={props.match.params.postId}
             />
           </div>
         }
