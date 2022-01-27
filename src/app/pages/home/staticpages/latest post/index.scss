@@ -107,6 +107,9 @@
     .trending {
         width: 100%;
         padding-bottom: 1rem;
+        button {
+            margin: $font_large 0;
+        }
         &__posts {
             &__image {
                 width: 40%;

@@ -41,12 +41,8 @@ margin: 2rem;
 }
 
 @media screen and (min-width: 320px) and (max-width:760px) {
-  .slider {
-    margin: 0;
-  }
   .features {
     display: block;
-    margin: 0;
     &__alPost{
       width: 100%;
       margin: 0;
@@ -60,7 +56,6 @@ margin: 2rem;
  .post-tab {
    display: block;
    padding: 0;
-   margin: 0;
   //  margin-left: 1rem;
   //  width: 90%;
  }
