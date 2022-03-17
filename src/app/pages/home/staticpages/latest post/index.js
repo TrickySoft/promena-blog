@@ -29,7 +29,7 @@ const Latest = () => {
                       <img src={url} key={post.thumbnail} className='posts__image' />
                     </div>
                     <div className='latest__post__maincontent'>
-                      <NavLink className='posts__link' to={`/post/${post.Blog_id}`}>
+                      <NavLink className='posts__link' to={`/post/${ post.title.match(/[a-z]+|\d+/ig).join('-')}/${post.Blog_id}`}>
                         {post.category}
                       </NavLink>
                       <h3>{post.title}</h3>

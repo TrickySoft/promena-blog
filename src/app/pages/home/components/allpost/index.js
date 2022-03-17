@@ -35,7 +35,7 @@ const AllPosts = () => {
                     <strong className='strong-text'>{post.category} ◦</strong>
                    
                   </h5>
-                  <NavLink to={`/post/${post.Blog_id}`} className='cat-title'>
+                  <NavLink to={`/post/${ post.title.match(/[a-z]+|\d+/ig).join('-')}/${post.Blog_id}`} className='cat-title'>
     <div>
     <ReadMore Blog_id={post.Blog_id} post = {post.content}/>
     </div>

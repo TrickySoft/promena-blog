@@ -29,7 +29,7 @@ const Postlist = () => {
                 <img src={post.thumbnail} className='postlist-img' alt='' />
               </div>
               <div className='postlist-container__postlist__right-postlist__content'>
-                <NavLink to={`/post/${post.Blog_id}`} className='postlist-container__postlist__right-postlist__content__postlist-title'>
+                <NavLink to={`/post/${ post.title.match(/[a-z]+|\d+/ig).join('-')}/${post.Blog_id}`} className='postlist-container__postlist__right-postlist__content__postlist-title'>
                   {post.category}
                 </NavLink>
                 <p className='postlist-container__postlist__right-postlist__content__title' >{post.title.substring(0, 50) + '...'}</p>

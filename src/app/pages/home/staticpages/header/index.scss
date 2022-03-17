@@ -6,6 +6,7 @@
   @include textnone;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  text-decoration: none !important;
 }
 .header-wrapper {
   background: $color-white-primary;

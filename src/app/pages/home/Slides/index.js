@@ -6,26 +6,11 @@ import Img3 from '../../../../assets/images/news-3.jpg'
 import Img2 from '../../../../assets/images/news-2.jpg'
 import './index.scss';
 import { getPostList } from '../../../utils/apiCalls';
-import moment from 'moment';
-import { NavLink } from 'react-router-dom';
-// import $ from 'jquery'
+
 
 const Slides = () => {
     const [posts, setPosts] = useState([]);
 
-    // $('.carousel').carousel({
-    //   interval: 2000
-    // })
-  
-    // $('.carousel').carousel('pause') ;
-  
-    // $('.carousel').hover(function(){
-    //   $('.carousel').carousel('cycle') ;
-    // }) ;
-  
-    // $('.carousel').mouseleave(function(){
-    //   $('.carousel').carousel('pause') ;
-    // }); 
 
   useEffect(() => {
   getPostList((res)=>{
