@@ -55,18 +55,19 @@ border-radius: 2%;
   height: 200px;
   max-height: 250px;
 }
-.title {
+.cat-title {
   text-decoration: none;
   color: black;
   font-size: 25px;
   cursor: pointer;
 }
-.title:hover{
-  color: royalblue;
-  text-decoration: none;
-  font-size: 25px;
-  cursor: pointer;
-    }
+// .cat-title:hover{
+//   color: royalblue;
+//   text-decoration: none;
+//   font-size: 25px;
+//   transition:.3s;
+//   cursor: pointer;
+//     }
     .card-title{
       color: #42ba96;
       cursor: pointer;
@@ -103,7 +104,7 @@ border-radius: 2%;
 @media screen and (min-width: 1024px) and (max-width:1420px) {
   .allpost {
     &__card-list {
-      margin: 1rem 0.5rem;
+      // margin: 1rem 0.5rem;
       width: 33%;
     }
   }

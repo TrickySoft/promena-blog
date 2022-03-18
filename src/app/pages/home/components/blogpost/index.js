@@ -57,7 +57,6 @@ const BlogPost = (props) => {
       <div className='chart-wrap'>
         <Chart />
       </div>
-      {/* <p className='mt-5 text-muted'>Posted on: {moment(post.date_created).format('MMM Do YY')} by Ashwin</p> */}
     </div>
   );
 }

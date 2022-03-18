@@ -1,9 +1,10 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react'
 import './index.scss';
 import logo from '../../../../../assets/images/promena.png'
 import { NavLink , useLocation } from 'react-router-dom';
 import { useHistory } from 'react-router';
-import { getCategoryDetails, getMenuDetails } from '../../../../utils/apiCalls';
+import { getCategoryDetails, getMenuDetails, getPostList } from '../../../../utils/apiCalls';
 import PopUp from 'app/components/popup';
 import hembuger from '../../../../../assets/images/hemburger.jpg'
 const Header = () => {
@@ -13,14 +14,23 @@ const Header = () => {
   const [menu, setMenu] = useState('');
   const [category, setcategory] = useState('');
   const [showConfirm, setShowConfirm] = useState(false);
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+  getPostList((res)=>{
+  setPosts(res);
+  });
+      }, []);
 
   useEffect(() => {
     getMenuDetails((response) => {
-      setMenu(response)
+      setMenu(response);
+  console.log(response);
     });
 
     getCategoryDetails((response) => {
       setcategory(response);
+      console.log(response);
     });
   }, []);
 
@@ -55,7 +65,6 @@ const handleClick = ()=>{
                           );
                         })}
                       </ul>
-
                     </li>
                   )
                 })}

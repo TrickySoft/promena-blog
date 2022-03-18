@@ -4,7 +4,6 @@ import './index.scss'
 import { NavLink } from 'react-router-dom';
 import { getPostList } from '../../../../utils/apiCalls';
 import moment from 'moment';
-import ReadMore from '../../components/readmore';
 
 
 const Sidebar = (props) => {
@@ -25,7 +24,7 @@ const Sidebar = (props) => {
             <div className='posts' key={post.Blog_id}>
               <img src={url} key={post.thumbnail} className='posts__image' />
               <div className='posts__maincontent'>
-                <NavLink className='posts__link' to={`/post/${post.Blog_id}`}>
+                <NavLink className='posts__link' to={`/post/${ post.title.match(/[a-z]+|\d+/ig).join('-')}/${post.Blog_id}`}>
                   {post.category}
                 </NavLink>
                 <h1>{post.title}</h1>

@@ -8,6 +8,7 @@ import Post from '../pages/home/posts';
 import PageNotFound from '../pages/home/staticpages/pagenotfound';
 import Footer from 'app/pages/home/staticpages/footer';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+// import Admin from '../pages/admin';
 
 const Router = () => {
   return (
@@ -21,13 +22,15 @@ const Router = () => {
     </Helmet>
     </HelmetProvider>
       <Switch>
-        <Route exact path='/admin' component={() => { 
-     window.location.href = 'http://promenablog.pythonanywhere.com/admin/login/?next=/admin/'; 
-     return null;
-}}/>
+        <Route  path='/admin'
+        component={() => {
+    global.window && (global.window.location.href = 'http://promenablog.pythonanywhere.com/admin/login/?next=/admin/');
+    return null;
+    }}
+/>
         <Route exact path='/forgotPassword' component={ForgotPassword} />
         <Route exact path='/' component={Home} />
-        <Route exact path='/post/:postId' component={Post} />
+        <Route exact path='/post/:title/:postId' component={Post} />
         <Route path={'**'} component={PageNotFound} />
       </Switch>
  <Footer/>
