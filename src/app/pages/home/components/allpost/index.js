@@ -18,7 +18,7 @@ const AllPosts = () => {
   return (
     <div className='allpost'>
       {postList.map((post, index) => {
-        return(
+        return (
           <div className='allpost__card-list' key={index}>
             <HelmetProvider>
               <Helmet>
@@ -40,19 +40,19 @@ const AllPosts = () => {
     <ReadMore Blog_id={post.Blog_id} post = {post.content}/>
     </div>
                 </NavLink>
-                  <ul className='allpost__card-list__card-ul'>
-                  <li><i className='fa fa-clock-o' aria-hidden='true'> { moment(post.datetime).format(' D MMM')}</i></li>
-                    <li>
-                      <i className='fa fa-eye' aria-hidden='true'></i> 75 reads
-                    </li>
-                    <li>
-                      <i className='fa fa-clock-o' aria-hidden='true'></i> 3 min
-                      read
-                    </li>
-                  </ul>
-                </div>
+                <ul className='allpost__card-list__card-ul'>
+                  <li><i className='fa fa-clock-o' aria-hidden='true'> {moment(post.datetime).format(' D MMM')}</i></li>
+                  <li>
+                    <i className='fa fa-eye' aria-hidden='true'></i> 75 reads
+                  </li>
+                  <li>
+                    <i className='fa fa-clock-o' aria-hidden='true'></i> 3 min
+                    read
+                  </li>
+                </ul>
               </div>
             </div>
+          </div>
         );
       })}
     </div>
