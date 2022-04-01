@@ -15,6 +15,7 @@ const Header = () => {
   const [category, setcategory] = useState('');
   const [showConfirm, setShowConfirm] = useState(false);
   const [posts, setPosts] = useState([]);
+  const [blogTitle, setBlogTitle] = useState('');
 
   useEffect(() => {
   getPostList((res)=>{
@@ -53,14 +54,14 @@ const handleClick = ()=>{
                 {menu.length && menu.map((val, index) => {
                   return (
                     <li key={index}>
-                      <a onClick={() => history.push('/')} className='desktop-link'>{val.menuname} ˅</a>
+                      <a  className='desktop-link'>{val.menuname} ˅</a>
                       <input type='checkbox' id='show-ppc'></input>
                       <label htmlFor='show-ppc'>{val.menuname}</label>
                       <ul>
                         {category.length && category.map((value, index1) => {
                           return (
-                            <li key={index1}><NavLink to={'/'}>{
-                              (val.menuid === value.menuname ? value.category_name : null)
+                            <li key={index1}><NavLink to={`/post/${value?.title?.title.match(/[a-z]+|\d+/ig).join('-')}/${value?.title?.Blog_id}`}>{
+                              (val.menuid === value.category_id ? value.category_name : null)
                             }</NavLink></li>
                           );
                         })}

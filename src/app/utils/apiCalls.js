@@ -91,3 +91,4 @@ export const getCategoryDetails = (callback, payload) => {
       callback(response);
     }, url, API_METHODS.GET, payload);
   };
+  
