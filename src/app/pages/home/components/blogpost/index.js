@@ -32,10 +32,8 @@ const BlogPost = (props) => {
       <div className='post-thumb'>
 
         <span className='blog__post__tag'>{post.title}</span>
-        <div className='blog__image'>
-          <img src={post.thumbnail} />
-        </div>
       </div>
+      <img src={post.thumbnail} className = 'post-image' />
       <div className='blog__text'>
         <div dangerouslySetInnerHTML={{ __html: post.content }} style={{ fontSize: '18px', marginTop: '1rem' }}></div>
         <div className='comment1'>
