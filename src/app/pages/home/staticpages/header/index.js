@@ -60,8 +60,8 @@ const handleClick = ()=>{
                       <ul>
                         {category.length && category.map((value, index1) => {
                           return (
-                            <li key={index1}><NavLink to={`/post/${value?.title?.title.match(/[a-z]+|\d+/ig).join('-')}/${value?.title?.Blog_id}`}>{
-                              (val.menuid === value.category_id ? value.category_name : null)
+                            <li key={index1}><NavLink to={`/post/${value?.postdata[0]?.title.match(/[a-z]+|\d+/ig).join('-')}/${value?.postdata[0]?.Blog_id}`}>{
+                              (val.menuname === value.menuname.menuname ? value.category_name : null)
                             }</NavLink></li>
                           );
                         })}

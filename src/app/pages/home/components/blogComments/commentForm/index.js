@@ -44,7 +44,7 @@ if(text){
      if(user.name !== undefined || user.name != null)
      {
      let payload = {
-      Blog_id: blogId,
+      Blog_id: parseInt(blogId),
       commentId: ++CommentId,
       name: user.name,
       Comment: text,
@@ -74,7 +74,7 @@ if(text){
       let userInfo = JSON.parse(localStorage.getItem('user'));
       if(userInfo !== 'login-target' && userInfo !== null){
       let payload = {
-        Blog_id: blogId,
+        Blog_id: parseInt(blogId),
         commentId: ++CommentId,
         name: userInfo.name,
         Comment: text,
