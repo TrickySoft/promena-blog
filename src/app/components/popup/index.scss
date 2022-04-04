@@ -372,3 +372,12 @@
     background-clip: content-box, border-box;
   }
 }
+
+
+@media screen and (min-width: 320px) and (max-width: 760px) {
+  .overlay {
+    &__dialog {
+      width: 100%;
+    }
+  }
+}

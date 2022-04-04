@@ -212,6 +212,9 @@ nav .content .link {
   .header-wrapper #show-menu:checked ~ .menu-icon i::before {
     content: "\f00d";
   }
+  .content-logo {
+    width: 75%;
+  }
   nav .content .link {
     display: block;
     position: fixed;
