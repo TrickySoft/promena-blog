@@ -10,8 +10,8 @@ const ReadMore = ({post, Blog_id}) => {
   return (
    <div>
         <div className='read-more'>
-      {isReadMore ?  <p dangerouslySetInnerHTML={{__html:DOMPurify.sanitize(post.length ? post.slice(0, 260):post)}} className='read-more'></p>: <p dangerouslySetInnerHTML={{__html:DOMPurify.sanitize(post)}} className='read-more'></p> }
-      {post.length > 200 &&
+      {isReadMore ?  <p dangerouslySetInnerHTML={{__html:DOMPurify.sanitize(post.length ? post.slice(0, 200):post)}} className='read-more'></p>: <p dangerouslySetInnerHTML={{__html:DOMPurify.sanitize(post)}} className='read-more'></p> }
+      {post.length > 150 &&
         <span onClick={toggleReadMore} className='read-more1'>
           {isReadMore ? <NavLink exact to={`/post/${Blog_id}`}>...Read More</NavLink> : null}
         </span>

@@ -14,6 +14,7 @@
   width: 100%;
   margin: 0rem 1rem 1rem 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
@@ -135,6 +136,7 @@
       &__right-postlist{
         margin: 1rem;
         padding: 1rem 0;
+        width: 45%;
         &__content {
           padding-left: 0;
         }

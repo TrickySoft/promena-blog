@@ -33,21 +33,23 @@ nav .content .link {
   z-index: 99;
   padding-left: 0!important;
 }
-.content a .logo {
-  color: $dark_shadow;
-  cursor: pointer;
-  height: 45px;
+
+.content-logo {
+  width: 25%;
+  img {
+    width: 100%;
+  }
 }
 .content .link li {
   @include listnone;
 }
 .content .link li a,
 .content .link li label {
-  color: $dark_shadow;
-  font-size: $font_xlarge;
-  font-weight: 500;
-  padding: $font_verysmall $font_xxlarge;
-  border-radius: $font_xverysmall;
+  color: black;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 9px 17px;
+  border-radius: 5px;
   transition: all 0.3s ease;
 }
 .content .link li a {
@@ -173,7 +175,7 @@ nav .content .link {
     margin-left: 0;
   }
   .content a .logo {
-    margin-left: -2rem;
+    // margin-left: -2rem;
   }
   .content .link li a {
     padding: $font_xxsmall $font_text;
@@ -201,7 +203,8 @@ nav .content .link {
 
 @media screen and (min-width: 320px) and (max-width: 760px) {
   .header-wrapper nav {
-    padding: 3rem;
+    padding: 1rem;
+    height: 6rem;
   }
   .header-wrapper .menu-icon {
     display: block;
