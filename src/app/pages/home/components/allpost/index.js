@@ -12,6 +12,7 @@ const AllPosts = () => {
   useEffect(() => {
     getPostList((response) => {
       if (response) setPostList(response);
+      console.log(response);
     });
   }, []);
 
@@ -32,7 +33,7 @@ const AllPosts = () => {
                 </div>
                 <div className='allpost__card-list__right-card__content'>
                   <h5 className='card-title'>
-                    <strong className='strong-text'>{post.category} ◦</strong>
+                    <strong className='strong-text'>{post.title} ◦</strong>
                    
                   </h5>
                   <NavLink to={`/post/${ post.title.match(/[a-z]+|\d+/ig).join('-')}/${post.Blog_id}`} className='cat-title'>
