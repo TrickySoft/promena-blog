@@ -2,202 +2,204 @@
 @import "../../../../../styles//variables.scss";
 
 .allposts {
+  position: relative;
+  padding: 1rem 5rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #f1f2f3;
+  .latest {
     position: relative;
-   padding: 1rem 5rem;
-   display: flex;
-   width: 100%;
-   justify-content: space-between;
-   background-color: #f1f2f3;
-.latest {
-   position: relative;
-   width: 60%;
-//    &__posts {
-//        width: 60%;
-//    }
-   &__post {
-       display: flex;
-       margin-top: 2rem;
-       &__image {
-        width: 40%;
+    width: 60%;
+    &__post {
+      display: flex;
+      border-radius: 5px;
+      margin: 2rem 0;
+      background-color: white;
+      border: 1px solid lightgray;
+      transition: 0.3s;
+      &__image {
+        width: 35%;
         img {
-            width: 75%;
-            height: 140px;
+          width: 85%;
+          height: 140px;
         }
-    }
-    ul {
+      }
+      ul {
         display: flex;
         justify-content: space-between;
         list-style-type: none;
-    }
-    &__maincontent {
+        padding-left: 0;
+        margin-top: 2rem;
+      }
+      &__maincontent {
         width: 60%;
-    }
-   }
-   button {
-       font-size: 3rem;
-       letter-spacing: 5px;
-       border-bottom: 1px solid rgba(0, 46, 145, 0.274);
-       margin-bottom: $font_large;
-       padding-bottom: 1rem;
-       background-color: #f1f2f3;
-   }
-  
-}
-.trending {
-    width: 30%;
-    &__content {
-        display: flex;
-        flex-wrap: wrap;
+      }
     }
     button {
-        font-size: $font_large;
-        letter-spacing: 5px;
-        border-bottom: 1px solid rgba(0, 46, 145, 0.274);
-        margin-bottom: $font_large;
-        padding-bottom: 1rem;
-        background-color: #f1f2f3;
+      font-size: 3rem;
+      letter-spacing: 5px;
+      border-bottom: 1px solid rgba(0, 46, 145, 0.274);
+      margin-bottom: $font_large;
+      padding-bottom: 1rem;
+      background-color: #f1f2f3;
+    }
+    &__post:hover {
+        box-shadow: 2px 3px 2px rgba(128, 123, 123, 0.305);
+        transform: scale(1.01);
+      }
+  }
+ 
+  .trending {
+    width: 30%;
+    &__content {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    button {
+      font-size: $font_large;
+      letter-spacing: 5px;
+      border-bottom: 1px solid rgba(0, 46, 145, 0.274);
+      margin-bottom: $font_large;
+      padding-bottom: 1rem;
+      background-color: #f1f2f3;
     }
     &__posts {
-        box-shadow: 0 0 2px 1px rgba(211, 211, 211, 1 / 10%);
-        margin: $font_large 0;
-        transition: 0.3s;
-        padding: 1rem;
-        display: flex;
-        background-color: white;
-        align-items: center;
-        h3 {
-            font-size: $font_large;
+      margin: $font_verysmall 0;
+      border-radius: 5px;
+      transition: 0.3s;
+      padding: 0.4rem;
+      display: flex;
+      background-color: white;
+      h3 {
+        font-size: $font_large;
+      }
+      &__image {
+        width: 45%;
+        img {
+          width: 90%;
         }
+      }
+      &__maincontent {
+        width: 50%;
+      }
+    }
+    &__posts:hover {
+        box-shadow: 2px 3px 2px rgba(128, 123, 123, 0.305);
+        transform: scale(1.01);
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 760px) {
+  .allposts {
+    display: block;
+    padding: 0 2rem;
+    .latest {
+      width: 100%;
+      &__post {
         &__image {
-            width: 50%;
-            height: 60%;
-            img {
-                width: 140px;
-                height: 80px;
-            }
+          img {
+            width: 90%;
+          }
+        }
+        ul {
+          padding-left: 0;
+          font-size: 1rem;
         }
         &__maincontent {
-            width: 50%;
+          h3 {
+            font-size: 1.6rem;
+            margin: 1rem 0 1rem 0;
+          }
         }
-    }
-    &__posts:hover{
-        box-shadow: 2px 2px 20px  8px rgba(0, 0, 0, 0.2);
-            transform:scale(1.04);
-    }
-}
-}
-
-@media screen and (min-width: 320px) and (max-width:760px) {
-    .allposts {
-      display: block;
-      padding: 0 2rem;
-      .latest {
-        width: 100%;
-        &__post {
-            &__image {
-                img {
-                    width: 90%;
-                }
-            }
-            ul {
-                padding-left: 0;
-                font-size: 1rem;
-            }
-            &__maincontent {
-                h3 {
-                    font-size: 1.6rem;
-                    margin: 1rem 0 1rem 0;
-                }
-            }
-        }
+      }
     }
     .trending {
-        width: 100%;
-        padding-bottom: 1rem;
-        button {
-            margin: $font_large 0;
-        }
-        &__posts {
-            &__image {
-                width: 40%;
-                img {
-                    width: 80%;
-                    height: 15vh;
-                }
-            }
-        }
-    }
-    }
-   
-  }
-
-  @media screen and (min-width: 768px) and (max-width:1020px) {
-      .allposts {
-          display: block;
-          padding: 0 2rem;
-          .latest {
-              display: block;
-              width: 100%;
-              &__post {
-                  &__image {
-                      width: 35%;
-                  }
-              }
-          }
-          .trending {
-              width: 100%;
-              display: block;
-              margin-top: 2rem;
-              button {
-                  margin-bottom: 1rem;
-              }
-              &__content {
-                  display: flex;
-                  justify-content: space-between;
-              }
-              &__posts {
-                  margin: 1rem 0;
-                  padding: 0;
-                  width: 40%;
-                  &__image {
-                      width: 70%;
-                      margin-left: 1rem;
-                      height: auto;
-                  }
-                  h3 {
-                      font-size: 1.4rem;
-                      margin: 1rem 0 2rem 0;
-                  }
-              }
-          }
+      width: 100%;
+      padding-bottom: 1rem;
+      button {
+        margin: $font_large 0;
       }
-  }
-
-
-  @media screen and (min-width: 1024px) and (max-width:1420px) {
-      .allposts {
-          .latest {
-              &__post {
-                  ul {
-                      padding: 0;
-                  }
-                  &__maincontent {
-                      margin-left: 1rem;
-                  }
-                  &__image {
-                      img {
-                          width: 100%;
-                          height: 25vh;
-                      }
-                  }
-              }
+      &__posts {
+        &__image {
+          width: 40%;
+          img {
+            width: 80%;
+            height: 15vh;
           }
-          .trending {
-              &__posts {
-                  h3 {
-                      margin: 1rem 0;
-                  }
-              }
-          }
+        }
       }
+    }
   }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1020px) {
+  .allposts {
+    display: block;
+    padding: 0 2rem;
+    .latest {
+      display: block;
+      width: 100%;
+      &__post {
+        &__image {
+          width: 35%;
+        }
+      }
+    }
+    .trending {
+      width: 100%;
+      display: block;
+      margin-top: 2rem;
+      button {
+        margin-bottom: 1rem;
+      }
+      &__content {
+        display: flex;
+        justify-content: space-between;
+      }
+      &__posts {
+        margin: 1rem 0;
+        padding: 0;
+        width: 40%;
+        &__image {
+          width: 70%;
+          margin-left: 1rem;
+          height: auto;
+        }
+        h3 {
+          font-size: 1.4rem;
+          margin: 1rem 0 2rem 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1420px) {
+  .allposts {
+    .latest {
+      &__post {
+        ul {
+          padding: 0;
+        }
+        &__maincontent {
+          margin-left: 1rem;
+        }
+        &__image {
+          img {
+            width: 100%;
+            height: 25vh;
+          }
+        }
+      }
+    }
+    .trending {
+      &__posts {
+        h3 {
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
+}

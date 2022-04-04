@@ -27,19 +27,19 @@ const AllPosts = () => {
                 <meta name='description' content={post.content} />
               </Helmet>
             </HelmetProvider>
-              <div className='allpost__card-list__right-card'>
-                <div className='allpost__card-list__right-card__img'>
-                  <img src={post.thumbnail} className='card-image' alt='' />
-                </div>
-                <div className='allpost__card-list__right-card__content'>
-                  <h5 className='card-title'>
-                    <strong className='strong-text'>{post.title} ◦</strong>
-                   
-                  </h5>
-                  <NavLink to={`/post/${ post.title.match(/[a-z]+|\d+/ig).join('-')}/${post.Blog_id}`} className='cat-title'>
-    <div>
-    <ReadMore Blog_id={post.Blog_id} post = {post.content}/>
-    </div>
+            <div className='allpost__card-list__right-card'>
+              <div className='allpost__card-list__right-card__img'>
+                <img src={post.thumbnail} className='card-image' alt='' />
+              </div>
+              <div className='allpost__card-list__right-card__content'>
+                <h5 className='card-title'>
+                  <strong className='strong-text'>{post.title}</strong>
+
+                </h5>
+                <NavLink to={`/post/${post.title.match(/[a-z]+|\d+/ig).join('-')}/${post.Blog_id}`} className='cat-title'>
+                  <div>
+                    <ReadMore Blog_id={post.Blog_id} post={post.content} />
+                  </div>
                 </NavLink>
                 <ul className='allpost__card-list__card-ul'>
                   <li><i className='fa fa-clock-o' aria-hidden='true'> {moment(post.datetime).format(' D MMM')}</i></li>

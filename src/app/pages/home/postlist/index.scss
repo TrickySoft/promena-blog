@@ -1,8 +1,8 @@
 @import "../../../../styles/mixins.scss";
 @import "../../../../styles//variables.scss";
 
-.list-container{
-  &__headings{
+.list-container {
+  &__headings {
     padding-left: 2rem;
     font-size: 30px;
     hr {
@@ -10,79 +10,77 @@
     }
   }
 }
-.postlist-container{
+.postlist-container {
   width: 100%;
-  margin: 0rem 1rem 1rem 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  &__postlist{
+  &__postlist {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    &__card-ul{
-            font-family: $monstserrat_regular;
-            padding-top: $font_large;
-            padding-left: 0;
-            font-size:1.4rem;
-            margin: 1rem;
-            @include listnone;
+    &__card-ul {
+      font-family: $monstserrat_regular;
+      padding-top: $font_large;
+      padding-left: 0;
+      font-size: 1.4rem;
+      margin: 1rem;
+      @include listnone;
     }
-    &__right-postlist{
-  display: flex;
-  width: 100%;
-  max-height: 150px;
-  margin: 2rem;
-  padding: 2rem 0;
-  box-shadow: 0   3px 5px rgba(0, 0, 0, 0.5);
-  flex-direction: row;
-  border-radius: 1%;
-  justify-content: center;
-  transition:.3s;
-  align-items: center;
+    &__right-postlist {
+      display: flex;
+      width: 30%;
+      margin: 1.6%;
+      padding: 2rem 0;
+      border: 1px solid lightgray;
+      flex-direction: row;
+      border-radius: 1%;
+      border-radius: 5px;
+      justify-content: center;
+      transition: 0.3s;
+      align-items: center;
 
-  &__content{
-  width: 100%;
-  padding-left: 1rem;
-  &__title{
-    font-size: 12px;
-  }
-  &__postlist-title {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    cursor: pointer;
-  }
-  }
+      &__content {
+        width: 100%;
+        padding-left: 1rem;
+        &__title {
+          font-size: 12px;
+        }
+        &__postlist-title {
+          text-decoration: none;
+          color: black;
+          font-size: 18px;
+          cursor: pointer;
+        }
+      }
     }
-    &__right-postlist:hover{
-      box-shadow: 2px 2px 20px  8px rgba(0, 0, 0, 0.2);
-          transform:scale(1.04);
+    &__right-postlist:hover {
+      box-shadow: 2px 3px 2px rgba(128, 123, 123, 0.305);
+        transform: scale(1.01);
+    }
+    &__card-ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-family: $monstserrat_regular;
+      padding-top: $font_large;
+      padding-right: 1rem;
+      font-size: 1.4rem;
+    }
   }
-  &__card-ul{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: $monstserrat_regular;
-          padding-top: $font_large;
-          padding-right: 1rem;
-          font-size:1.4rem;
-  }
-  }
-  
-  .card-image{
-  border-radius: 2%;
+
+  .card-image {
+    border-radius: 2%;
     width: 100%;
     // height: 200px;
     // max-height: 250px;
   }
-  .postlist-img{
-  border-radius: 50%;
+  .postlist-img {
+    border-radius: 50%;
     width: 100%;
-    padding:0 1rem;
+    padding: 0 1rem;
     height: 100px;
     max-height: 250px;
   }
@@ -92,48 +90,46 @@
     font-size: 25px;
     cursor: pointer;
   }
-  .title:hover{
+  .title:hover {
     color: royalblue;
     text-decoration: none;
     font-size: 25px;
     cursor: pointer;
-      }
-      .card-title{
-        color: #42ba96;
-        cursor: pointer;
-      }
-      .strong-text{
-        color:royalblue;
-        cursor: pointer;
-      }
-  
+  }
+  .card-title {
+    color: #42ba96;
+    cursor: pointer;
+  }
+  .strong-text {
+    color: royalblue;
+    cursor: pointer;
+  }
 }
 
-.headings{
+.headings {
   position: relative;
-  top: 1rem;
   font-size: 17px;
 }
 
-@media screen and (min-width: 320px) and (max-width:760px) {
+@media screen and (min-width: 320px) and (max-width: 760px) {
   .postlist-container {
     display: block;
     &__postlist {
       &__right-postlist {
-        margin : 0;
+        margin: 0;
       }
     }
   }
 }
 
-@media screen and (min-width: 768px) and (max-width:1020px) {
+@media screen and (min-width: 768px) and (max-width: 1020px) {
   .postlist-main {
-    padding: 0 1rem ;
+    padding: 0 1rem;
   }
   .postlist-container {
     margin: 0;
-    &__postlist{
-      &__right-postlist{
+    &__postlist {
+      &__right-postlist {
         margin: 1rem;
         padding: 1rem 0;
         width: 45%;
@@ -150,7 +146,6 @@
     .postlist-image {
       width: 90%;
       height: 80px;
-
     }
   }
   .list-container {
@@ -160,20 +155,18 @@
   }
 }
 
-
-@media screen and (min-width: 1024px) and (max-width:1420px) {
-
+@media screen and (min-width: 1024px) and (max-width: 1420px) {
   .postlist-container {
     &__postlist {
-    &__right-postlist {
-      img {
-        width: 75%;
-      }
-      &__content {
-        padding-left: 0;
+      &__right-postlist {
+        img {
+          width: 75%;
+        }
+        &__content {
+          padding-left: 0;
+        }
       }
     }
-  }
     .postlist-image {
       width: 90%;
     }

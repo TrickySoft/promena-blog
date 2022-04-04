@@ -11,10 +11,10 @@ display: flex;
 width: 100%;
 max-height: 150px;
 margin: 2rem 0;
-padding: 1.5rem 0;
-box-shadow: 0   3px 5px rgba(0, 0, 0, 0.5);
+padding: 1rem 0;
 flex-direction: row;
-border-radius: 1%;
+border: 1px solid lightgray;
+border-radius: 10px;
 justify-content: center;
 transition:.3s;
 align-items: center;
@@ -29,15 +29,14 @@ padding-left: 1rem;
   font-family: $monstserrat_regular;
   padding-top: $font_large;
   padding-left: 0;
-  @include flexbetween;
-  font-size:1.4rem;
+  font-size:1.2rem;
   @include listnone;
 }
 }
   }
   &__right-category:hover{
-    box-shadow: 2px 2px 20px  8px rgba(0, 0, 0, 0.2);
-        transform:scale(1.04);
+    box-shadow: 0 3px 5px rgba(128, 123, 123, 0.305);
+    transform: scale(1.01);
 }
 }
 
@@ -51,7 +50,7 @@ border-radius: 2%;
 .category-title {
   text-decoration: none;
   color: black;
-  font-size: 18px;
+  font-size: 14px;
   cursor: pointer;
 }
 
