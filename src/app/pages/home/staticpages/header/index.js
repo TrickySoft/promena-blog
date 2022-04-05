@@ -15,7 +15,6 @@ const Header = () => {
   const [category, setcategory] = useState('');
   const [showConfirm, setShowConfirm] = useState(false);
   const [posts, setPosts] = useState([]);
-  const [blogTitle, setBlogTitle] = useState('');
 
   useEffect(() => {
     getPostList((res) => {
@@ -23,17 +22,17 @@ const Header = () => {
     });
   }, []);
 
-  useEffect(() => {
-    getMenuDetails((response) => {
-      setMenu(response);
-      console.log(response);
-    });
+  // useEffect(() => {
+  //   getMenuDetails((response) => {
+  //     setMenu(response);
+  //     console.log(response);
+  //   });
 
-    getCategoryDetails((response) => {
-      setcategory(response);
-      console.log(response);
-    });
-  }, []);
+  //   getCategoryDetails((response) => {
+  //     setcategory(response);
+  //     console.log(response);
+  //   });
+  // }, []);
 
   const handleClick = () => {
     setShowConfirm(true);
@@ -53,7 +52,23 @@ const Header = () => {
             <ul className='link'>
               <li><a onClick={() => history.push('/')}><i className='fas fa-home'></i> &nbsp;
                 Home</a></li>
-              {menu.length && menu.map((val, index) => {
+                <li>
+      <a onClick={() => history.push('/')} className='desktop-link'>Blog ˅</a>
+                <input type='checkbox' id='show-ppc'></input>
+                <label htmlFor='show-ppc'>Blog</label>
+                <ul>
+{posts?.length && posts?.map((post, index)=>{
+  return(
+    <li key={index}>
+                    <NavLink
+                    to = {`/post/${post?.title?.match(/[a-z]+|\d+/ig).join('-')}/${post?.Blog_id}`}
+                    >{post?.slug}</NavLink>
+                  </li>
+  )
+})}
+                </ul>
+              </li>
+              {/* {menu.length && menu.map((val, index) => {
                 return (
                   <li key={index}>
                     <a className='desktop-link'>{val.menuname} ˅</a>
@@ -70,7 +85,7 @@ const Header = () => {
                     </ul>
                   </li>
                 )
-              })}
+              })} */}
               <li><a onClick={() => history.push('/')}>WEBINARS</a></li>
               <li>
                 <a onClick={() => history.push('/')} className='desktop-link'>FOLLOW ˅</a>
