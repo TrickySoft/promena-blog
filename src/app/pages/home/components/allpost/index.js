@@ -33,14 +33,13 @@ const AllPosts = () => {
               </div>
               <div className='allpost__card-list__right-card__content'>
                 <h5 className='card-title'>
-                  <strong className='strong-text'>{post.title}</strong>
-
-                </h5>
                 <NavLink to={`/post/${post.title.match(/[a-z]+|\d+/ig).join('-')}/${post.Blog_id}`} className='cat-title'>
+                  <strong className='strong-text'>{post.title}</strong>
+                  </NavLink>
+                </h5>
                   <div>
                     <ReadMore Blog_id={post.Blog_id} post={post.content} />
                   </div>
-                </NavLink>
                 <ul className='allpost__card-list__card-ul'>
                   <li><i className='fa fa-clock-o' aria-hidden='true'> {moment(post.datetime).format(' D MMM')}</i></li>
                   <li>

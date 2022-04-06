@@ -9,18 +9,18 @@ const Postlist = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-  getPostList((res)=>{
-  setPosts(res);
-  });
-      }, []);
+    getPostList((res) => {
+      setPosts(res);
+    });
+  }, []);
 
-    return (
-        <div className='list-container'>
-<div className='list-container__headings'>
-<h3>Most Visited</h3>
-<hr style={{width:'20%'}}/>
-</div>
-<div className='postlist-container'>
+  return (
+    <div className='list-container'>
+      <div className='list-container__headings'>
+        <h3>Most Visited</h3>
+        <hr style={{ width: '20%' }} />
+      </div>
+      <div className='postlist-container'>
 
         {posts.map((post, index) => {
           return (
@@ -29,10 +29,10 @@ const Postlist = () => {
                 <img src={post.thumbnail} className='postlist-img' alt='' />
               </div>
               <div className='postlist-container__postlist__right-postlist__content'>
-                <NavLink to={`/post/${ post.title.match(/[a-z]+|\d+/ig).join('-')}/${post.Blog_id}`} className='postlist-container__postlist__right-postlist__content__postlist-title'>
+                <NavLink to={`/post/${post.title.match(/[a-z]+|\d+/ig).join('-')}/${post.Blog_id}`} className='postlist-container__postlist__right-postlist__content__postlist-title'>
                   {post.category}
+                  <h2 className='postlist-container__postlist__right-postlist__content__title' >{post.title}</h2>
                 </NavLink>
-                <p className='postlist-container__postlist__right-postlist__content__title' >{post.title.substring(0, 50) + '...'}</p>
                 <ul className='postlist-container__postlist__card-ul'>
                   <li><i className='fa fa-clock-o' aria-hidden='true'> {moment(post.datetime).format(' D MMM')}</i></li>
                   <li><i className='fa fa-eye' aria-hidden='true'></i> 15k views</li>
