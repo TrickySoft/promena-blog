@@ -43,7 +43,12 @@
     }
   }
 }
-
+.post-thumb{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
 .comment1{
   @include allcenter;
 &__button1{
