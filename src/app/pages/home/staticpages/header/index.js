@@ -50,71 +50,30 @@ const Header = () => {
               <a onClick={() => history.push('/')}><img src={logo} className='logo' alt='logo' /></a>
             </div>
             <ul className='link'>
-              <li><a onClick={() => history.push('/')}><i className='fas fa-home'></i> &nbsp;
-                Home</a></li>
-                <li>
-      <a onClick={() => history.push('/')} className='desktop-link'>Blog ˅</a>
+              <li><a onClick={() => history.push('/')}> &nbsp;
+                HOME</a></li>
+                <li><a onClick={() => history.push('/')}> &nbsp;
+                PRICING</a></li>
+                <li><a onClick={() => history.push('/')}> &nbsp;
+                ABOUT US</a></li>
+              <li>
+                <a onClick={() => history.push('/')} className='desktop-link'>Blog ˅</a>
                 <input type='checkbox' id='show-ppc'></input>
                 <label htmlFor='show-ppc'>Blog</label>
                 <ul>
-{posts?.length && posts?.map((post, index)=>{
-  return(
-    <li key={index}>
-                    <NavLink
-                    to = {`/post/${post?.title?.match(/[a-z]+|\d+/ig).join('-')}/${post?.Blog_id}`}
-                    >{post?.slug}</NavLink>
-                  </li>
-  )
-})}
+                  {posts?.length && posts?.map((post, index) => {
+                    return (
+                      <li key={index}>
+                        <NavLink
+                          to={`/post/${post?.title?.match(/[a-z]+|\d+/ig).join('-')}/${post?.Blog_id}`}
+                        >{post?.slug}</NavLink>
+                      </li>
+                    )
+                  })}
                 </ul>
               </li>
-              {/* {menu.length && menu.map((val, index) => {
-                return (
-                  <li key={index}>
-                    <a className='desktop-link'>{val.menuname} ˅</a>
-                    <input type='checkbox' id='show-ppc'></input>
-                    <label htmlFor='show-ppc'>{val.menuname}</label>
-                    <ul>
-                      {category.length && category.map((value, index1) => {
-                        return (
-                          <li key={index1}><NavLink to={`/post/${value?.postdata[0]?.title?.match(/[a-z]+|\d+/ig).join('-')}/${value?.postdata[0]?.Blog_id}`}>{
-                            (val.menuname === value.menuname.menuname ? value.category_name : null)
-                          }</NavLink></li>
-                        );
-                      })}
-                    </ul>
-                  </li>
-                )
-              })} */}
-              <li><a onClick={() => history.push('/')}>WEBINARS</a></li>
-              <li>
-                <a onClick={() => history.push('/')} className='desktop-link'>FOLLOW ˅</a>
-                <input type='checkbox' id='show-social-links'></input>
-                <label htmlFor='show-social-links'>Follow Us</label>
-                <ul className='social-links'>
-                  <li>
-                    <a
-                      href='https://www.facebook.com/PromenaLLP/'
-                      className='fa fa-facebook fa-3x'
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href='https://api.whatsapp.com/message/DEEJEJJ7JI4KL1'
-                      className='fa fa-whatsapp fa-3x'
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href='https://in.linkedin.com/company/promena-inc'
-                      className='fa fa-linkedin fa-3x'
-                    ></a>
-                  </li>
-                  <li>
-                    <a href='#' className='fa fa-envelope-o fa-3x'></a>
-                  </li>
-                </ul>
-              </li>
+              <li><a onClick={() => history.push('/')}> &nbsp;
+              CONTACT US</a></li>
             </ul>
             {showConfirm && <PopUp onCancel={() => { setShowConfirm(false) }} />}<img src={hembuger} alt='' onClick={handleClick} className='hamburger' />
           </div>

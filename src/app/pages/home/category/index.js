@@ -23,12 +23,12 @@ const Category = () => {
           <div key={index} className='category__right-category'>
 
 
-<div className='category__right-category__content'>
-  <NavLink to={`/post/${ post.title.match(/[a-z]+|\d+/ig).join('-')}/${post.Blog_id}`} className='category-title'>
-  {post.title.substring(0, 20) + '...'}
-  </NavLink>
-<ul className='category__right-category__content__card-ul'>
-                <li><i className='fa fa-clock-o' aria-hidden='true'> { moment(post.datetime).format('D MMM')}</i></li>
+            <div className='category__right-category__content'>
+              <NavLink to={`/post/${post.title.match(/[a-z]+|\d+/ig).join('-')}/${post.Blog_id}`} className='category-title'>
+                {post.title.substring(0, 20) + '...'}
+              </NavLink>
+              <ul className='category__right-category__content__card-ul'>
+                <li><i className='fa fa-clock-o' aria-hidden='true'> {moment(post.datetime).format('D MMM')}</i></li>
                 <li><i className='fa fa-eye' aria-hidden='true'></i> 15k views</li>
               </ul>
             </div>

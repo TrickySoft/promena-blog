@@ -54,7 +54,8 @@ nav .content .link {
 }
 .content .link li a {
   @include textnone;
-  font-size: $font_large;
+  font-size: $font_button;
+  cursor: pointer
 }
 .content .link li label {
   @include displaynone;
