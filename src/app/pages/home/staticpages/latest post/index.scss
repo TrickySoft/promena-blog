@@ -22,7 +22,6 @@
         width: 35%;
         img {
           width: 85%;
-          height: 140px;
         }
       }
       ul {
@@ -100,7 +99,9 @@
       &__post {
         &__image {
           img {
+            padding: 0.5rem;
             width: 90%;
+            height: 100%;
           }
         }
         ul {
@@ -109,7 +110,7 @@
         }
         &__maincontent {
           h3 {
-            font-size: 1.6rem;
+            font-size: 1.2rem;
             margin: 1rem 0 1rem 0;
           }
         }
@@ -122,11 +123,14 @@
         margin: $font_large 0;
       }
       &__posts {
+        h3 {
+          font-size: 1.4rem;
+        }
         &__image {
           width: 40%;
           img {
             width: 80%;
-            height: 15vh;
+            height: 100%;
           }
         }
       }
@@ -161,9 +165,9 @@
       &__posts {
         margin: 1rem 0;
         padding: 0;
-        width: 40%;
+        width: 45%;
         &__image {
-          width: 70%;
+          width: 50%;
           margin-left: 1rem;
           height: auto;
         }

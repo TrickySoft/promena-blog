@@ -373,11 +373,13 @@
   }
 }
 
-
 @media screen and (min-width: 320px) and (max-width: 760px) {
   .overlay {
     &__dialog {
       width: 100%;
+      right: 0;
+      top: 0;
+      transform: translate( 0, 0);
     }
   }
 }

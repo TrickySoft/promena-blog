@@ -1,49 +1,48 @@
 @import "../../../../styles/mixins.scss";
 @import "../../../../styles//variables.scss";
 
-.category{
+.category {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  &__right-category{
-display: flex;
-width: 100%;
-max-height: 150px;
-margin: 2rem 0;
-padding: 1rem 0;
-flex-direction: row;
-border: 1px solid lightgray;
-border-radius: 10px;
-justify-content: center;
-transition:.3s;
-align-items: center;
-&__img{
-width: 100%;
-
-}
-&__content{
-width: 100%;
-padding-left: 1rem;
-&__card-ul{
-  font-family: $monstserrat_regular;
-  padding-top: $font_large;
-  padding-left: 0;
-  font-size:1.2rem;
-  @include listnone;
-}
-}
+  &__right-category {
+    display: flex;
+    width: 100%;
+    max-height: 150px;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    flex-direction: row;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    justify-content: center;
+    transition: 0.3s;
+    align-items: center;
+    &__img {
+      width: 100%;
+    }
+    &__content {
+      width: 100%;
+      padding-left: 1rem;
+      &__card-ul {
+        font-family: $monstserrat_regular;
+        padding-top: $font_large;
+        padding-left: 0;
+        font-size: 1.2rem;
+        @include listnone;
+      }
+    }
   }
-  &__right-category:hover{
+  &__right-category:hover {
     box-shadow: 0 3px 5px rgba(128, 123, 123, 0.305);
     transform: scale(1.01);
-}
+  }
 }
 
-.category-image{
-border-radius: 2%;
+.category-image {
+  border-radius: 2%;
   width: 100%;
-  padding:0 1rem;
+  padding: 0 1rem;
   height: 100px;
   max-height: 250px;
 }
@@ -54,9 +53,23 @@ border-radius: 2%;
   cursor: pointer;
 }
 
-@media screen and (min-width : 320px) and (max-width : 760px) {
+@media screen and (min-width: 320px) and (max-width: 760px) {
   .category-title {
     font-size: 2rem;
   }
-  
+}
+
+
+@media screen and (min-width: 768px) and (max-width:1020px) {
+  .category {
+    &__right-category {
+      width: 45%;
+    }
+  }
+  .category-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }

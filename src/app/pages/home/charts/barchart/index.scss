@@ -1,2 +1,12 @@
-@import "../../../../styles/mixins.scss";
-@import "../../../../styles/variables.scss";
+@import "../../../../../styles/mixins.scss";
+@import "../../../../../styles/variables.scss";
+
+
+
+
+@media screen and (min-width:320px) and (max-width:760px) {
+    .chart-container {
+        min-width: 280px;
+        max-width: 380px;
+    }
+}
