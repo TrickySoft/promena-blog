@@ -37,7 +37,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className='Latest__posts'>
+            <div className='latest__posts'>
                 <Latest />
             </div>
             <div className='post-tab'>

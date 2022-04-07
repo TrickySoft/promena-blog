@@ -35,7 +35,7 @@ width: 23%;
   }
 }
 .post-tab {
-margin: 2rem;
+margin: 3rem;
 }
 
 @media screen and (min-width: 320px) and (max-width:760px) {
@@ -54,7 +54,7 @@ margin: 2rem;
  .post-tab {
    display: block;
    padding: 0;
-  //  margin-left: 1rem;
+   margin: 0;
   //  width: 90%;
  }
 }
@@ -65,16 +65,17 @@ margin: 2rem;
   }
   .features {
     display: block;
-    margin: 0;
+    margin: 3rem;
     &__alPost {
       width: 100%;
+      margin: 0;
     }
     &__category {
       width: 100%;
-      padding: 3rem;
-      // display: flex;
-      // justify-content: center;
     }
+  }
+  .post-tab {
+    margin: 2rem 3rem ;
   }
 }
 

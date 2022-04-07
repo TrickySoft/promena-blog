@@ -10,7 +10,6 @@ const Category = () => {
   useEffect(() => {
     getPostList((res) => {
       setPosts(res);
-      console.log(res)
     });
   }, []);
 

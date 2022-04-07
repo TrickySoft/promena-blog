@@ -2,14 +2,13 @@
 @import "../../../../../../styles/variables.scss";
 
 .comments {
-  margin-top: $font_large;
   border: 1px solid rgb(192, 194, 166);
   padding: $font_large;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
 
 .comments-title {
-  font-size: $font_xxlarge;
+  font-size: $font_large;
   margin-bottom: $font_large;
 }
 
@@ -18,7 +17,7 @@
 }
 
 .comment-form-title {
-  font-size: $font_large;
+  font-size: $font_button;
 }
 
 .comment-form-textarea {
@@ -58,6 +57,7 @@ padding: 10px 0;
 
 .comment-image-container img {
   border-radius: $font_top8;
+  width: 65%;
 }
 
 .comment-right-part {
@@ -70,12 +70,12 @@ padding: 10px 0;
 
 .comment-author {
   margin-right: $font_xxsmall;
-  font-size: $font_large;
+  font-size: 1.8rem;
   color: rgb(59, 130, 246);
 }
 
 .comment-text {
-  font-size: $font_xlarge;
+  font-size: $font_button;
 }
 
 .comment-actions {

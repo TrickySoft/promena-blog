@@ -33,7 +33,6 @@ const Registration = () => {
     if (userName && validateEmail(email) && password) {
       setIsBtnDisabled(false);
       adminRegistartion((response)=>{
-        console.log(response);
         if(response)
         {
           setIsBtnDisabled(false);

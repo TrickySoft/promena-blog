@@ -12,7 +12,6 @@ const AllPosts = () => {
   useEffect(() => {
     getPostList((response) => {
       if (response) setPostList(response);
-      console.log(response);
     });
   }, []);
 

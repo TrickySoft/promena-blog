@@ -15,7 +15,6 @@ const Slides = () => {
   useEffect(() => {
     getPostList((res) => {
       setPosts(res);
-      console.log(res)
     });
   }, []);
 

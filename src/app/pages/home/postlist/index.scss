@@ -3,7 +3,6 @@
 
 .list-container {
   &__headings {
-    padding-left: 2rem;
     font-size: 30px;
     hr {
       margin-top: 1rem;
@@ -33,7 +32,7 @@
       display: flex;
       width: 30%;
       margin: 1.6%;
-      padding: 2rem 0;
+      padding: 1rem 0;
       border: 1px solid lightgray;
       flex-direction: row;
       border-radius: 1%;
@@ -41,9 +40,11 @@
       justify-content: center;
       transition: 0.3s;
       align-items: center;
-
+      &__img {
+        width: 50%;
+      }
       &__content {
-        width: 100%;
+        width: 50%;
         padding-left: 1rem;
         &__title {
           font-size: 18px;
@@ -58,10 +59,10 @@
     }
     &__right-postlist:hover {
       box-shadow: 2px 3px 2px rgba(128, 123, 123, 0.305);
-        transform: scale(1.01);
+      transform: scale(1.01);
     }
     &__card-ul {
-      display: flex;
+      display: block;
       justify-content: space-around;
       align-items: center;
       font-family: $monstserrat_regular;
@@ -74,15 +75,11 @@
   .card-image {
     border-radius: 2%;
     width: 100%;
-    // height: 200px;
-    // max-height: 250px;
   }
   .postlist-img {
     border-radius: 50%;
     width: 100%;
     padding: 0 1rem;
-    height: 100px;
-    max-height: 250px;
   }
   .title {
     text-decoration: none;
@@ -108,7 +105,7 @@
 
 .headings {
   position: relative;
-  font-size: 17px;
+  font-size: 20px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 760px) {
@@ -133,6 +130,7 @@
   }
   .postlist-container {
     margin: 0;
+    justify-content: space-between;
     &__postlist {
       &__right-postlist {
         margin: 1rem;

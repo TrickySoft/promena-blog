@@ -2,7 +2,7 @@
 @import "../../../../styles//variables.scss";
 
 .featured-container {
-  margin: 2rem;
+  margin: 1rem;
   &__featured-title {
     margin: 2rem;
   }
@@ -147,17 +147,23 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1020px) {
+  .featured-container {
+    margin: 2rem 3rem;
+    h1 {
+      font-size: 24px;
+    }
+  }
   .featured {
     display: block;
     &__left-slider {
-      width: 80%;
+      width: 100%;
       margin: auto;
     }
     &__caption {
       color: #e9ecef;
     }
     &__right-card {
-      width: 80%;
+      width: 100%;
       margin: auto;
       margin-top: 2rem;
       // height: 400px;
