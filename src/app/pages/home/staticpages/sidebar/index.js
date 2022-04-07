@@ -26,8 +26,9 @@ const Sidebar = (props) => {
               <div className='posts__maincontent'>
                 <NavLink className='posts__link' to={`/post/${ post.title.match(/[a-z]+|\d+/ig).join('-')}/${post.Blog_id}`}>
                   {post.category}
+                  <h1>{post.title}</h1>
                 </NavLink>
-                <h1>{post.title}</h1>
+               
                 {/* <ReadMore Blog_id={post.Blog_id} post={post.content} /> */}
               
               <ul className='posts__ul'>

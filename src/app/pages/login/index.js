@@ -31,7 +31,6 @@ setIsShowLoader(true);
 if (validateEmail(email) && password) {
       setIsLoggedIn(false);
 adminLogin((response)=>{
-  console.log(response);
 if(response.jwt)
 {
   localStorage.setItem('token', response.jwt);

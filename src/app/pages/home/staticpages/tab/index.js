@@ -11,6 +11,7 @@ const Tab = () => {
           <button className={toggleState === 1 ? 'tab active-tab' : 'tab'}>
             Recommended
           </button>
+          <hr/>
         </div>
       </div>
       <div className='content-tab'>

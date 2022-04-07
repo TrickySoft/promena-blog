@@ -17,13 +17,12 @@ const Post = (props) => {
   return (
     <div className='post-container'>
       <div className='post-wrapper'>
-        <div className='common blogpost'>
+        <div className='common-blogpost'>
           <BlogPost {...props} />
         </div>
         <div className='common post-sidebar'>
           <Tab />
         </div>
-      
       </div>
       <div>
       <Postlist />

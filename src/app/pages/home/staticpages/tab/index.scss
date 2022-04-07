@@ -2,12 +2,12 @@
 @import "../../../../../styles/mixins.scss";
 
 .blog-tab {
-  @include relativeflex;
+  position: relative;
+  width: 100%;
+  justify-content: flex-start;
 }
 .tab {
-  padding: $font_button;
   text-align: center;
-  width: 50%;
   background: rgba(90, 69, 69, 0.075);
   cursor: pointer;
   box-sizing: content-box;
@@ -15,27 +15,21 @@
   outline: none;
   font-size: $font_button;
 }
-.tab:not(:last-child) {
-  width: 50%;
-}
-
-.tab:not(:first-child) {
-  width: 50%;
-}
 
 .active-tab {
   background: $color-white-primary;
-  color: #0d6efd;
-  border-bottom: 1px solid rgba(0, 46, 145, 0.274);
-  color: rgb(10, 100, 173);
+  color: #292a2c;
   font-size: $font_large;
   cursor: default;
 }
-
+hr {
+  width: 50%;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
 .active-tab::before {
   @include relativeblock;
   top: -5px;
-  left: 50%;
   transform: translateX(-50%);
   width: calc(100% + 2px);
   height: $font_xverysmall;
@@ -71,7 +65,12 @@ button {
 @media screen and (min-width: 320px) and (max-width: 760px) {
   .blog-tab {
     @include relative;
-    padding-top: $font_verysmall
+    padding-top: $font_verysmall;
+    justify-content: flex-start;
+  }
+  .active-tab {
+    padding: 0 0 1rem 0;
+    margin-bottom: 1rem
   }
   .active-content {
     @include relative;

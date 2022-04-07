@@ -22,18 +22,6 @@ const Header = () => {
     });
   }, []);
 
-  // useEffect(() => {
-  //   getMenuDetails((response) => {
-  //     setMenu(response);
-  //     console.log(response);
-  //   });
-
-  //   getCategoryDetails((response) => {
-  //     setcategory(response);
-  //     console.log(response);
-  //   });
-  // }, []);
-
   const handleClick = () => {
     setShowConfirm(true);
   }
@@ -52,11 +40,11 @@ const Header = () => {
             <ul className='link'>
               <li><a onClick={() => history.push('/')}> &nbsp;
                 HOME</a></li>
-                <li><a onClick={() => history.push('/')}> &nbsp;
+              <li><a onClick={() => history.push('/')}> &nbsp;
                 PRICING</a></li>
-                <li><a onClick={() => history.push('/')}> &nbsp;
+              <li><a onClick={() => history.push('/')}> &nbsp;
                 ABOUT US</a></li>
-              <li>
+              {/*<li>
                 <a onClick={() => history.push('/')} className='desktop-link'>Blog ˅</a>
                 <input type='checkbox' id='show-ppc'></input>
                 <label htmlFor='show-ppc'>Blog</label>
@@ -71,9 +59,9 @@ const Header = () => {
                     )
                   })}
                 </ul>
-              </li>
+                </li> */}
               <li><a onClick={() => history.push('/')}> &nbsp;
-              CONTACT US</a></li>
+                CONTACT US</a></li>
             </ul>
             {showConfirm && <PopUp onCancel={() => { setShowConfirm(false) }} />}<img src={hembuger} alt='' onClick={handleClick} className='hamburger' />
           </div>

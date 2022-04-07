@@ -5,14 +5,16 @@
   position: relative;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .posts {
   position: relative;
-  margin: 2rem 1rem;
+  margin: 1rem;
   display: flex;
   padding: 0.5rem;
-  width: 30%;
+  width: 100%;
+  border-radius: 5px;
   background-size: cover;
   padding: $font_xverysmall;
   border: 1px solid lightgray;
@@ -31,7 +33,8 @@
     background-color: #f1f2f3 !important;
   }
   h1 {
-    font-size: $font_large;
+    font-size: $font_xlarge;
+    margin: 10px 0;
     font-weight: 600;
   }
   &__link {
@@ -70,34 +73,19 @@
 //   }
 // }
 
-// @media screen and (min-width: 768px) and (max-width: 1020px) {
-//   .posts {
-//     padding: 0;
-//     display: block;
-//     @include allcenter;
-//     position: relative;
-//     padding-top: 2rem;
-//     &__maincontent{
-//       display: block;
-//       text-align: center;
-//     }
-//     p {
-//       margin-bottom: 0;
-//     }
-//     &__ul {
-//       padding: 0;
-//       font-size:$font_small;
-//     }
-//     &__image {
-//       padding-left: 0;
-//       width: 80%;
-//     }
-//     .read-more {
-//       padding-left: 0;
-//       margin-bottom: 0;
-//     }
-//   }
-// }
+@media screen and (min-width: 768px) and (max-width: 1020px) {
+  .posts {
+    width: 45%;
+    &__maincontent{
+      margin-left: 2rem;
+    }
+   &__ul {
+     flex-direction: column;
+     align-items: start;
+     margin-bottom: 0;
+   }
+  }
+}
 
 @media screen and (min-width: 320px) and (max-width: 760px) {
   .main1 {
@@ -117,6 +105,8 @@
     }
     &__ul {
       padding: 0;
+      flex-direction: column;
+      align-items: flex-start;
       font-size: $font_small;
     }
   }
