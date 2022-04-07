@@ -201,6 +201,9 @@ nav .content .link {
   }
 }
 
+.dropdown-toggle {
+  padding-left: 1.8rem !important;
+}
 
 @media screen and (min-width: 320px) and (max-width: 760px) {
   .header-wrapper nav {
@@ -219,15 +222,13 @@ nav .content .link {
   nav .content .link {
     display: block;
     position: fixed;
-    height: 100%;
     width: 100%;
     left: -100%;
     margin-left: 0;
     max-width: 350px;
     overflow-y: auto;
     background: $color-white-primary;
-    top: $font_medium1;
-    padding-bottom: $font_top5;
+    top: 6rem;
     transition: all 0.3s ease;
   }
   nav #show-menu:checked ~ .content .link {
@@ -238,15 +239,16 @@ nav .content .link {
     margin: $font_button $font_large;
   }
 
+  
 
 
   .content .link li a,
   .content .link li label {
     display: block;
     cursor: pointer;
-    padding: $font_xxsmall $font_xlarge;
-    line-height: $font_top9;
-    font-size: $font_large;
+    padding: $font_xxsmall;
+    line-height: $font_large;
+    font-size: $font_button;
   }
   .content .link li a.desktop-link {
     @include displaynone;
@@ -258,8 +260,8 @@ nav .content .link {
     position: static;
     opacity: 1;
     visibility: visible;
-    background: none;
-    max-height: 0px;
+    // background: none;
+    // max-height: 0px;
     overflow: hidden;
   }
   .content .link #show-features:checked ~ ul,
