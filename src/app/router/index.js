@@ -16,8 +16,8 @@ const Router = () => {
     <Header/>
     <HelmetProvider>
     <Helmet>
-      <title >Promena Blogs</title>
-      <meta  name='description' content='promena blogs and its related info'/>
+      <title >Yoneak Blogs</title>
+      <meta  name='description' content='Yoneak blogs and its related info'/>
       <meta name='keywords' content='Technology, Content Writing, Digital Marketing'/>
     </Helmet>
     </HelmetProvider>
