@@ -22,9 +22,10 @@ const Router = () => {
     </Helmet>
     </HelmetProvider>
       <Switch>
-        <Route  path='/admin'
-        component={() => { window.location = 'http://promenablog.pythonanywhere.com/admin/login/?next=/admin/'; return null;} }
-/>
+        <Route  exact path='/admin' component={() => { 
+     window.location.href = 'https://promenablog.pythonanywhere.com/admin/login/?next=/admin/'; 
+     return null;
+}}  />
         <Route exact path='/forgotPassword' component={ForgotPassword} />
         <Route exact path='/' component={Home} />
         <Route exact path='/post/:title/:postId' component={Post} />
