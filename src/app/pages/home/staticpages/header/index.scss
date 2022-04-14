@@ -18,7 +18,7 @@
 .header-wrapper nav {
   @include flexbetween;
   margin: 0 auto;
-  padding: $font_xxlarge $font_top7;
+  padding: $font_xxlarge $font_top8;
   height: $font_medium1;
   box-shadow: 0 0px 0px 0.2px rgba(0, 0, 0, 0.5);
 }
@@ -38,6 +38,7 @@ nav .content .link {
   width: 25%;
   img {
     width: 100%;
+    cursor: pointer
   }
 }
 .content .link li {
@@ -148,7 +149,9 @@ nav .content .link {
   .content {
     padding: 0 !important;
   }
-  
+  .header-wrapper nav {
+    padding: 3rem 6rem;
+  }
   .header-wrapper .search-icon,
   .header-wrapper .menu-icon {
     color: black;

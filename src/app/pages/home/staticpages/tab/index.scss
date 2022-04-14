@@ -19,7 +19,7 @@
 .active-tab {
   background: $color-white-primary;
   color: #292a2c;
-  font-size: $font_large;
+  font-size: $font_xxlarge;
   cursor: default;
 }
 hr {
@@ -44,7 +44,6 @@ button {
 }
 .content {
   background: $color-white-primary;
-  padding: $font_verysmall;
   width: 100%;
   @include displaynone;  
 }
@@ -69,6 +68,7 @@ button {
     justify-content: flex-start;
   }
   .active-tab {
+    font-size: 2rem;
     padding: 0 0 1rem 0;
     margin-bottom: 1rem
   }
@@ -77,9 +77,12 @@ button {
     padding: 0;
   }
   .tab:not(:first-child) {
-    width: 50%;
+    width: 100%;
+    text-align: start;
   }
   .tab:not(:last-child) {
-    width: 50%;
+    width: 100%;
+    padding: 0;
+    text-align: start;
   }
 }

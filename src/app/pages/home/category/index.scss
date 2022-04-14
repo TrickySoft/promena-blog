@@ -25,11 +25,14 @@
       width: 100%;
       padding-left: 1rem;
       &__card-ul {
-        font-family: $monstserrat_regular;
-        padding-top: $font_large;
+        padding-top: $font_verysmall;
         padding-left: 0;
+        color: #424242;
         font-size: 1.2rem;
         @include listnone;
+        li {
+          padding: $font_verysmall 0;
+        }
       }
     }
   }
@@ -40,7 +43,7 @@
 }
 
 .category-image {
-  border-radius: 2%;
+  border-radius: 12px;
   width: 100%;
   padding: 0 1rem;
   height: 100px;
