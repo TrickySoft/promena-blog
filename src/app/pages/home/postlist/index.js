@@ -26,17 +26,19 @@ const Postlist = () => {
           return (
             <div key={index} className='postlist-container__postlist__right-postlist'>
               <div className='postlist-container__postlist__right-postlist__img'>
-                <img src={post.thumbnail} className='postlist-img' alt='' />
+                <NavLink to={`/post/${post.title.match(/[a-z]+|\d+/ig).join('-')}/${post.Blog_id}`} className='postlist-container__postlist__right-postlist__content__postlist-title'>
+                  <img src={post.thumbnail} className='postlist-img' alt='' />
+                </NavLink>
               </div>
               <div className='postlist-container__postlist__right-postlist__content'>
                 <NavLink to={`/post/${post.title.match(/[a-z]+|\d+/ig).join('-')}/${post.Blog_id}`} className='postlist-container__postlist__right-postlist__content__postlist-title'>
                   {post.category}
                   <h2 className='postlist-container__postlist__right-postlist__content__title' >{post.title}</h2>
+                  <ul className='postlist-container__postlist__card-ul'>
+                    <li><i className='fa fa-clock-o' aria-hidden='true'> {moment(post.datetime).format(' D MMM')}</i></li>
+                    <li><i className='fa fa-eye' aria-hidden='true'></i> 15k views</li>
+                  </ul>
                 </NavLink>
-                <ul className='postlist-container__postlist__card-ul'>
-                  <li><i className='fa fa-clock-o' aria-hidden='true'> {moment(post.datetime).format(' D MMM')}</i></li>
-                  <li><i className='fa fa-eye' aria-hidden='true'></i> 15k views</li>
-                </ul>
               </div>
             </div>
           )

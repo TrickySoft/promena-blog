@@ -17,29 +17,31 @@ const Sidebar = (props) => {
 
   return (
     <div className='main1'>
-      {
-        postList.map(post => {
-          var url = post.thumbnail;
-          return (
-            <div className='posts' key={post.Blog_id}>
-              <img src={url} key={post.thumbnail} className='posts__image' />
-              <div className='posts__maincontent'>
-                <NavLink className='posts__link' to={`/post/${ post.title.match(/[a-z]+|\d+/ig).join('-')}/${post.Blog_id}`}>
-                  {post.category}
-                  <h1>{post.title}</h1>
-                </NavLink>
-               
-                {/* <ReadMore Blog_id={post.Blog_id} post={post.content} /> */}
-              
-              <ul className='posts__ul'>
-                <li><i className='fa fa-clock-o' aria-hidden='true'> {moment(post.date_created).format('MMM Do')}</i></li>
-                <li><i className='fa fa-eye' aria-hidden='true'></i> 75 reads</li>
-                <li><i className='fa fa-clock-o' aria-hidden='true'></i> 3 min read</li>
-              </ul>
-              </div>
+      {postList.map((post, index) => {
+        return (
+          <div key={index} className='posts'>
+            <div className='posts__image'>
+              <NavLink to={`/post/${post.title.match(/[a-z]+|\d+/ig).join('-')}/${post.Blog_id}`}>
+                <img src={post.thumbnail} />
+              </NavLink>
             </div>
-          )
-        })
+            <div className='posts__maincontent'>
+              <NavLink to={`/post/${post.title.match(/[a-z]+|\d+/ig).join('-')}/${post.Blog_id}`}>
+                {post.category}
+                <h1>{post.title}</h1>
+
+                {/* <ReadMore Blog_id={post.Blog_id} post={post.content} /> */}
+
+                <ul className='posts__ul'>
+                  <li><i className='fa fa-clock-o' aria-hidden='true'> {moment(post.date_created).format('MMM Do')}</i></li>
+                  <li><i className='fa fa-eye' aria-hidden='true'></i> 75 reads</li>
+                  <li><i className='fa fa-clock-o' aria-hidden='true'></i> 3 min read</li>
+                </ul>
+              </NavLink>
+            </div>
+          </div>
+        )
+      })
       }
     </div>
   )

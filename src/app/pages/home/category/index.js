@@ -21,20 +21,20 @@ const Category = () => {
 
         {posts.map((post, index) => {
           return (
-            <div key={index} className='category__right-category'>
-
-
+            <div className='category__right-category' key={index}>
               <div className='category__right-category__content'>
-                <NavLink to={`/post/${post.title.match(/[a-z]+|\d+/ig).join('-')}/${post.Blog_id}`} className='category-title'>
+                <NavLink to={`/post/${post.title.match(/[a-z]+|\d+/ig).join('-')}/${post.Blog_id}`}>
                   {post.title.substring(0, 20) + '...'}
+                  <ul className='category__right-category__content__card-ul'>
+                    <li><i className='fa fa-clock-o' aria-hidden='true'> {moment(post.datetime).format('D MMM')}</i></li>
+                    <li><i className='fa fa-eye' aria-hidden='true'></i> 15k views</li>
+                  </ul>
                 </NavLink>
-                <ul className='category__right-category__content__card-ul'>
-                  <li><i className='fa fa-clock-o' aria-hidden='true'> {moment(post.datetime).format('D MMM')}</i></li>
-                  <li><i className='fa fa-eye' aria-hidden='true'></i> 15k views</li>
-                </ul>
               </div>
               <div className='category__right-category__img'>
-                <img src={post.thumbnail} className='category-image' alt='' />
+                <NavLink to={`/post/${post.title.match(/[a-z]+|\d+/ig).join('-')}/${post.Blog_id}`}>
+                  <img src={post.thumbnail} className='category-image' alt='' />
+                </NavLink>
               </div>
             </div>
           )

@@ -9,7 +9,6 @@
   flex-wrap: wrap;
   flex-direction: row;
   width: 100%;
-  align-items: center;
   &__card-list {
     margin: 1rem;
     width: 30%;
@@ -29,30 +28,20 @@
       transform: scale(1.01);
     }
     &__card-ul {
-      font-family: $monstserrat_regular;
       padding-top: $font_large;
       padding-left: 0;
       @include flexbetween;
-      font-size: 1.4rem;
-      @include listnone;
-    }
-
-    &__card-ul {
-      font-family: $monstserrat_regular;
-      padding-top: $font_large;
-      padding-left: 0;
-      @include flexbetween;
-      font-size: 1.2rem;
+      font-size: 1rem;
       @include listnone;
     }
   }
 }
 
 .card-image {
-  border-radius: 2%;
+  border-radius: 5px;
   width: 100%;
-  height: 200px;
-  max-height: 250px;
+  // height: 200px;
+  // max-height: 250px;
 }
 .cat-title {
   text-decoration: none;

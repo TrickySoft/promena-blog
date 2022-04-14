@@ -23,6 +23,11 @@
     line-height: 20px;
     font-family: "Lato",sans-serif;
     text-align: justify;
+    p {
+      margin: 0.5rem 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+    }
   }
   &__post {
     text-align: center;

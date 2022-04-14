@@ -10,7 +10,7 @@
 
 .posts {
   position: relative;
-  margin: 1rem;
+  margin: 1rem 2.5%;
   display: flex;
   padding: 0.5rem;
   width: 100%;
@@ -19,14 +19,20 @@
   padding: $font_xverysmall;
   border: 1px solid lightgray;
   &__image {
-    width: 28%;
+    width: 32%;
+    img {
+      width: 100%;
+      border-radius: 5px;
+      height: 100%;
+    }
   }
-  &__maincontent{
+  &__maincontent {
+    width: 65%;
     display: block;
     position: relative;
-    margin-left: 3rem;
+    margin-left: 1rem;
     text-align: left;
-  } 
+  }
   span {
     margin-left: 0;
     font-size: $font_large;
@@ -34,7 +40,7 @@
   }
   h1 {
     font-size: $font_xlarge;
-    margin: 10px 0;
+    margin: 0 0 10px 0;
     font-weight: 600;
   }
   &__link {
@@ -43,47 +49,36 @@
     cursor: pointer !important;
   }
   &__ul {
-    font-family: $monstserrat_regular;
-    font-size: $font_small;
+    font-size: $font_xxsmall;
     @include flexbetween;
+    color: #424242;
     @include listnone;
     padding-left: 0;
   }
 }
 
-// @media screen and (min-width: 1024px) and (max-width: 1420px) {
-//   .posts{
-//     &__image {
-//       width: 40%;
-//       height: 25vh;
-//     }
-//     h1{
-//       font-size: $font_medium
-//     }
-//     .read-more {
-//       font-size: $font_small;
-//     }
-//     span {
-//       font-size: $font_small;
-//     }
-//     &__ul {
-//       font-size: 1rem;
-//       padding: 0 ;
-//     }
-//   }
-// }
+@media screen and (min-width: 1024px) and (max-width: 1420px) {
+  .posts {
+    h1 {
+      font-size: $font_medium;
+    }
+  }
+}
 
 @media screen and (min-width: 768px) and (max-width: 1020px) {
   .posts {
     width: 45%;
-    &__maincontent{
+    h1 {
+      font-size: 1.4rem;
+    }
+    &__maincontent {
       margin-left: 2rem;
     }
-   &__ul {
-     flex-direction: column;
-     align-items: start;
-     margin-bottom: 0;
-   }
+    &__ul {
+      flex-direction: column;
+      align-items: start;
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -102,6 +97,9 @@
     &__image {
       padding: 0;
       width: 40%;
+      img {
+        height: 100%;
+      }
     }
     &__ul {
       padding: 0;

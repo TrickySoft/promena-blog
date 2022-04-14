@@ -38,7 +38,7 @@ const Header = () => {
               <a onClick={() => history.push('/')}><img src={logo} className='logo' alt='logo' /></a>
             </div>
             <ul className='link'>
-              <li><a onClick={() => history.push('/')}> &nbsp;
+              <li><a href='https://yoneak.com/home'> &nbsp;
                 HOME</a></li>
               <li><a onClick={() => history.push('/')}> &nbsp;
                 PRICING</a></li>

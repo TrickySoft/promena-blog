@@ -4,7 +4,9 @@
 .featured-container {
   margin: 1rem;
   &__featured-title {
-    margin: 2rem;
+    margin: 2rem 0;
+    font-size: 3rem;
+    font-weight: 400;
   }
 }
 .featured {
@@ -178,9 +180,9 @@
   // .title {
   //     font-size: 1.8rem;
   // }
-  .card-image {
-    height: 220px;
-  }
+  // .card-image {
+  //   height: 220px;
+  // }
   .featured {
     &__card-ul {
       font-size: 1.2rem;
